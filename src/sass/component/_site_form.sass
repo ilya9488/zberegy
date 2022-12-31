@@ -1,0 +1,78 @@
+// SITE-FORM
+.site-form
+  label
+    font-size: 14px
+    line-height: 20px
+    color: rgba(50, 50, 50, 0.6)
+    margin-bottom: 6px
+    cursor: pointer
+    @include media-breakpoint-down(sm)
+      font-size: 12px
+      line-height: 16px
+
+  input,
+  textarea,
+  [contenteditable]
+    display: block
+    width: 100%
+    padding: 17px 20px
+    margin-bottom: 20px
+    font-size: 16px
+    line-height: 26px
+    border-radius: 10px
+    border: 1px solid #dedede
+    color: rgba(50, 50, 50, 0.6)
+    transition: .3s
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 22px
+      padding: 14px 15px
+    &::placeholder
+      font-size: inherit
+      line-height: inherit
+      color: inherit
+      transition: inherit
+    &:focus,
+    &:focus-visible
+      color: $text-c
+      outline: none
+      &::placeholder
+        font-size: 0
+        color: transparent
+  textarea
+    position: relative
+    min-height: 260px
+    max-height: 500px
+    padding-bottom: 25px
+    @include media-breakpoint-down(sm)
+      min-height: 100px
+      max-height: 300px
+    // &:focus
+      // &+.textarea-maxlength
+        // opacity: 1
+    &+.textarea-maxlength
+      display: block
+      text-align: right
+      font-size: 12px
+      line-height: 12px
+      color: rgba(50, 50, 50, 0.6)
+      margin-top: -12px
+      margin-right: 15px
+      transform: translateY(-30px)
+      z-index: 1
+      // opacity: 0
+      // transition: .3s
+  [contenteditable]
+    &::before
+      content: attr(data-placeholder)
+      width: 100%
+      white-space: nowrap
+      overflow: hidden
+      display: inline-flex
+      transition: .2s
+    &.active,
+    &:focus
+      &::before
+        width: 0
+    
+      

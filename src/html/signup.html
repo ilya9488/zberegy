@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('_head.html')
+<body>
+  <!-- <main id="page" class="IS_LOG_IN"> -->
+  <main id="page">
+    @@include('_header.html')
+    <div id="content">
+
+      <div class="login-block" style="background-image: url(../../static/img/login/login-bg.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 form-wrap">
+              <form action="#" id="login_form" class="site-form login-form">
+                <button class="btn-login-google">
+                  <svg class="icon-google" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
+                    <path d="M16.9925 11.1176C16.9925 10.6025 16.9507 10.2267 16.8603 9.83691H10.979V12.1616H14.4312C14.3616 12.7393 13.9857 13.6093 13.1505 14.1939L13.1388 14.2717L14.9984 15.7123L15.1272 15.7252C16.3104 14.6324 16.9925 13.0246 16.9925 11.1176Z" fill="#4285F4"/>
+                    <path d="M10.979 17.2425C12.6703 17.2425 14.0902 16.6857 15.1273 15.7252L13.1506 14.1939C12.6216 14.5628 11.9117 14.8203 10.979 14.8203C9.32252 14.8203 7.91658 13.7276 7.41541 12.2173L7.34194 12.2235L5.40834 13.72L5.38306 13.7902C6.41315 15.8365 8.52903 17.2425 10.979 17.2425Z" fill="#34A853"/>
+                    <path d="M7.41535 12.2173C7.28311 11.8275 7.20658 11.4099 7.20658 10.9784C7.20658 10.5468 7.28311 10.1292 7.40839 9.73947L7.40489 9.65646L5.44706 8.13599L5.383 8.16646C4.95845 9.0156 4.71484 9.96916 4.71484 10.9784C4.71484 11.9876 4.95845 12.9411 5.383 13.7902L7.41535 12.2173Z" fill="#FBBC05"/>
+                    <path d="M10.979 7.13647C12.1553 7.13647 12.9487 7.64455 13.4011 8.06915L15.169 6.34303C14.0833 5.33381 12.6703 4.71436 10.979 4.71436C8.52903 4.71436 6.41315 6.12029 5.38306 8.16656L7.40845 9.73956C7.91658 8.22921 9.32252 7.13647 10.979 7.13647Z" fill="#EB4335"/>
+                  </svg>
+                  Увійти за допомогою Google
+                </button>
+                <button class="btn-login-fb">
+                  <svg class="icon-fb" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
+                    <path d="M11.8771 17.209V11.3209H13.8535L14.1499 9.02616H11.8771V7.56105C11.8771 6.89672 12.0616 6.44395 13.0143 6.44395H14.2295V4.39214C13.6413 4.32991 13.0502 4.29978 12.4587 4.30186C10.7067 4.30186 9.50736 5.3712 9.50736 7.33512V9.02616H7.52588V11.3209H9.50736V17.209H11.8771Z" fill="#1778F2"/>
+                  </svg>
+                  Увійти за допомогою Facebook
+                </button>
+                <div class="dash-block"><span class="dash-text">або E-mail</span></div>
+                <label for="email">Ваш E-mail</label>
+                <input type="text" id="email" placeholder="Ваш E-mail">
+                <label for="pass" class="label-pass">Ваш пароль <a href="#" class="forgot-pass-link">Забули пароль?</a></label>
+                <input type="text" id="pass" placeholder="Ваш пароль">
+
+                <button class="btn-login" type="submit">Зареєструватися</button>
+
+                <div class="ask-sign-up">
+                  <span>Немає аккаунту Збережи? </span>
+                  <a href="signup.html">Зареєструватися</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </main>
+  <!-- scripst & styles -->
+  @@include('_footer_connections.html')
+</body>
+</html>

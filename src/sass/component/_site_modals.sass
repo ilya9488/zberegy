@@ -1,0 +1,110 @@
+.site-modal
+  &.show
+    padding: 0 !important
+  &.send-message-modal
+    .modal-header
+      justify-content: center
+  &.sucses-modal
+    text-align: center
+    .modal-header
+      justify-content: center
+
+  .modal-dialog
+    flex-direction: column
+    justify-content: center
+    width: calc( 100vw - 30px )
+    // max-width: 1070px // old
+    max-width: 870px
+    border-radius: 10px
+    box-shadow: 0px 10px 60px rgba(50, 50, 50, 0.1)
+    margin-left: auto
+    margin-right: auto
+    .close
+      width: 26px
+      height: 26px
+      margin-left: auto
+      @include media-breakpoint-down(sm)
+        width: 20px
+        height: 20px
+  .modal-content
+    padding: 20px
+    border: none
+    @include media-breakpoint-down(sm)
+      padding: 15px
+    .modal-header
+      border: none
+      margin-bottom: 30px
+      // padding: 40px 15px 0
+      padding-top: 40px
+      @include media-breakpoint-down(md)
+        padding: 20px 0 0
+      @include media-breakpoint-down(sm)
+        margin-bottom: 10px
+        justify-content: center
+        text-align: center
+    .modal-body
+      @include media-breakpoint-down(sm)
+        padding: 0 0 20px
+      // GIVER-BLOCK
+      .giver-block
+        display: flex
+        flex-wrap: wrap
+        padding: 30px 0px
+        border-bottom: 1px solid #DEDEDE
+        &:last-child
+          border-bottom: none
+        @include media-breakpoint-down(sm)
+          justify-content: center
+          padding: 20px 0px
+        .giver-img
+          width: 40px
+          height: 40px
+          border-radius: 50%
+          overflow: hidden
+          margin-right: 10px
+      .giver-text-wrap
+        margin-right: auto
+        @include media-breakpoint-down(sm)
+          margin-bottom: 20px
+        .giver
+          &-name
+            display: block
+          &-date
+            font-size: 14px
+            line-height: 22px
+            color: rgba(50, 50, 50, 0.6)
+            @include media-breakpoint-down(sm)
+              font-size: 12px
+              line-height: 16px
+      .which-gift
+        max-width: 100px
+        max-height: 100px
+
+      // GIFTS-BLOCK
+      .gifts-block
+        display: flex
+        flex-wrap: wrap
+        .gift-img
+          width: calc( 25% - 7.5px )
+          margin: 0 10px 10px 0
+          display: flex
+          // justify-content: center
+          align-items: center
+          @include media-breakpoint-down(sm)
+            width: calc( 33.333% - 7.5px )
+          &:nth-child(4n)
+            margin-right: 0
+            @include media-breakpoint-down(sm)
+              margin-right: 10px
+          &:nth-child(3n)
+            @include media-breakpoint-down(sm)
+              margin-right: 0
+  .icon-sucses
+    @include media-breakpoint-down(sm)
+      max-width: 50px
+  &.giver-modal
+    .modal-body
+      max-height: 500px
+      overflow: auto
+
+

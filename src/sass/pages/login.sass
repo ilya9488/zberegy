@@ -1,0 +1,81 @@
+.login-block
+  padding: 100px 0
+  @include media-breakpoint-down(sm)
+    padding: 45px 0
+    background-size: auto 115%
+  .form-wrap
+    margin: 0 auto
+  .login-form
+    background-color: $clear
+    border-radius: $border-radius
+    padding: 60px
+    @include media-breakpoint-down(sm)
+      padding: 0
+      background-color: transparent
+    .btn-login-google,
+    .btn-login-fb
+      margin-bottom: 16px
+    .dash-block
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      &::before,
+      &::after
+        content: ''
+        flex: auto
+        height: 1px
+        background-color: #DEDEDE
+      .dash-text
+        margin: 0 30px
+    .label-pass
+      display: flex
+      justify-content: space-between
+      .forgot-pass-link
+        font-size: 12px
+        line-height: 16px
+        color: #3E9AF6
+        transition: .3s
+        &:hover
+          color: #2879ca
+    .pass-wrap
+      position: relative
+      margin-bottom: 20px
+      .pass-show
+        position: absolute
+        right: 15px
+        bottom: 50%
+        transform: translateY(50%)
+      input
+        margin: 0
+    .btn-login
+      width: 100%
+      margin-bottom: 16px
+    .memorable-me
+      user-select: none
+      display: flex
+      align-items: center
+      margin-bottom: 16px
+      .custom-checkbox
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 20px
+        height: 20px
+        color: #3E9AF6
+        background-color: $clear
+        border: 1px solid #DEDEDE
+        border-radius: 4px
+        margin-right: 10px
+        font-size: 0
+        transition: .2s
+      input:checked + .custom-checkbox
+        font-size: 14px
+    .ask-sign-up
+      font-weight: 600
+      font-size: 18px
+      line-height: 18px
+      a
+        color: #3E9AF6
+        transition: .3s
+        &:hover
+          color: #2879ca

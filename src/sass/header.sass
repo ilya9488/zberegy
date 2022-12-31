@@ -1,0 +1,277 @@
+@import "_root"
+@import "_var"
+
+@import "../../node_modules/bootstrap/scss/functions"
+@import "../../node_modules/bootstrap/scss/variables"
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/reboot"
+@import "../../node_modules/bootstrap/scss/transitions"
+
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/navbar"
+
+/*_start_main_css_*/
+@import "_typography"
+@import "_mixin"
+
+body
+  display: flex
+  position: relative
+  min-width: 320px
+  background-color: $clear
+  color: $text-c
+  overflow-x: hidden
+  *
+    font-family: $text
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+    font-style: normal
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 20px
+    &::selection
+      background: $bg-selection
+      color: $text-selection
+
+#page
+  min-height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+#content
+  flex-grow: 1
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+
+// # Header
+.header
+  position: sticky
+  width: 100%
+  top: 0
+  left: 0
+  padding: 20px 15px
+  background-color: $clear
+  // box-shadow: 0px 2px 60px #3232321a
+  box-shadow: 0 -50px 70px #323232
+  z-index: 50
+  @include media-breakpoint-down(lg)
+    padding: 15px
+// site logo
+.logo-link
+  color: $blue
+  margin-right: 20px
+  transition: .3s
+  @include media-breakpoint-down(lg)
+    margin: 0px 10px
+    // margin: 0 auto
+  &:hover
+    color: darken($blue, 4%)
+    .yellow
+      fill: darken($yellow, 3%)
+  .yellow
+    fill: $yellow
+    transition: .3s
+  // svg
+  .site-logo
+    max-width: 100%
+    @include media-breakpoint-down(lg)
+      max-width: 100px
+      max-height: 30px
+
+.header-wrap
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  max-width: 1720px
+  margin: 0 auto
+  @include media-breakpoint-down(lg)
+    position: relative
+    flex: auto
+    justify-content: space-between
+
+  // Search
+  .search-wrap
+    display: flex
+    align-items: center
+    border: 1px solid #DEDEDE
+    border-radius: 100px
+    padding-left: 20px
+    max-width: 500px
+    overflow: hidden
+    flex: auto
+    background-color: $clear
+    margin-left: 70px
+    transition: .3s
+    @media (max-width: 1400px)
+      margin-left: 15px
+    @include media-breakpoint-down(lg)
+      border-color: transparent
+      padding: 0
+      flex: none
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(50%, -50%)
+      max-width: 0
+      @include media-breakpoint-down(sm)
+        transform: translate(0, -50%)
+    &.active
+      @include media-breakpoint-down(lg)
+        width: 50%
+        right: 50%
+        max-width: 100%
+        padding: 5px 5px 5px 20px
+        border-color: #DEDEDE
+      @include media-breakpoint-down(sm)
+        right: 0
+        width: calc( 100% - 40px )
+    &.active + .btn-search-toggler
+      opacity: .3
+      z-index: -1
+    .btn-search
+      padding: 0
+      margin-right: 10px
+      margin-left: auto
+    .search-input
+      flex: auto
+      border: none
+      padding: 16px 10px 16px 0
+      transition: .3s
+      &:focus-visible                 
+        outline: none
+      @include media-breakpoint-down(lg)
+        font-size: 14px
+        font-weight: 300
+        line-height: 20px
+        padding: 0
+    .btn-search-reset
+      padding: 0
+      margin-right: 20px
+      transition: .3s
+      &.hide
+        opacity: 0
+        pointer-events: none
+
+  .btn-search-toggler
+    padding: 0
+    &-close
+      padding: 0
+  // Btn-Menu Toggler
+  .btn-menu-toggler
+    padding: 0
+    .line
+      &-top,
+      &-middle,
+      &-bottom
+        transition: .5s
+    .line-top
+      transform: rotate(-0.13turn) translate(-16px, 1px)
+    .line-middle
+      opacity: 0
+    .line-bottom
+      transform: rotate(0.13turn) translate(6px, -10px)
+    &.collapsed
+      .line
+        &-top,
+        &-middle,
+        &-bottom
+          transform: none
+          opacity: 1
+
+  // Btns ( links )
+  .header-nav
+    flex: auto
+    @include media-breakpoint-down(lg)
+      width: 100%
+  .btn-wrap,
+  .navbar-collapse
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media (max-width: 1300px)
+      padding-left: 10px
+    @include media-breakpoint-down(lg)
+      align-items: flex-start
+      justify-content: flex-start
+      padding-left: 0
+      transition: .3s
+    @include media-breakpoint-down(sm)
+      overflow-x: auto
+  a, button
+    margin-right: 20px
+    &:last-of-type:not(.logo-link)
+      margin-right: 0
+    @media (max-width: 1300px)
+      margin-right: 10px
+      
+  .btn-user-cabinet,
+  .btn-user-mesage
+    @include media-breakpoint-down(lg)
+      margin-top: 20px
+
+
+  .btn-user
+    &-login,
+    &-cabinet,
+    &-mesage
+      color: #F2F2F2
+      @include media-breakpoint-down(lg)
+        display: none
+      &:hover
+        color: #eeeeee
+    &-mesage
+      position: relative
+      &[data-count="0"]
+        &::before
+          opacity: 0
+      &::before
+        content: attr(data-count)
+        position: absolute
+        top: 6px
+        right: 6px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        color: #323232
+        background-color: $yellow
+        font-size: 10px
+        line-height: 10px
+        transition: opacity .3s
+    // If user (not) logged in
+    &-cabinet,
+    &-mesage
+      display: none
+// If user is (logget in)
+.IS_LOG_IN
+  // btns / links
+  .btn-user
+    &-login
+      display: none
+    &-cabinet,
+    &-mesage
+      display: inline-flex
+      @include media-breakpoint-down(lg)
+        display: none
+      
+/*_component_*/
+@import "component/breadcrumbs"
+@import "component/site_dropdown"
+/*_sections_*/
+@import "sections/home_page_first"
+@import "sections/home_about_project"
+@import "sections/search-results"
+@import "sections/memorial_header"
+// ? to stile.sass ?
+@import "sections/memorial_body"
+@import "blocks/memorial_tab_1"
+@import "blocks/memorial_tab_2"
+@import "blocks/memorial_tab_3"
+/*_pages_*/
+@import "pages/login"

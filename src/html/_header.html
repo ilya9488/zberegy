@@ -1,0 +1,124 @@
+<header id="header" class="header">
+  <!-- <div class="header-wrap row justify-content-between"> -->
+  <div class="header-wrap row">
+    @@include('component/btns_links.html', {
+      "type": "btn",
+      "style": "menu-toggler",
+      "class": "d-xl-none collapsed",
+      "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#headerMenu\" aria-controls=\"headerMenu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" "
+    })
+    @@include('component/logo.html')
+  
+    <div class="search-wrap">
+      @@include('component/btns_links.html', {
+        "type": "btn",
+        "style": "search",
+        "attr": " id=\"search_btn\" type=\"button\" aria-label=\"Кнопка активувати поле пошуку\" "
+      })
+      <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input">
+      <!-- <div id="search-result" class=""></div> -->
+      @@include('component/btns_links.html', {"type": "btn","style": "search-reset", "class": "hide" })
+      @@include('component/btns_links.html', {"type": "btn","style": "search-toggler close", "class": "d-xl-none"})
+    </div>
+
+    @@include('component/btns_links.html', {"type": "btn", "style": "search-toggler", "class": "d-xl-none"})
+    
+    <nav class="header-nav navbar-expand-xl">
+      <div class="navbar-collapse collapse btn-wrap" id="headerMenu">
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "green",
+          "text": "Створити Меморіал",
+          "attr": "href=\"#\"",
+          "class": "d-none d-xl-block"
+        })
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "blue",
+          "text": "Підтримати Проект",
+          "attr": "href=\"#\"",
+          "class": "d-none d-xl-block"
+        })
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "user-login",
+          "attr": "href=\"login.html\" ",
+        })
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "user-cabinet",
+          "attr": " href=\"user_cabinet.html\" ",
+        })
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "user-mesage",
+          "attr": "href=\"#\" data-count=\"3\" ",
+        })
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Про Нас",
+            "class": "collapsed",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#aboutUs\" aria-expanded=\"false\" aria-controls=\"aboutUs\""
+          })
+          <div class="collapse" id="aboutUs">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="about-us.html">Про проект</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="news.html">Новини</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="contact.html">Контакти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Послуги",
+            "class": "collapsed",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#services\" aria-expanded=\"false\" aria-controls=\"services\""
+          })
+          <div class="collapse" id="services">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="capabilities.html">Можливості сервісу</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="example-memorial.html">Приклад Онлайн Меморіалу</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Важлива інформація",
+            "class": "collapsed",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#importantInfo\" aria-expanded=\"false\" aria-controls=\"importantInfo\""
+          })
+          <div class="collapse" id="importantInfo">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="capabilities.html">Контакти</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="memorial.html">Умови використання сайта</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
