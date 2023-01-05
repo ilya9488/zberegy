@@ -9,14 +9,16 @@
     @include media-breakpoint-down(sm)
       font-size: 12px
       line-height: 16px
-
+  .form-group
+    position: relative
+    margin-bottom: 20px
   input,
   textarea,
   [contenteditable]
     display: block
     width: 100%
     padding: 17px 20px
-    margin-bottom: 20px
+    // margin-bottom: 20px
     font-size: 16px
     line-height: 26px
     border-radius: 10px
@@ -39,6 +41,24 @@
       &::placeholder
         font-size: 0
         color: transparent
+    &.error
+      border-color: $error
+
+    &.error + .error-mess
+      padding-top: 4px
+      max-height: 100px
+      @include media-breakpoint-down(sm)
+        padding-top: 4px
+  .error-mess
+    display: block
+    overflow: hidden
+    max-height: 0
+    font-size: 14px
+    line-height: 20px
+    color: $error
+    transition: .3s
+    @include media-breakpoint-down(sm)
+      font-size: 12px
   textarea
     position: relative
     min-height: 260px
@@ -58,7 +78,7 @@
       color: rgba(50, 50, 50, 0.6)
       margin-top: -12px
       margin-right: 15px
-      transform: translateY(-30px)
+      transform: translateY(-10px)
       z-index: 1
       // opacity: 0
       // transition: .3s
@@ -74,5 +94,22 @@
     &:focus
       &::before
         width: 0
+  .agreement-terms
+    margin-bottom: 20px
+    font-size: 12px
+    line-height: 16px
+    a
+      color: $blue
+      font-size: inherit
+      line-height: inherit
+  .captcha
+    margin-bottom: 20px
+  .wenn-registriert
+    font-size: 18px
+    line-height: 18px
+    font-weight: 600
+    text-align: center
+    color: #3E9AF6
+    display: block
+    margin-bottom: 16px
     
-      

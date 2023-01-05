@@ -7,11 +7,12 @@
     @@include('_header.html')
     <div id="content">
 
-      <div class="login-block" style="background-image: url(../../static/img/login/login-bg.jpg);">
-        <div class="container">
+      <div class="login_signup-block signup-block">
+
+        <div class="container-xl">
           <div class="row">
             <div class="col-lg-7 form-wrap">
-              <form action="#" id="login_form" class="site-form login-form">
+              <form action="#" id="signup_form" class="site-form signup_login-form">
                 <button class="btn-login-google">
                   <svg class="icon-google" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
@@ -29,18 +30,51 @@
                   </svg>
                   Увійти за допомогою Facebook
                 </button>
+                
                 <div class="dash-block"><span class="dash-text">або E-mail</span></div>
-                <label for="email">Ваш E-mail</label>
-                <input type="text" id="email" placeholder="Ваш E-mail">
-                <label for="pass" class="label-pass">Ваш пароль <a href="#" class="forgot-pass-link">Забули пароль?</a></label>
-                <input type="text" id="pass" placeholder="Ваш пароль">
+
+                <div class="form-group row">
+                  <div class="col-lg-6">
+                    <label for="name">Ім’я*</label>
+                    <input type="text" id="name" placeholder="Ваше Ім’я">
+                    <span class="error-mess">Некоректно заповнене поле</span>
+                  </div>
+                  <div class="col-lg-6 pl-lg-0">
+                    <label for="surname">Прізвище*</label>
+                    <input type="text" id="surname" placeholder="Ваше Прізвище">
+                    <span class="error-mess">Некоректно заповнене поле</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Ваш E-mail</label>
+                  <input type="email" id="email" placeholder="Ваш E-mail">
+                  <span class="error-mess">Некоректно заповнене поле</span>
+                </div>
+                <label for="pass" class="label-pass">Ваш пароль</label>
+                <div class="form-group pass-wrap">
+                  <svg class="pass-show" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.9996 7.48C9.06361 7.48 7.47961 9.064 7.47961 11C7.47961 12.936 9.06361 14.52 10.9996 14.52C12.9356 14.52 14.5196 12.936 14.5196 11C14.5196 9.064 12.9356 7.48 10.9996 7.48ZM10.9996 13.64C9.54761 13.64 8.35961 12.452 8.35961 11C8.35961 9.548 9.54761 8.36 10.9996 8.36C12.4516 8.36 13.6396 9.548 13.6396 11C13.6396 12.452 12.4516 13.64 10.9996 13.64ZM20.7676 10.692L18.8756 8.778C16.7856 6.666 13.9916 5.5 10.9996 5.5C8.00761 5.5 5.21361 6.666 3.12361 8.778L1.23161 10.692C1.05561 10.868 1.05561 11.132 1.23161 11.308L3.12361 13.222C5.21361 15.334 8.00761 16.5 10.9996 16.5C13.9916 16.5 16.7856 15.334 18.8756 13.222L20.7676 11.308C20.9436 11.132 20.9436 10.868 20.7676 10.692ZM18.2596 12.606C16.3236 14.542 13.7496 15.62 10.9996 15.62C8.24961 15.62 5.67561 14.542 3.73961 12.606L2.15561 11L3.73961 9.394C5.67561 7.458 8.24961 6.38 10.9996 6.38C13.7496 6.38 16.3236 7.458 18.2596 9.394L19.8436 11L18.2596 12.606Z" fill="#323232" fill-opacity="0.6"/>
+                    <path class="eye-slash" d="M18.8777 4.12187C18.7152 3.95938 18.451 3.95938 18.2885 4.12187L4.12187 18.2885C3.95938 18.451 3.95938 18.7152 4.12187 18.8777C4.20355 18.9585 4.31019 18.9994 4.41687 18.9994C4.52355 18.9994 4.63019 18.9586 4.71105 18.8777L18.8777 4.71105C19.0402 4.54855 19.0402 4.28437 18.8777 4.12187Z" fill="#323232" fill-opacity="0.6"/>
+                  </svg>
+                  <input type="password" id="pass" placeholder="Ваш пароль">
+                  <span class="error-mess">Некоректно заповнене поле</span>
+                </div>
+
+                <div class="agreement-terms">
+                  Реєструючись, ви погоджуєтеся з умовами 
+                  <a href="#">положення про обробку і захист <br> персональних даних</a>
+                   та 
+                   <a href="#">угодою користувача</a>.
+                </div>
+                
+                <div class="captcha">
+                  <!-- temp example -->
+                  <img style="width: 100%;" src="static/img/captcha.jpg" alt="">
+                </div>
 
                 <button class="btn-login" type="submit">Зареєструватися</button>
+                <a class="wenn-registriert" href="login.html">Я вже зареєстрований</a>
 
-                <div class="ask-sign-up">
-                  <span>Немає аккаунту Збережи? </span>
-                  <a href="signup.html">Зареєструватися</a>
-                </div>
               </form>
             </div>
           </div>

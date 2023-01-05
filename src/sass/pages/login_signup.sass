@@ -1,11 +1,28 @@
-.login-block
+.login_signup-block
   padding: 100px 0
   @include media-breakpoint-down(sm)
     padding: 45px 0
+  &.login-block
+    background-image: url(../img/login/login-bg.jpg)
     background-size: auto 115%
+  &.signup-block
+    background-image: url(../img/signup/signup-bg.png)
+    background-size: calc( 50% - 100px ) auto
+    background-position: calc( 100% - 30px ) center
+    @include media-breakpoint-down(md)
+      background: none
+    .form-wrap
+      margin: 0
+    .signup_login-form
+      padding: 15px
+      max-width: 600px
+      @include media-breakpoint-down(md)
+        margin: 0 auto
+        padding: 0
+
   .form-wrap
     margin: 0 auto
-  .login-form
+  .signup_login-form
     background-color: $clear
     border-radius: $border-radius
     padding: 60px
@@ -43,8 +60,9 @@
       .pass-show
         position: absolute
         right: 15px
-        bottom: 50%
-        transform: translateY(50%)
+        top: 50%
+        transform: translateY(-50%)
+        cursor: pointer
       input
         margin: 0
     .btn-login
@@ -79,3 +97,21 @@
         transition: .3s
         &:hover
           color: #2879ca
+  .mail-confirmation
+    padding: 100px 15px
+    @include media-breakpoint-down(md)
+      padding: 0 15px
+      max-width: 500px
+      margin: 0 auto
+    a,
+    .current-signup-email
+      color: #3E9AF6
+      &:hover
+        color: #1c7fe1
+    .sign-img
+      display: none
+      @include media-breakpoint-down(md)
+        display: block
+
+        
+    

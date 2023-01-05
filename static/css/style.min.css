@@ -1256,6 +1256,7 @@ button:focus-visible {
 .btn-login-fb {
   width: 100%;
   color: #ffffff;
+  align-items: center;
 }
 .btn-login-google .icon-google,
 .btn-login-google .icon-fb,
@@ -1267,13 +1268,31 @@ button:focus-visible {
 .btn-login-google {
   background-color: #323232;
 }
+.btn-login-google:hover {
+  background-color: #525151;
+}
+.btn-login-google:focus {
+  background-color: #323232;
+}
 
 .btn-login-fb {
+  background-color: #1778F2;
+}
+.btn-login-fb:hover {
+  background-color: #116cdc;
+}
+.btn-login-fb:focus {
   background-color: #1778F2;
 }
 
 .btn-login {
   color: #ffffff;
+  background-color: #3E9AF6;
+}
+.btn-login:hover {
+  background-color: #318ce7;
+}
+.btn-login:focus {
   background-color: #3E9AF6;
 }
 
@@ -2940,13 +2959,16 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     line-height: 16px;
   }
 }
+.site-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
 .site-form input,
 .site-form textarea,
 .site-form [contenteditable] {
   display: block;
   width: 100%;
   padding: 17px 20px;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 26px;
   border-radius: 10px;
@@ -2987,6 +3009,38 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   font-size: 0;
   color: transparent;
 }
+.site-form input.error,
+.site-form textarea.error,
+.site-form [contenteditable].error {
+  border-color: #FF0000;
+}
+.site-form input.error + .error-mess,
+.site-form textarea.error + .error-mess,
+.site-form [contenteditable].error + .error-mess {
+  padding-top: 4px;
+  max-height: 100px;
+}
+@media (max-width: 767.98px) {
+  .site-form input.error + .error-mess,
+.site-form textarea.error + .error-mess,
+.site-form [contenteditable].error + .error-mess {
+    padding-top: 4px;
+  }
+}
+.site-form .error-mess {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF0000;
+  transition: 0.3s;
+}
+@media (max-width: 767.98px) {
+  .site-form .error-mess {
+    font-size: 12px;
+  }
+}
 .site-form textarea {
   position: relative;
   min-height: 260px;
@@ -3007,7 +3061,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: rgba(50, 50, 50, 0.6);
   margin-top: -12px;
   margin-right: 15px;
-  transform: translateY(-30px);
+  transform: translateY(-10px);
   z-index: 1;
 }
 .site-form [contenteditable]::before {
@@ -3020,6 +3074,28 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 .site-form [contenteditable].active::before, .site-form [contenteditable]:focus::before {
   width: 0;
+}
+.site-form .agreement-terms {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.site-form .agreement-terms a {
+  color: #3488dd;
+  font-size: inherit;
+  line-height: inherit;
+}
+.site-form .captcha {
+  margin-bottom: 20px;
+}
+.site-form .wenn-registriert {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #3E9AF6;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .comments-wrap {

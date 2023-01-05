@@ -72,7 +72,8 @@ Fancybox.bind('[data-fancybox="gallery"]', {
       // Get link related to current item
       const $trigger = fancybox.items[slideIndex].$trigger
       // Get data from `data-comments` attribute
-      const data = $trigger.dataset.comments || ''
+      // const data = $trigger.dataset.comments || ''
+      const data = $trigger.querySelector('.sidebar-img-comments').innerHTML || ''
       // Update comments
       fancybox.$comments.innerHTML = data
       $('.fancybox__container').addClass('active')
