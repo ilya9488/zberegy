@@ -15,10 +15,9 @@
       </div>
       <div class="modal-body">
         <form id="complain_form" class="site-form" action="#">
-          <label for="message_subject">Причина порушення</label>
+          <label data-dropdown-for="message_subject">Причина порушення</label>
           <!-- <input type="text" id="message_subject" name="message_subject" placeholder="Не вказано"> -->
-
-          <div class="site-dropdown">
+          <div class="site-dropdown" data-dropdown-id="message_subject">
             <!-- hiden elem (select)(!) -->
             <select class="select-dropdown d-none">
               <option value="none">none</option>
