@@ -5,6 +5,11 @@ $('textarea').on('input', function(){
   $(this).scrollTop($(this)[0].scrollHeight);
 })
 
+// removeClass error if focus
+$('textarea, input').on('focus', function(){
+  $(this).removeClass('error')
+})
+
 // input that adjusts in height
 $('[contenteditable]').on('keyup', function () {
 	const thisDataId = $(this)[0].getAttribute('data-input-id')

@@ -5,6 +5,7 @@
   display: inline-block
   white-space: nowrap
   cursor: pointer
+  background-color: $clear
   .icon-bracket
     transition: .5s
   &.active
@@ -29,6 +30,7 @@
     .select-sort
       font-size: 16px
       line-height: 26px
+      color: rgba(50, 50, 50, 0.6)
       @include media-breakpoint-down(sm)
         font-size: 12px
         line-height: 16px
@@ -85,6 +87,10 @@
           transform: rotateX(0.5turn)
       .site-dropdown-select
         max-height: 100vh
+  .select-dropdown.error + .site-dropdown-header
+    border-color: $error
+    .select-sort
+      color: $error
 
 // if in .site-form
 .site-form
@@ -107,6 +113,10 @@
           padding: 14px 15px 7px
         &:last-child
           padding: 7px 15px 14px
+    &.in-active
+      .select-sort
+        color: $text-c
+    
     &.active
       .site-dropdown-select
         max-height: 300px

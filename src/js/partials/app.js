@@ -2,7 +2,7 @@
 $(document).on('mouseup',function(e){
   let elsNav = $('.navbar-toggler, .header-nav'),
       elsSearch = $('.btn-search-toggler, .search-wrap'),
-      elsSearchSortDrop = $('.site-dropdown'),
+    elsSearchSortDrop = $('.site-dropdown, [data-dropdown-for]'),
       elsPromoVideo = $('.video-wrap, .play-video')
   if (!elsNav.is(e.target) && elsNav.has(e.target).length === 0){
     $('.navbar-collapse').collapse('hide')

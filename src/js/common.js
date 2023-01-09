@@ -38,4 +38,5 @@ window.onload = function (){
 	//= partials/comments-form.js
 	//= partials/comments-to-foto-form.js
 	//= partials/comments-to-comment-form.js
+	//= partials/contact-us.js
 }

@@ -5749,7 +5749,6 @@ img {
   height: auto;
 }
 
-/* Error-Message */
 @keyframes opacity {
   0% {
     opacity: 0.5;
@@ -6134,6 +6133,7 @@ body *::selection {
   display: inline-block;
   white-space: nowrap;
   cursor: pointer;
+  background-color: #ffffff;
 }
 .site-dropdown .icon-bracket {
   transition: 0.5s;
@@ -6159,6 +6159,7 @@ body *::selection {
 .site-dropdown-header .select-sort {
   font-size: 16px;
   line-height: 26px;
+  color: rgba(50, 50, 50, 0.6);
 }
 @media (max-width: 767.98px) {
   .site-dropdown-header .select-sort {
@@ -6226,6 +6227,12 @@ body *::selection {
 .site-dropdown-options.active .site-dropdown-select {
   max-height: 100vh;
 }
+.site-dropdown .select-dropdown.error + .site-dropdown-header {
+  border-color: #FF0000;
+}
+.site-dropdown .select-dropdown.error + .site-dropdown-header .select-sort {
+  color: #FF0000;
+}
 
 .site-form .site-dropdown {
   display: block;
@@ -6258,6 +6265,9 @@ body *::selection {
   .site-form .site-dropdown-options:last-child {
     padding: 7px 15px 14px;
   }
+}
+.site-form .site-dropdown.in-active .select-sort {
+  color: rgba(50, 50, 50, 0.8);
 }
 .site-form .site-dropdown.active .site-dropdown-select {
   max-height: 300px;
@@ -6822,6 +6832,38 @@ body *::selection {
   .example-memorial .memorial-header .memorial-header-data .img-wrap::before {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.about-us {
+  margin-bottom: 150px;
+}
+@media (max-width: 991.98px) {
+  .about-us {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-us {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+}
+.about-us .title {
+  margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+  .about-us .title {
+    margin-bottom: 20px;
+  }
+}
+.about-us-img-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+  .about-us-img-wrap {
+    margin-bottom: 20px;
   }
 }
 
@@ -7520,6 +7562,30 @@ body *::selection {
 @media (max-width: 991.98px) {
   .login_signup-block .mail-confirmation .sign-img {
     display: block;
+  }
+}
+
+.contact-us {
+  background-image: url(../img/contact-us/contact-us-bg.png);
+  background-position: right top 50px;
+  margin-bottom: 60px;
+}
+.contact-us-wrap {
+  max-width: 530px;
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .contact-us-wrap {
+    margin-bottom: 60px;
+  }
+}
+.contact-us-wrap .site-form textarea {
+  min-height: 150px;
+}
+@media (max-width: 767.98px) {
+  .contact-us .img-wrap {
+    max-width: 330px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=header.min.css.map */

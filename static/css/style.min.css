@@ -1442,7 +1442,6 @@ img {
   height: auto;
 }
 
-/* Error-Message */
 @keyframes opacity {
   0% {
     opacity: 0.5;
@@ -2805,8 +2804,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .site-modal.sucses-modal {
   text-align: center;
 }
-.site-modal.sucses-modal .modal-header {
+.site-modal.sucses-modal .modal-content .modal-header {
   justify-content: center;
+  margin-bottom: 0;
+}
+.site-modal.sucses-modal .modal-content .modal-title {
+  max-width: 500px;
+  margin: 0 auto;
 }
 .site-modal .modal-dialog {
   flex-direction: column;
@@ -3014,16 +3018,16 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .site-form [contenteditable].error {
   border-color: #FF0000;
 }
-.site-form input.error + .error-mess,
-.site-form textarea.error + .error-mess,
-.site-form [contenteditable].error + .error-mess {
+.site-form input.error ~ .error-mess,
+.site-form textarea.error ~ .error-mess,
+.site-form [contenteditable].error ~ .error-mess {
   padding-top: 4px;
   max-height: 100px;
 }
 @media (max-width: 767.98px) {
-  .site-form input.error + .error-mess,
-.site-form textarea.error + .error-mess,
-.site-form [contenteditable].error + .error-mess {
+  .site-form input.error ~ .error-mess,
+.site-form textarea.error ~ .error-mess,
+.site-form [contenteditable].error ~ .error-mess {
     padding-top: 4px;
   }
 }

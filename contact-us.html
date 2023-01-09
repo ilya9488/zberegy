@@ -172,49 +172,58 @@
           <li class="menu-item curent-item">Результати пошуку</li> <!-- <li class="menu-item curent-item"><a class="menu-item-link" href="#">Результати пошуку</a></li> -->
         </ul>
       </div>
-      <section class="about-us">
-        <div class="container-xl">
+      <section class="contact-us"> .<div class="container-xl">
           <div class="row">
-            <div class="col-12">
-              <h1 class="title">Про проект</h1>
-            </div>
             <div class="col-md-6">
-              <p> Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному… Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
-              <p> Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному… </p>
-              <p> Онлайн Меморіал це не просто сторінка сайту з інформацією про людину, якої вже нема в цьому світу. Це віртуальний пам'ятник або альбом спогадів, який буде завжди поряд із Вами. </p>
-              <p> Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному… Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
-              <p> Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. </p>
-              <p> Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
-            </div>
-            <div class="col-md-6">
-              <div class="about-us-img-wrap">
-                <img class="about-us-img" src="/static/img/about-us/about-us-bg.png" alt="Про нас зобрвження">
+              <div class="contact-us-wrap">
+                <h4>Зв'язатися з нами</h4>
+                <p> Якщо у Вас виникли питання щодо роботи нашого сервісу, маєте цікаві пропозиції щодо його розвитку, варіанти співпраці або Ви помітили помилку, то зв'яжіться з нами, і ми спробуємо максимально швидко відповісти. Ми завжди раді будь-яким новим ідеям та адекватно ставимося до конструктивної критики. </p>
+                <form action="#" class="site-form" id="contact_us_form">
+                  <div class="form-group">
+                    <label for="name">ПІБ</label>
+                    <input type="text" name="name" id="name" placeholder="Ваше Ім’я">
+                    <span class="error-mess">Некоректно заповнене поле</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Введіть Ваш e-mail">
+                    <span class="error-mess">Некоректно заповнене поле</span>
+                  </div>
+                  <label data-dropdown-for="message_subject">Текст повідомлення</label>
+                  <div class="site-dropdown" data-dropdown-id="message_subject"> <!-- hiden elem (select)(!) -->
+                    <select class="select-dropdown" hidden>
+                      <option id="message_subject" value="none">none</option>
+                    </select>
+                    <div class="site-dropdown-header">
+                      <span class="select-sort">Оберіть певну тему</span>
+                      <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232" />
+                      </svg>
+                    </div>
+                    <ul class="site-dropdown-select">
+                      <li class="site-dropdown-options">Тема 1</li>
+                      <li class="site-dropdown-options">Тема 2</li>
+                      <li class="site-dropdown-options">Тема 3</li>
+                      <li class="site-dropdown-options">Iнша тема</li>
+                    </ul>
+                    <span class="error-mess">Оберiть тему</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="text">Текст повідомлення</label>
+                    <textarea name="text" id="text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+                    <span class="textarea-maxlength">0/1000</span>
+                    <span class="error-mess">Не заповнене поле</span>
+                  </div>
+                  <button tepe="submit" class="btn-circle">
+                    <span class="text"> Надіслати </span>
+                  </button>
+                </form>
               </div>
-              <p> Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному… Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
-              <p> Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
-              <p> Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини — пам'ять про неї. </p>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="home-donate" style="background-image: url(static/img/home/home-donate-bg.png), linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,250,255,1) 50%, rgba(255,255,255,1) 100%);">
-        <div class="container-xl">
-          <div class="row">
-            <div class="col-lg-6 col-md-7 text-wrap">
-              <h2>Підтримай Збережи</h2>
-              <p>Ми будемо дуже вдячні Вам за будь-яку підтримку нашого проекту.</p>
-              <a href="#" class="btn-blue btn-donate"> Підтримати Проект <svg class="btn-icon" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.81265 12.5C0.632382 12.5 0.5 12.6348 0.5 12.8261V19.6739C0.5 19.8654 0.632382 20 0.81265 20H2.76671C2.94698 20 3.07936 19.8654 3.07936 19.6739V12.8261C3.07936 12.6348 2.94698 12.5 2.76671 12.5H0.81265ZM24.3656 12.801C24.261 12.7906 24.1603 12.809 24.053 12.8259C23.9125 12.8476 23.7724 12.8933 23.6361 12.9764L17.7479 16.3124C17.0366 17.2038 16.8072 17.3428 15.5593 17.4663C14.0051 17.4927 12.406 17.492 10.8435 17.4911V16.6885H15.4812C16.1087 16.6885 16.4052 16.5435 16.6275 16.3875C16.728 16.3128 16.8031 16.1961 16.8881 16.0865C16.9895 15.9087 17.0965 15.7321 17.0965 15.4343C17.0965 14.9292 16.943 14.6589 16.6797 14.456C16.4163 14.2531 15.9977 14.1299 15.4812 14.1299H13.2144C12.6175 14.1299 11.9863 13.9223 11.3646 13.7286C10.7429 13.5348 10.1139 13.3489 9.74924 13.3273H7.50858C6.83491 13.3273 6.23928 13.5221 5.68478 13.7286C5.12982 13.9353 4.61979 14.1801 4.06942 14.1801H3.9131V19.1718H17.9824C18.1812 19.1637 18.3331 19.1364 18.4253 19.0963H18.4513C18.5971 19.0441 18.6552 19.0209 18.6598 19.0209L24.9649 15.158C25.494 14.8366 25.6604 14.1315 25.3296 13.6028L25.1733 13.3269C24.9841 13.0255 24.6797 12.8411 24.3656 12.8001V12.801Z" fill="currentColor" />
-                  <path d="M14.3061 0C11.2883 0 8.83333 2.45495 8.83333 5.47279C8.83333 8.49063 11.2883 10.9456 14.3061 10.9456C17.324 10.9456 19.7789 8.49063 19.7789 5.47279C19.7789 2.45495 17.324 0 14.3061 0ZM16.0254 7.14456C15.8602 7.38547 15.6436 7.56622 15.3597 7.70115C15.1503 7.79396 14.9323 7.85096 14.7072 7.87216V8.60779C14.7072 8.72008 14.6164 8.8106 14.5044 8.8106H13.8973C13.7851 8.8106 13.6945 8.71979 13.6945 8.60779V7.80857C13.5802 7.78049 13.4677 7.74125 13.3548 7.68969C13.0514 7.56594 12.8068 7.36427 12.6352 7.09299C12.463 6.8412 12.3705 6.547 12.3562 6.19953C12.3516 6.08953 12.4355 5.99615 12.5453 5.9887L13.0904 5.95146C13.2001 5.94516 13.2929 6.02279 13.3058 6.12992C13.3276 6.3124 13.3789 6.46336 13.4545 6.56648C13.5396 6.69425 13.6487 6.77818 13.8137 6.84578C14.1632 6.99961 14.6078 6.9999 14.9154 6.88159C15.0518 6.82315 15.1483 6.75612 15.2122 6.67362C15.2669 6.59513 15.2938 6.51263 15.2938 6.41409C15.2938 6.32156 15.2701 6.25339 15.2125 6.17948C15.1824 6.13937 15.1048 6.06432 14.9005 5.98268C14.8008 5.94974 14.5419 5.87612 14.1477 5.78073C13.6874 5.66586 13.421 5.57878 13.2557 5.48911C13.0096 5.35906 12.8248 5.19693 12.7088 5.00815C12.5899 4.81594 12.5298 4.59651 12.5298 4.35646C12.5298 4.09521 12.6028 3.84628 12.7466 3.61654C12.8956 3.39253 13.1153 3.21664 13.3852 3.1032C13.4754 3.06224 13.5779 3.02786 13.6948 3.00036V2.32404C13.6948 2.21174 13.7856 2.12122 13.8976 2.12122H14.5046C14.6169 2.12122 14.7074 2.21203 14.7074 2.32404V2.96456C14.8899 2.99492 15.0589 3.04104 15.2122 3.10206C15.5087 3.23526 15.7238 3.41372 15.8773 3.6512C16.0312 3.87521 16.118 4.14419 16.1332 4.44583C16.1386 4.55641 16.0544 4.65094 15.9438 4.65839L15.3858 4.69591C15.2781 4.70336 15.1855 4.62659 15.1709 4.52089C15.1397 4.29201 15.0632 4.13216 14.9369 4.03276C14.7934 3.91044 14.5851 3.85344 14.2941 3.85344C14.0091 3.85344 13.7802 3.90872 13.6493 4.00956C13.543 4.09148 13.4932 4.19003 13.4932 4.31951C13.4932 4.41919 13.5244 4.4974 13.586 4.5524C13.6186 4.57818 13.7968 4.69419 14.3729 4.81536C14.8487 4.92766 15.1984 5.02992 15.3901 5.11242C15.6954 5.24992 15.9137 5.42724 16.0418 5.64036C16.1847 5.85435 16.2566 6.09383 16.2566 6.36424C16.2566 6.64555 16.179 6.90794 16.0254 7.14456Z" fill="currentColor" />
-                </svg>
-              </a>
-            </div>
-            <div class="col-lg-6 col-md-5 img-wrap">
-              <picture>
-                <source media="(min-width: 650px)" srcset="static/img/home/donate-desctop.png">
-                <source media="(max-width: 650px)" srcset="static/img/home/donate-mobile.png">
-                <img data-src="static/img/home/donate-desctop.png" alt="">
-              </picture>
+            <div class="col-md-6">
+              <div class="img-wrap">
+                <img src="static/img/contact-us/contact-us.png" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -366,7 +375,239 @@
         </div> <!-- /.row -->
       </div> <!-- /.container -->
     </footer>
-  </main>
+  </main> <!-- all site modals windows --> <!-- Modal complain -->
+  <div class="modal fade site-modal send-message-modal" id="complainModal" tabindex="-1" aria-labelledby="complainModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="complainModalLabel">Повідомити про порушення</h5>
+        </div>
+        <div class="modal-body">
+          <form id="complain_form" class="site-form" action="#">
+            <label data-dropdown-for="message_subject">Причина порушення</label> <!-- <input type="text" id="message_subject" name="message_subject" placeholder="Не вказано"> -->
+            <div class="site-dropdown" data-dropdown-id="message_subject"> <!-- hiden elem (select)(!) -->
+              <select class="select-dropdown d-none">
+                <option value="none">none</option>
+              </select>
+              <div class="site-dropdown-header">
+                <span class="select-sort">Виберіть зі списку</span>
+                <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232" />
+                </svg>
+              </div>
+              <ul class="site-dropdown-select">
+                <li class="site-dropdown-options">Причина порушення 1</li>
+                <li class="site-dropdown-options">Причина порушення 2</li>
+                <li class="site-dropdown-options">Причина порушення 3</li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <label for="message_text">Додатковий коментар</label>
+              <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+              <span class="textarea-maxlength">0/1000</span>
+            </div>
+            <button tepe="submit" class="btn-circle">
+              <span class="text"> Надіслати </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal sucses -->
+  <div class="modal fade site-modal sucses-modal" id="sucsesModal" tabindex="-1" aria-labelledby="sucsesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <svg class="icon-sucses" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="#3ED05E" />
+            <path d="M37.7127 55.6524C37.2949 55.6536 36.8809 55.572 36.4947 55.4124C36.1086 55.2528 35.7578 55.0183 35.4627 54.7224L21.9377 41.2074C21.3977 40.5998 21.1103 39.8088 21.1342 38.9962C21.1581 38.1836 21.4916 37.4109 22.0664 36.8361C22.6412 36.2613 23.414 35.9278 24.2265 35.9039C25.0391 35.88 25.8301 36.1674 26.4377 36.7074L37.7102 47.9574L57.9877 27.6799C58.5954 27.1399 59.3864 26.8525 60.1989 26.8764C61.0115 26.9003 61.7842 27.2338 62.359 27.8086C62.9339 28.3834 63.2673 29.1561 63.2913 29.9687C63.3152 30.7813 63.0277 31.5723 62.4877 32.1799L39.9552 54.7149C39.3577 55.3102 38.5487 55.6446 37.7052 55.6449L37.7127 55.6524Z" fill="white" />
+          </svg>
+        </div>
+        <div class="modal-body">
+          <h6 class="modal-title" id="sucsesModalLabel">Дякуємо, Ваше повідомлення надіслано</h5>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal givers-->
+  <div class="modal fade site-modal giver-modal" id="giverModal" tabindex="-1" aria-labelledby="giverModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="giverModalLabel">Пам'ять вшанували</h5>
+        </div>
+        <div class="modal-body">
+          <div class="giver-block">
+            <div class="giver-img">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="giver-text-wrap">
+              <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
+              <span class="giver-date">дд.мм.рррр</span>
+            </div>
+            <div class="which-gift">
+              <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3">
+            </div>
+          </div>
+          <div class="giver-block">
+            <div class="giver-img">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="giver-text-wrap">
+              <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
+              <span class="giver-date">дд.мм.рррр</span>
+            </div>
+            <div class="which-gift">
+              <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3">
+            </div>
+          </div>
+          <div class="giver-block">
+            <div class="giver-img">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="giver-text-wrap">
+              <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
+              <span class="giver-date">дд.мм.рррр</span>
+            </div>
+            <div class="which-gift">
+              <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            </div>
+          </div>
+          <div class="giver-block">
+            <div class="giver-img">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="giver-text-wrap">
+              <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
+              <span class="giver-date">дд.мм.рррр</span>
+            </div>
+            <div class="which-gift">
+              <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            </div>
+          </div>
+          <div class="giver-block">
+            <div class="giver-img">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="giver-text-wrap">
+              <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
+              <span class="giver-date">дд.мм.рррр</span>
+            </div>
+            <div class="which-gift">
+              <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal (add) gifts -->
+  <div class="modal fade site-modal" id="giftsModal" tabindex="-1" aria-labelledby="giftsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="giftsModalLabel">Оберить меморіальний поминок</h5>
+        </div>
+        <div class="modal-body">
+          <div class="gifts-block">
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-1">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-2">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-4">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-5.png" alt="Подарунок-5">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-6">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-7.png" alt="Подарунок-7">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-8.png" alt="Подарунок-8">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-9.png" alt="Подарунок-9">
+            </div>
+            <div class="gift-img">
+              <img src="static/img/memorials/gifts/gift-10.png" alt="Подарунок-10">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal send message -->
+  <div class="modal fade site-modal send-message-modal" id="sendMessageModal" tabindex="-1" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="sendMessageModalLabel">Написати повідомлення</h5>
+        </div>
+        <div class="modal-body">
+          <form id="send_message_form" class="site-form" action="#">
+            <div class="form-group">
+              <label for="message_subject">Тема повідомлення</label>
+              <input type="text" id="message_subject" name="message_subject" placeholder="Не вказано">
+            </div>
+            <div class="form-group">
+              <label for="message_text">Текст повідомлення</label>
+              <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+              <span class="textarea-maxlength">0/1000</span>
+            </div>
+            <button tepe="submit" class="btn-circle">
+              <span class="text"> Відправити повідомлення </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- scripst & styles -->
   <link rel="stylesheet" href="static/css/style.min.css?_v=fc07c7c206bbe436910930b0c0d9fe0b">
   <script defer src="static/js/common.min.js?_v=fc07c7c206bbe436910930b0c0d9fe0b"></script>
 </body>
