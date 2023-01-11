@@ -1,0 +1,19 @@
+.capabilities-page
+  background-image: url(../img/capabilities/first-cap.png)
+  background-size: 50% auto
+  background-position: right top
+  @include media-breakpoint-down(lg)
+    background-image: none
+  .capabilities
+    margin-bottom: 100px
+    @include media-breakpoint-down(sm)
+      max-width: 500px
+      margin: 0 auto 20px
+  .capabilities-descr
+    margin-bottom: 160px
+    @include media-breakpoint-down(md)
+      margin-bottom: 0
+      .site-accordion
+        margin-bottom: 0
+      &:last-child
+        margin-bottom: 60px

@@ -1,7 +1,11 @@
-.home-capabilities
+.home-capabilities,
+.accordion-images-wrap
   margin-bottom: 100px
   @include media-breakpoint-down(sm)
     margin-bottom: 60px
+  &.revers-type
+    .images-wrap
+      justify-content: flex-end
   .accordion-wrap
     @include media-breakpoint-down(md)
       max-width: 530px
@@ -44,7 +48,7 @@
     border-radius: 10px
     max-width: 90%
     box-shadow: 1px 3px 30px rgba(50, 50, 50, 0.1)
-    transition: top .8s, left .5s, filter .1s
+    transition: top .8s, left .5s, right .5s, filter .1s
     cursor: pointer
     @include media-breakpoint-down(md)
       max-width: 100%

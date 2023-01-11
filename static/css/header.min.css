@@ -6955,6 +6955,43 @@ body *::selection {
     display: block;
   }
 }
+.news .hr:last-child {
+  display: none;
+}
+
+.capabilities-page {
+  background-image: url(../img/capabilities/first-cap.png);
+  background-size: 50% auto;
+  background-position: right top;
+}
+@media (max-width: 1199.98px) {
+  .capabilities-page {
+    background-image: none;
+  }
+}
+.capabilities-page .capabilities {
+  margin-bottom: 100px;
+}
+@media (max-width: 767.98px) {
+  .capabilities-page .capabilities {
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+}
+.capabilities-page .capabilities-descr {
+  margin-bottom: 160px;
+}
+@media (max-width: 991.98px) {
+  .capabilities-page .capabilities-descr {
+    margin-bottom: 0;
+  }
+  .capabilities-page .capabilities-descr .site-accordion {
+    margin-bottom: 0;
+  }
+  .capabilities-page .capabilities-descr:last-child {
+    margin-bottom: 60px;
+  }
+}
 
 .memorial-body {
   margin-bottom: 100px;
@@ -7661,10 +7698,10 @@ body *::selection {
 }
 .contact-us-wrap {
   max-width: 530px;
-  margin: 0 auto;
 }
 @media (max-width: 767.98px) {
   .contact-us-wrap {
+    margin: 0 auto;
     margin-bottom: 60px;
   }
 }
