@@ -888,16 +888,16 @@ p {
   }
 }
 
-.p-pb-40 {
+.p-mb-40 {
   margin-bottom: 40px;
 }
 @media (max-width: 1199.98px) {
-  .p-pb-40 {
+  .p-mb-40 {
     margin-bottom: 30px;
   }
 }
 @media (max-width: 767.98px) {
-  .p-pb-40 {
+  .p-mb-40 {
     margin-bottom: 20px;
   }
 }
@@ -1319,6 +1319,52 @@ ul li {
   ul li {
     line-height: 22px;
   }
+}
+
+ol {
+  padding: 0;
+  list-style: none;
+  counter-reset: li;
+}
+ol h1, ol h2, ol h3, ol h4, ol h5, ol h6 {
+  flex: 1;
+}
+ol h1 + .list-yellow-mark, ol h2 + .list-yellow-mark, ol h3 + .list-yellow-mark, ol h4 + .list-yellow-mark, ol h5 + .list-yellow-mark, ol h6 + .list-yellow-mark {
+  padding-top: 0;
+}
+ol .list-yellow-mark {
+  flex: 100%;
+  padding: 20px 0 0 30px;
+}
+ol .list-yellow-mark li {
+  padding: 0;
+  flex-wrap: nowrap;
+}
+ol li {
+  display: flex;
+  flex-wrap: wrap;
+}
+ol li ol {
+  flex: 100%;
+}
+ol li li {
+  margin-bottom: 10px;
+}
+ol li a {
+  color: #3e9af6;
+}
+ol li a:hover {
+  color: #1f8bf8;
+}
+ol li span {
+  flex: 1;
+  color: rgba(50, 50, 50, 0.8);
+}
+ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+  font-weight: 700;
+  margin-right: 10px;
 }
 
 .list-yellow-mark li {
@@ -2722,6 +2768,34 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+.capabilities-info {
+  background-image: url(../img/capabilities/cap-info-bg.png);
+  margin-bottom: 160px;
+}
+@media (max-width: 991.98px) {
+  .capabilities-info {
+    margin-bottom: 100px;
+    background-position: top center;
+  }
+}
+@media (max-width: 767.98px) {
+  .capabilities-info {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .capabilities-info .text-wrap,
+.capabilities-info .img-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .capabilities-info .text-wrap {
+    margin-bottom: 40px;
+  }
+}
+
 .memorial-sidebar .sidebar-block {
   padding: 30px;
   border-radius: 10px;
@@ -3656,6 +3730,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 .footer .partners-links .partners-item {
+  display: inline-flex;
+  justify-content: center;
   width: 80px;
   margin-left: 40px;
   margin-bottom: 30px;

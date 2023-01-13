@@ -5195,16 +5195,16 @@ p {
   }
 }
 
-.p-pb-40 {
+.p-mb-40 {
   margin-bottom: 40px;
 }
 @media (max-width: 1199.98px) {
-  .p-pb-40 {
+  .p-mb-40 {
     margin-bottom: 30px;
   }
 }
 @media (max-width: 767.98px) {
-  .p-pb-40 {
+  .p-mb-40 {
     margin-bottom: 20px;
   }
 }
@@ -5626,6 +5626,52 @@ ul li {
   ul li {
     line-height: 22px;
   }
+}
+
+ol {
+  padding: 0;
+  list-style: none;
+  counter-reset: li;
+}
+ol h1, ol h2, ol h3, ol h4, ol h5, ol h6 {
+  flex: 1;
+}
+ol h1 + .list-yellow-mark, ol h2 + .list-yellow-mark, ol h3 + .list-yellow-mark, ol h4 + .list-yellow-mark, ol h5 + .list-yellow-mark, ol h6 + .list-yellow-mark {
+  padding-top: 0;
+}
+ol .list-yellow-mark {
+  flex: 100%;
+  padding: 20px 0 0 30px;
+}
+ol .list-yellow-mark li {
+  padding: 0;
+  flex-wrap: nowrap;
+}
+ol li {
+  display: flex;
+  flex-wrap: wrap;
+}
+ol li ol {
+  flex: 100%;
+}
+ol li li {
+  margin-bottom: 10px;
+}
+ol li a {
+  color: #3e9af6;
+}
+ol li a:hover {
+  color: #1f8bf8;
+}
+ol li span {
+  flex: 1;
+  color: rgba(50, 50, 50, 0.8);
+}
+ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+  font-weight: 700;
+  margin-right: 10px;
 }
 
 .list-yellow-mark li {
@@ -6318,7 +6364,7 @@ body *::selection {
     padding: 30px 15px 0;
     margin: 0 auto;
   }
-  .home-page-first .text-wrap .p-pb-40 {
+  .home-page-first .text-wrap .p-mb-40 {
     margin-bottom: 30px;
   }
 }
@@ -6988,9 +7034,67 @@ body *::selection {
   .capabilities-page .capabilities-descr .site-accordion {
     margin-bottom: 0;
   }
-  .capabilities-page .capabilities-descr:last-child {
+}
+@media (max-width: 991.98px) {
+  .capabilities-page .capabilities-descr + .capabilities-descr {
     margin-bottom: 60px;
   }
+}
+
+/* _user_cabinet_ */
+.user-cabinet-menu {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1);
+}
+@media (max-width: 1400px) {
+  .user-cabinet-menu {
+    padding: 15px;
+  }
+}
+.user-cabinet-menu ul {
+  padding: 0;
+}
+.user-cabinet-menu .menu-item {
+  padding: 0;
+  margin-bottom: 16px;
+}
+.user-cabinet-menu .menu-item a {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.user-cabinet-menu .menu-item a .icon-bg {
+  fill: #f2f2f2;
+}
+.user-cabinet-menu .menu-item a:hover .icon-bg {
+  fill: #DBEDFF;
+}
+.user-cabinet-menu .menu-item a.active {
+  background-color: #DBEDFF;
+}
+.user-cabinet-menu .menu-item a.active .icon-bg {
+  fill: #DBEDFF;
+}
+.user-cabinet-menu .menu-item a .menu-icon {
+  margin-right: 20px;
+}
+@media (max-width: 1400px) {
+  .user-cabinet-menu .menu-item a .menu-icon {
+    margin-right: 10px;
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
+@media (max-width: 767.98px) {
+  .user-cabinet-menu .menu-item a .menu-icon {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
+.user-cabinet-data {
+  border: 1px solid red;
 }
 
 .memorial-body {
@@ -7712,6 +7816,68 @@ body *::selection {
   .contact-us .img-wrap {
     max-width: 330px;
     margin: 0 auto;
+  }
+}
+
+.user-cabinet {
+  max-width: 1720px;
+  padding-top: 60px;
+  margin: 0 auto 160px;
+}
+@media (max-width: 991.98px) {
+  .user-cabinet {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 767.98px) {
+  .user-cabinet {
+    margin-bottom: 60px;
+  }
+}
+.user-cabinet .user-cabinet-content {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1);
+}
+@media (max-width: 1400px) {
+  .user-cabinet .user-cabinet-content {
+    padding: 15px;
+  }
+}
+
+.terms-of-use .title {
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .terms-of-use .title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .terms-of-use .title {
+    margin-bottom: 20px;
+  }
+}
+
+.privacy-policy .title {
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .privacy-policy .title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .privacy-policy .title {
+    margin-bottom: 20px;
+  }
+}
+.privacy-policy .list-yellow-mark {
+  padding-left: 30px;
+}
+@media (max-width: 767.98px) {
+  .privacy-policy .list-yellow-mark {
+    padding-left: 20px;
   }
 }
 /*# sourceMappingURL=header.min.css.map */

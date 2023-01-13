@@ -15,9 +15,9 @@ $('.site-dropdown-options').on('click', function () {
       sortCont.dataset.sortType = thisSort
       sortCont.style.flexDirection = 'column'
 			break
-		case 'date':
+    case 'date':
       sortCont.dataset.sortType = thisSort
       sortCont.style.flexDirection = 'column-reverse'
-			break
+      break
 	}
 })

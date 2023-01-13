@@ -32,6 +32,14 @@ $('[data-favorite]').on('click',function(e){
 //     console.log(this);
 //   }
 // })
+
+// Current Menu Item
+$('a').each(function(){
+  if ( this.href === window.location.href
+    && this.href.includes(window.location.pathname))
+    
+    this.classList.add('active')
+})
   
   
 

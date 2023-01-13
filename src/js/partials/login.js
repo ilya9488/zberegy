@@ -52,7 +52,7 @@ $('#login_form').on('submit', function (e) {
 	}
 	setTimeout(() => {
 		if (valid) {
-			location.href = 'user_cabinet.html'
+			location.href = 'user-cabinet.html'
 			localStorage.login = true
 		}
 	}, 1000);
@@ -72,11 +72,17 @@ $('.pass-show').on('click', function () {
 		: (thisInput.type = 'password') && thisSlashEye.removeAttribute('hidden')
 	// thisSlashEye.classList.toggle('hidden')
 })
-$('#btn_logout').on('click', function () {
-		location.href = 'login.html'
-		localStorage.login = false
+$('#btn_logout').on('click', function (e) {
+	e.preventDefault();
+	location.href = 'login.html';
+	localStorage.login = false;
 })
 if (localStorage.login === 'true') {
   $('#page').addClass('IS_LOG_IN')
+	$('a').each(function () {
+		if (this.href.includes('login.html') && !$(this).hasClass('btn-user-login'))
+			this.href = 'user-cabinet.html';
+	})
 }
+
 

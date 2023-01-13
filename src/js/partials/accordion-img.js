@@ -55,7 +55,7 @@ if (screen.width > 992 && $('#accordionCapabilities_2').length !== 0) {
   $('#accordionCapabilities_2 .accordion-btn')[0].setAttribute('aria-expanded', 'true');
   $('#accordionCapabilities_2 .collapse')[0].classList.add('show');
 }
-// can be deleted
+// update accordion
 $(window).on('resize', function () {
   if (screen.width < 992 && $('.accordion-images-wrap').length !== 0) {
     window.location = window.location

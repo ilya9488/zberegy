@@ -134,7 +134,7 @@ p
   margin-bottom: 30px
   @include media-breakpoint-down(sm)
     margin-bottom: 20px
-.p-pb-40
+.p-mb-40
   margin-bottom: 40px
   @include media-breakpoint-down(lg)
     margin-bottom: 30px
@@ -440,6 +440,40 @@ ul
     padding: 0 0 10px 0
     @include media-breakpoint-down(sm)
       line-height: 22px
+
+ol
+  padding: 0
+  list-style: none
+  counter-reset: li
+  h1,h2,h3,h4,h5,h6
+    flex: 1
+    +.list-yellow-mark
+      padding-top: 0
+  .list-yellow-mark
+    flex: 100%
+    padding: 20px 0 0 30px
+    li
+      padding: 0
+      flex-wrap: nowrap
+  li
+    display: flex
+    flex-wrap: wrap
+    ol
+      flex: 100%
+    li
+      margin-bottom: 10px
+    a
+      color: #3e9af6
+      &:hover
+        color: #1f8bf8
+    span
+      flex: 1
+      color: rgba(50, 50, 50, 0.8)
+    &:before
+      counter-increment: li
+      content: counters(li, ".") ". "
+      font-weight: 700
+      margin-right: 10px
 .list-yellow-mark
   li
     display: flex
