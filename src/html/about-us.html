@@ -6,7 +6,10 @@
   <main id="page">
     @@include('_header.html')
     <div id="content">
-      @@include('component/breadcrumbs.html')
+      @@include('component/breadcrumbs.html',{
+        "item": "curent",
+        "text": "Про проект",
+      })
       <section class="about-us">
         <div class="container-xl">
           <div class="row">

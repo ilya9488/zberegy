@@ -18,25 +18,13 @@
     margin-bottom: 40px
     .card-header
       border-bottom: 1px solid #DEDEDE
-      .accordion-btn
-        padding: 0
-        display: flex
-        justify-content: space-between
-        align-items: center
-        width: 100%
-        line-height: 26px
-        font-weight: 700
-        padding: 10px 0 12px
-        @include media-breakpoint-down(sm)
-          font-size: 16px
-          line-height: 22px
-
-        .vertical
-          opacity: 0
-          transition: .4s
-        &.collapsed
-          .vertical
-            opacity: 1
+    .accordion-btn
+      line-height: 26px
+      font-weight: 700
+      padding: 10px 0 12px
+      @include media-breakpoint-down(sm)
+        font-size: 16px
+        line-height: 22px
     .card-body
       padding: 10px 0 20px
   .images-wrap

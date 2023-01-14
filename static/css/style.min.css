@@ -2454,32 +2454,18 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .accordion-images-wrap .site-accordion .card-header {
   border-bottom: 1px solid #DEDEDE;
 }
-.home-capabilities .site-accordion .card-header .accordion-btn,
-.accordion-images-wrap .site-accordion .card-header .accordion-btn {
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+.home-capabilities .site-accordion .accordion-btn,
+.accordion-images-wrap .site-accordion .accordion-btn {
   line-height: 26px;
   font-weight: 700;
   padding: 10px 0 12px;
 }
 @media (max-width: 767.98px) {
-  .home-capabilities .site-accordion .card-header .accordion-btn,
-.accordion-images-wrap .site-accordion .card-header .accordion-btn {
+  .home-capabilities .site-accordion .accordion-btn,
+.accordion-images-wrap .site-accordion .accordion-btn {
     font-size: 16px;
     line-height: 22px;
   }
-}
-.home-capabilities .site-accordion .card-header .accordion-btn .vertical,
-.accordion-images-wrap .site-accordion .card-header .accordion-btn .vertical {
-  opacity: 0;
-  transition: 0.4s;
-}
-.home-capabilities .site-accordion .card-header .accordion-btn.collapsed .vertical,
-.accordion-images-wrap .site-accordion .card-header .accordion-btn.collapsed .vertical {
-  opacity: 1;
 }
 .home-capabilities .site-accordion .card-body,
 .accordion-images-wrap .site-accordion .card-body {
@@ -2889,6 +2875,21 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   padding-top: 6px;
   font-size: 14px;
   line-height: 18px;
+}
+
+.site-accordion .accordion-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+.site-accordion .accordion-btn .vertical {
+  opacity: 0;
+  transition: 0.4s;
+}
+.site-accordion .accordion-btn.collapsed .vertical {
+  opacity: 1;
 }
 
 .site-modal.show {

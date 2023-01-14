@@ -7,7 +7,10 @@
   <main id="page">
     @@include('_header.html')
     <div id="content">
-      @@include('component/breadcrumbs.html')
+      @@include('component/breadcrumbs.html',{
+        "item": "curent",
+        "text": "Політика безпеки",
+      })
       
       <div class="container-xl privacy-policy">
         <div class="row">

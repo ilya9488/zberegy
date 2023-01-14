@@ -6,7 +6,10 @@
   <main id="page">
     @@include('_header.html')
     <div id="content">
-      @@include('component/breadcrumbs.html')
+      @@include('component/breadcrumbs.html',{
+        "item": "curent",
+        "text": "Результати пошуку",
+      })
       @@include('sections/_search_results.html')
     </div>
     @@include('_footer.html')
