@@ -57,51 +57,51 @@
           @include media-breakpoint-down(sm)
             width: 30px
             height: 30px
-
-.fancybox__container,
-.fancybox__container.is-animated
-  display: flex
-  flex-wrap: nowrap
-  flex-direction: row
-  align-items: center
-  justify-content: center
-  opacity: 0
-  &.active
-    opacity: 1
-  @include media-breakpoint-down(sm)
-    flex-direction: column
-  .fancybox__leftCol,
-  .fancybox__rightCol
-    width: 50%
-    max-width: 870px
-    height: calc( 100vh - 100px ) // ( ! )
-    max-height: 920px
-    overflow: hidden
+.memorial-page
+  .fancybox__container,
+  .fancybox__container.is-animated
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    opacity: 0
+    &.active
+      opacity: 1
     @include media-breakpoint-down(sm)
-      width: 100%
-      max-width: 320px
-      max-height: 340px
-      height: calc( 50vh - 100px ) // ( ! )
-  .fancybox__rightCol
-    background-color: #fff
-    max-width: 420px
-    overflow-y: auto
-    @include media-breakpoint-down(sm)
-      max-width: 320px
-      
-  .fancybox__slide
-    padding: 0
-    align-content: center
-    &::before,
-    &::after
-      display: none
-    .fancybox__content
-      min-width: 100%
-      min-height: 100%
-      margin: auto
-      img
+      flex-direction: column
+    .fancybox__leftCol,
+    .fancybox__rightCol
+      width: 50%
+      max-width: 870px
+      height: calc( 100vh - 100px ) // ( ! )
+      max-height: 920px
+      overflow: hidden
+      @include media-breakpoint-down(sm)
+        width: 100%
+        max-width: 320px
+        max-height: 340px
+        height: calc( 50vh - 100px ) // ( ! )
+    .fancybox__rightCol
+      background-color: #fff
+      max-width: 420px
+      overflow-y: auto
+      @include media-breakpoint-down(sm)
+        max-width: 320px
+        
+    .fancybox__slide
+      padding: 0
+      align-content: center
+      &::before,
+      &::after
+        display: none
+      .fancybox__content
         min-width: 100%
         min-height: 100%
-        width: 100%
-        height: 100%
-        object-fit: cover
+        margin: auto
+        img
+          min-width: 100%
+          min-height: 100%
+          width: 100%
+          height: 100%
+          object-fit: cover

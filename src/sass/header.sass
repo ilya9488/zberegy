@@ -106,6 +106,30 @@ body
     background-color: $clear
     margin-left: 70px
     transition: .3s
+    &:focus-within
+      padding-left: 0
+      .btn-search
+        font-size: 16px
+        border-color: #DEDEDE
+        border-radius: 100px
+        padding: 19px
+        transform: scale(100px)
+        color: #959393
+        font-size: 14px
+        font-weight: 400
+        @include media-breakpoint-down(lg)
+          padding: 0 10px
+          font-size: 12px
+        @include media-breakpoint-down(sm)
+          padding: 0 5px 0 10px
+          font-size: 0
+        &:hover
+          color: $text-c
+          background-color: #fafafa
+        .search-icon
+          margin-right: 10px
+          @include media-breakpoint-down(sm)          
+            margin-right: 5px
     @media (max-width: 1400px)
       margin-left: 15px
     @include media-breakpoint-down(lg)
@@ -117,8 +141,8 @@ body
       top: 50%
       transform: translate(50%, -50%)
       max-width: 0
-      @include media-breakpoint-down(sm)
-        transform: translate(0, -50%)
+    @include media-breakpoint-down(sm)
+      transform: translate(0, -50%)
     &.active
       @include media-breakpoint-down(lg)
         width: 50%
@@ -126,6 +150,8 @@ body
         max-width: 100%
         padding: 5px 5px 5px 20px
         border-color: #DEDEDE
+        &:focus-within
+          padding-left: 0
       @include media-breakpoint-down(sm)
         right: 0
         width: calc( 100% - 40px )
@@ -133,9 +159,17 @@ body
       opacity: .3
       z-index: -1
     .btn-search
+      display: inline-flex
+      align-items: center
       padding: 0
       margin-right: 10px
       margin-left: auto
+      font-size: 0
+      border-right: 1px solid transparent
+      &::after
+        content: attr(data-btn-name)
+      .search-icon
+        min-width: 14px
     .search-input
       flex: auto
       border: none
@@ -151,13 +185,17 @@ body
     .btn-search-reset
       padding: 0
       margin-right: 20px
+      min-width: 8px
       transition: .3s
+      @include media-breakpoint-down(sm)
+        margin-right: 15px
       &.hide
         opacity: 0
         pointer-events: none
 
   .btn-search-toggler
     padding: 0
+    min-width: 20px
     &-close
       padding: 0
   // Btn-Menu Toggler
@@ -212,7 +250,6 @@ body
   .btn-user-mesage
     @include media-breakpoint-down(lg)
       margin-top: 20px
-
 
   .btn-user
     &-login,
@@ -271,6 +308,7 @@ body
 @import "sections/about_us"
 @import "sections/news"
 @import "sections/capabilities"
+@import "sections/news_single_post"
 /* _user_cabinet_ */
 @import "sections/_user_cabinet_menu"
 @import "sections/_user_cabinet_data"
@@ -287,3 +325,4 @@ body
 @import "pages/terms_of_use"
 @import "pages/privacy_policy"
 @import "pages/faq"
+@import "pages/donate"

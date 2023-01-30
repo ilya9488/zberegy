@@ -2,16 +2,31 @@
 // $('#sucsesModal').modal('show')
 
 // delete this code (start code)
-$('[data-title]').each(function () {
-  let thisElPos = this.getBoundingClientRect(),
+// setInterval(function () {
+function dataTitlePos() {
+$('[data-title]').each(function() {
+    let thisElPos = this.getBoundingClientRect(),
       thisElRightPos = window.innerWidth - thisElPos.right
-  if (thisElPos.x < 100) {
-		this.classList.add('left')
-	}
-  if (thisElRightPos < 100) {
-		this.classList.add('right')
-	}
+    if (thisElPos.x < 100) {
+      this.classList.remove('right')
+      this.classList.add('left')
+    } else {
+      this.classList.remove('left')
+    }
+    if (thisElRightPos < 100) {
+      this.classList.remove('left')
+      this.classList.add('right')
+    } else {
+      this.classList.remove('right')
+    }
+  })
+}
+dataTitlePos()
+
+$(window).on('click', function(){
+  setTimeout(() => { dataTitlePos() }, 500);
 })
+
 $('.btn-lock').on('click',function(e){
   e.preventDefault() // because we are inside the link
 })

@@ -24,7 +24,7 @@ window.addEventListener("resize", function(){
 })
 
 function windowResz(){
-  if(screen.width <= 1199){
+  if (window.innerWidth <= 1199){
     footerNavCollapse(true)
   }else{
     footerNavCollapse(false)

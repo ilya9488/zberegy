@@ -32,18 +32,6 @@
     .btn-login-google,
     .btn-login-fb
       margin-bottom: 16px
-    .dash-block
-      display: flex
-      align-items: center
-      margin-bottom: 20px
-      &::before,
-      &::after
-        content: ''
-        flex: auto
-        height: 1px
-        background-color: #DEDEDE
-      .dash-text
-        margin: 0 30px
     .label-pass
       display: flex
       justify-content: space-between
@@ -57,12 +45,6 @@
     .pass-wrap
       position: relative
       margin-bottom: 20px
-      .pass-show
-        position: absolute
-        right: 15px
-        top: 50%
-        transform: translateY(-50%)
-        cursor: pointer
       input
         margin: 0
     .btn-login
@@ -112,6 +94,3 @@
       display: none
       @include media-breakpoint-down(md)
         display: block
-
-        
-    

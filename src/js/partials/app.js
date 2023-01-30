@@ -83,3 +83,38 @@ $('.about-memorial .btn-excerpt').on('click', function (e) {
   $(this)[0].classList.toggle('open')
   $(this)[0].parentNode.classList.toggle('close')
 })
+
+// btn-copy pay data
+$('.btn-copy').on('click', function () {
+  const thisCopyText = this.parentNode.querySelector('.copy-data').innerText;
+  // copy
+  navigator.clipboard.writeText(thisCopyText);
+  // tooltipe info
+  this.dataset.title = 'Скопійовано: ' + thisCopyText
+  setTimeout(function(){
+    this.dataset.title = 'Копіювати'
+  }.bind(this), 3000);
+})
+// btn-copy share link post
+if ($('[data-news-copy]')[0]){ $('[data-news-copy]')[0].dataset.newsCopy = window.location.href}
+
+$('[data-news-copy]').on('click', function () {
+  // copy
+  navigator.clipboard.writeText(this.dataset.newsCopy);
+  this.dataset.title = 'Скопійовано посилання на цю сторінку'
+  setTimeout(function(){
+    this.dataset.title = 'Копіювати'
+  }.bind(this), 3000);
+})
+
+$('.btn-copy').on('click', function () {
+  const thisCopyText = this.parentNode.querySelector('.copy-data').innerText;
+  // copy
+  navigator.clipboard.writeText(thisCopyText);
+  // tooltipe info
+  this.dataset.title = 'Скопійовано: ' + thisCopyText
+  setTimeout(function(){
+    this.dataset.title = 'Копіювати'
+  }.bind(this), 3000);
+})
+

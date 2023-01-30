@@ -1,5 +1,5 @@
 //  Comment Body  ( cut text... + img )
-const commBodMaxH = screen.width > 768 ? 160 : 150 ;
+const commBodMaxH = window.innerWidth > 768 ? 160 : 150 ;
 function commentParent(){
 let commentBodyArr = {}
 for (let i = 0; i < $('.comments-user-wrap .comment-body').length; i++) {

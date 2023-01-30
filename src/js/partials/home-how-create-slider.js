@@ -21,7 +21,7 @@
     ]
   });
 // }
-// if(screen.width <= 992){
+// if(window.innerWidth <= 992){
 // }
 // $(window).on('resize', function (){
 //   mySlickInit()
@@ -30,6 +30,6 @@
 // }) 
 // // can be deleted: $(window).on...
 // //   // console.log(slickInit());
-// //   if(screen.width < 992){
+// //   if(window.innerWidth < 992){
 // //     mySlickInit()
 // //   }

@@ -29,6 +29,8 @@ window.onload = function (){
 	//= partials/site-dropdown.js
 	//= partials/memorial-gallery.js
 	//= partials/gifts.js
+	//= partials/post-slider.js
+	//= partials/post-gallery .js
 	//= partials/comments-excerpt.js
 	//= partials/for-tests.js
 	/*_forms_*/
@@ -39,4 +41,5 @@ window.onload = function (){
 	//= partials/comments-to-foto-form.js
 	//= partials/comments-to-comment-form.js
 	//= partials/contact-us.js
+	//= partials/donate-form.js
 }

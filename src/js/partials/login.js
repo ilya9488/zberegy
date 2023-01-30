@@ -58,11 +58,6 @@ $('#login_form').on('submit', function (e) {
 	}, 1000);
 })
 
-
-
-$('.pass-show').each(function(){
-	$(this)[0].style.top = $(this).next()[0].offsetHeight / 2
-})
 $('.pass-show').on('click', function () {
 	let thisInput = $(this)[0].parentNode.querySelector('input'),
 		thisSlashEye = $(this).find('.eye-slash')[0]

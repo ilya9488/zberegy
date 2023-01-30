@@ -19,3 +19,10 @@ $('[contenteditable]').on('keyup', function () {
 		? $(this).removeClass('active')
 		: $(this).addClass('active')
 })
+
+// pass icon or curency icon...
+setTimeout(function () {
+  $('.icon-for-input').each(function () {
+    $(this).css('top', $(this).next()[0].offsetHeight / 2)
+  })
+}, 100);

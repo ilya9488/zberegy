@@ -13,7 +13,7 @@
       @@include('component/btns_links.html', {
         "type": "btn",
         "style": "search",
-        "attr": " id=\"search_btn\" type=\"button\" aria-label=\"Кнопка активувати поле пошуку\" "
+        "attr": " id=\"search_btn\" type=\"button\" aria-label=\"Кнопка активувати поле пошуку\" data-btn-name=\"Знайти\" "
       })
       <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input">
       <!-- <div id="search-result" class=""></div> -->
@@ -36,7 +36,7 @@
           "type": "link",
           "style": "blue",
           "text": "Підтримати Проект",
-          "attr": "href=\"#\"",
+          "attr": "href=\"donate.html\" ",
           "class": "d-none d-xl-block"
         })
         @@include('component/btns_links.html', {
