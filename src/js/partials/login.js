@@ -12,6 +12,7 @@ function getFile(fileName) {
 }
 getFile('/admin-data.json')
 
+
 $('#login_form').on('submit', function (e) {
 	e.preventDefault()
 	const adminEmail = admin_data.email,
@@ -52,7 +53,7 @@ $('#login_form').on('submit', function (e) {
 	}
 	setTimeout(() => {
 		if (valid) {
-			location.href = 'user-cabinet.html'
+			location.href = 'user-cabinet-data.html'
 			localStorage.login = true
 		}
 	}, 1000);
@@ -76,7 +77,7 @@ if (localStorage.login === 'true') {
   $('#page').addClass('IS_LOG_IN')
 	$('a').each(function () {
 		if (this.href.includes('login.html') && !$(this).hasClass('btn-user-login'))
-			this.href = 'user-cabinet.html';
+			this.href = 'user-cabinet-data.html';
 	})
 }
 

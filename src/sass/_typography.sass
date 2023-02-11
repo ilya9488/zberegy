@@ -4,18 +4,18 @@
 @import "icons"
 @import "component/btns_links"
 
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover, 
-// input:-webkit-autofill:focus, 
-// input:-webkit-autofill:active
-//   -webkit-box-shadow: 0 0 0 50px $block-bg inset
-//   -webkit-text-fill-color: $dark
-// input:-webkit-autofill::first-line
-//   font-size: 16px
-//   -webkit-font-size: 16px
-//   line-height: 24px
-//   font-family: inherit
-  // font-weight: 400
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+  -webkit-box-shadow: 0 0 0 50px $clear inset
+  // -webkit-text-fill-color: $dark
+input:-webkit-autofill::first-line
+  font-size: 16px
+  -webkit-font-size: 16px
+  line-height: 24px
+  font-family: $text
+  font-weight: 400
 
 *
   &::-webkit-scrollbar
@@ -300,7 +300,8 @@ img, svg
   transition: .5s
 img
   height: auto
-
+.t-c
+  text-align: center
 // global animations
 @keyframes opacity
   0%

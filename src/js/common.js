@@ -42,4 +42,6 @@ window.onload = function (){
 	//= partials/comments-to-comment-form.js
 	//= partials/contact-us.js
 	//= partials/donate-form.js
+	//= partials/user-cabinet-form.js
+	//= partials/user-cabinet-pass.js
 }

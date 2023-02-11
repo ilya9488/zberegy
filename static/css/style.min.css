@@ -1131,6 +1131,21 @@ a:hover {
   color: #3E9AF6;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+}
+
+input:-webkit-autofill::first-line {
+  font-size: 16px;
+  -webkit-font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
 *::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -1517,6 +1532,10 @@ img, svg {
 
 img {
   height: auto;
+}
+
+.t-c {
+  text-align: center;
 }
 
 @keyframes opacity {
@@ -3246,6 +3265,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   cursor: pointer;
 }
 .site-form .form-group .icon-for-input.input-curency {
+  left: 20px;
+}
+.site-form .form-group .icon-lock {
   left: 20px;
 }
 
