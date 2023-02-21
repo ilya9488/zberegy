@@ -1,4 +1,5 @@
-let old_user_data_filds = '', new_user_data_filds, userImgPath ='';
+let old_user_data_filds = '', new_user_data_filds, userImgPath = $('.user-img img').length ? $('.user-img img')[0].src : '';
+
 function oldUserDataFilds() {
   old_user_data_filds = '';
   $('#user_data_form input').each(function () {
@@ -81,6 +82,7 @@ $('#btn_edit_user_data').on('click', function (e) {
   } else {
     // remember the old image value
     $('#load_user_img')[0].dataset.oldValue = userImgPath
+    console.log(userImgPath);
     e.target.form.setAttribute('disabled', 'true')
     e.target.form.dataset.change = false
     e.target.textContent = "Редагувати"
@@ -143,9 +145,6 @@ $('#btn_edit_user_data').on('click', function (e) {
     }, 100);
     
   })
-
-  
-
 })
 
 // btn form.reset

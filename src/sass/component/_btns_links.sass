@@ -288,7 +288,34 @@ button
     background-color: #222222
   &:focus
     background-color: #323232
-  
+
+// Btn-Reset
+.btn-reset
+  padding: 20px 30px
+  color: $link
+  &:hover
+    color: darken($link, 20%)
+// Btn in moderatoon
+.btn-in-moder,
+.btn-rejected
+  color: $error
+  &:hover
+    color: darken($error, 10%)
+.btn-approved
+  color: #3ED05E
+  &:hover
+    color: darken(#3ED05E, 10%)
+// Btn edit, rejected
+.btn-edit
+  color: $text-c
+  &:hover
+    color: $link
+// Btn delete
+.btn-delete
+  color: $title-c
+  &:hover
+    color: darken($error, 20%)
+
 // links
 a
   text-decoration: none
