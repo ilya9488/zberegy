@@ -23,6 +23,7 @@ $('[data-title]').each(function() {
 }
 dataTitlePos()
 
+// Update tooltip position (!)
 $(window).on('click', function(){
   setTimeout(() => { dataTitlePos() }, 500);
 })
@@ -30,9 +31,11 @@ $(window).on('click', function(){
 $('.btn-lock').on('click',function(e){
   e.preventDefault() // because we are inside the link
 })
-
-$('[data-favorite]').on('click',function(e){
+// (!important a > button)
+$('a button').on('click', function (e) {
   e.preventDefault() // because we are inside the link
+})
+$('[data-favorite]').on('click',function(e){
   if($(this)[0].getAttribute('data-favorite') === 'remove-from-favorite'){
     this.setAttribute('data-favorite', 'add-to-favorite')
     this.setAttribute('data-title', 'Додати в Обрані Меморіали')
@@ -47,14 +50,6 @@ $('[data-favorite]').on('click',function(e){
 //     console.log(this);
 //   }
 // })
-
-// Current Menu Item
-$('a').each(function(){
-  if ( this.href === window.location.href
-    && this.href.includes(window.location.pathname))
-    
-    this.classList.add('active')
-})
   
   
 

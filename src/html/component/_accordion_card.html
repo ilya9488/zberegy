@@ -2,9 +2,9 @@
   <div class="card-header" id="heading_@@num">
     @@include('btns_links.html', {
       "type": "btn",
-      "style": "accordion-btn",
+      "style": "accordion",
       "text": "@@title",
-      "attr": " class=\"accordion-btn collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_@@num\" aria-expanded=\"@@if(context.show !== 'true'){false}@@if(context.show === 'true'){true}\" aria-controls=\"collapse_@@num\" "
+      "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_@@num\" aria-expanded=\"@@if(context.show !== 'true'){false}@@if(context.show === 'true'){true}\" aria-controls=\"collapse_@@num\" "
     })
   </div>
   <div id="collapse_@@num" class="collapse @@if(context.show === 'true'){show}" aria-labelledby="heading_@@num" data-parent="#accordion@@parent">

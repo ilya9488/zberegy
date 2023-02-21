@@ -1,5 +1,9 @@
-.search-results
+/* Search Results & Favorites Memlrials */
+.search-results,
+.memorials-preview-wrap
   margin-bottom: 160px
+  @include media-breakpoint-down(lg)
+    margin-bottom: 100px
   @include media-breakpoint-down(md)
     margin-bottom: 60px
   .link-to-memorial:hover
@@ -61,7 +65,7 @@
       @media (max-width: 400px)
         margin-bottom: 10px
 
-  .search-item
+  .preview-item
     position: relative
     display: flex
     border-radius: 10px
@@ -81,6 +85,11 @@
       margin-right: 30px
       border-top-left-radius: 10px
       border-bottom-left-radius: 10px
+      @include media-breakpoint-down(lg)
+        min-width: 200px
+        min-height: 200px
+        width: 200px
+        height: 200px
       @include media-breakpoint-down(md)
         min-width: 150px
         min-height: 150px
@@ -111,7 +120,7 @@
           font-size: 16px
           line-height: 18px
           margin-bottom: 5px
-          padding-right: 70px
+          padding-right: 80px
       .loc,
       .text
         margin-bottom: 10px
@@ -130,20 +139,25 @@
       position: absolute
       top: 30px
       right: 30px
+      @include media-breakpoint-down(lg)
+        top: 20px
+        right: 15px
       @include media-breakpoint-down(sm)
         top: 10px
         right: 10px
-      .btn-lock,
-      .btn-add-to-favorite
+      // .btn-lock,
+      // .btn-add-to-favorite
+      button, a
         padding: 0
-
-      .btn-lock
         margin-right: 20px
+        @include media-breakpoint-down(lg)
+          margin-right: 15px
         @include media-breakpoint-down(sm)
           margin-right: 10px
-        .icon-lock
+        svg
+          @include media-breakpoint-down(lg)
+            width: 20px
+            height: 20px
           @include media-breakpoint-down(sm)
             width: 16px
             height: 16px
-
-              

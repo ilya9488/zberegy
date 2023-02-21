@@ -260,27 +260,8 @@ body
         display: none
       &:hover
         color: #eeeeee
-    &-mesage
-      position: relative
-      &[data-count="0"]
-        &::before
-          opacity: 0
-      &::before
-        content: attr(data-count)
-        position: absolute
-        top: 6px
-        right: 6px
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 20px
-        height: 20px
-        border-radius: 50%
-        color: #323232
-        background-color: $yellow
-        font-size: 10px
-        line-height: 10px
-        transition: opacity .3s
+    // &-mesage
+      
     // If user (not) logged in
     &-cabinet,
     &-mesage
@@ -312,6 +293,9 @@ body
 /* _user_cabinet_ */
 @import "sections/_user_cabinet_menu"
 @import "sections/_user_cabinet_data"
+@import "sections/_user_cabinet_favorites"
+@import "sections/_user_cabinet_management"
+@import "sections/_user_cabinet_management_create"
 
 // ? to style.sass ?
 @import "sections/memorial_body"

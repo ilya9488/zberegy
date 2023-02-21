@@ -1,3 +1,6 @@
+// all input autocomplete off
+$('input').each(function () { this.setAttribute('autocomplete', 'off') })
+
 // textarea letter counter
 $('textarea').on('input', function(){
   $(this).next('.textarea-maxlength').text($(this).val().length + '/' + $(this)[0].getAttribute('maxlength'))

@@ -11,7 +11,7 @@
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="complainModalLabel">Повідомити про порушення</h5>
+        <h4 class="modal-title" id="complainModalLabel">Повідомити про порушення</h4>
       </div>
       <div class="modal-body">
         <form id="complain_form" class="site-form" action="#">
@@ -44,7 +44,7 @@
             "type": "btn",
             "style": "circle",
             "text": "Надіслати",
-            "attr": " tepe=\"submit\" "
+            "attr": " type=\"submit\" "
           })
         </form>
       </div>
@@ -70,7 +70,7 @@
         </svg>
       </div>
       <div class="modal-body">
-        <h6 class="modal-title" id="sucsesModalLabel">Дякуємо, Ваше повідомлення надіслано</h5>
+        <h6 class="modal-title" id="sucsesModalLabel">Дякуємо, Ваше повідомлення надіслано</h6>
       </div>
     </div>
   </div>
@@ -213,10 +213,125 @@
             "type": "btn",
             "style": "circle",
             "text": "Відправити повідомлення",
-            "attr": " tepe=\"submit\" "
+            "attr": " type=\"submit\" "
           })
         </form>
       </div>
+    </div>
+  </div>
+</div>
+<!-- Modal deleting account -->
+<div class="modal fade site-modal send-message-modal" id="delAccModal" tabindex="-1" aria-labelledby="delAccModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+            <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+          </svg>
+        </span>
+      </button>
+      <div class="modal-header">
+        <h4 class="modal-title" id="delAccModalLabel">Видалення акаунту</h5>
+      </div>
+      <div class="modal-body">
+        <form id="del_account_form" class="del-account-form site-form" action="#" disabled="true">
+          <label for="confirm_remove" class="custom-checkbox-wrap">
+            <input hidden type="checkbox" name="confirm_remove" id="confirm_remove">
+            <span class="custom-checkbox">&#10004;</span>
+            <span>Я усвідомленно видаляю свій акаунт</span>
+          </label>
+          <p>Відмовляюсь від можливості отримувати будь яку інформацію з сервісу Збережи та відповіді на мої коментарі.</p>
+          
+          <div class="form-group">
+            <label for="message_text">Будь ласка, введіть причину</label>
+            <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+            <span class="textarea-maxlength">0/1000</span>
+            <span class="error-mess">Будь ласка, введіть причину</span>
+          </div>
+          @@include('../component/btns_links.html', {
+            "type": "btn",
+            "style": "yellow",
+            "text": "Надіслати",
+            "attr": " type=\"submit\" "
+          })
+          <button class="btn-reset" type="reset" data-dismiss="modal">Скасувати</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal deleting account -->
+<div class="modal fade site-modal del-acc-alert-modal" id="delAccAlert" tabindex="-1" aria-labelledby="delAccAlert" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+            <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+          </svg>
+        </span>
+      </button>
+      <div class="modal-header">
+        <h4 class="modal-title" id="delAccAlert">Видалення акаунту</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ви є Хранителем одного або кількох Онлайн Меморіалів. Щоб видалити свій обліковий запис Вам необхідно спочатку видалити Меморіали. Після цього Ви отримаєте можливість видалити свій запис.</p>
+        <button class="btn-green" data-dismiss="modal">Зрозуміло</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal deleting memorial -->
+<div class="modal fade site-modal del-memorial-modal" id="delMemorialModal" tabindex="-1" aria-labelledby="delMemorialModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+            <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+          </svg>
+        </span>
+      </button>
+      <div class="modal-header">
+        <h4 class="modal-title" id="delMemorialModal">Ви впевнені що бажаєте видалити обраний Онлайн Меморіал?</h4>
+      </div>
+      <div class="modal-body">
+        @@include("../component/btns_links.html", {
+          "type": "btn",
+          "style": "yellow",
+          "text": "Так",
+          "attr": " id=\"btnConfirmDelMemorial\" data-which-del-memorial data-confirm-text=\"Онлайн Меморіал видалено.\" "
+        })
+        @@include("../component/btns_links.html", {
+          "type": "btn",
+          "style": "yellow",
+          "text": "Ні",
+          "attr": " data-dismiss=\"modal\" "
+        })
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal info memorial -->
+<div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+            <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+          </svg>
+        </span>
+      </button>
+      <div class="modal-header">
+        <h4 class="modal-title" id="infoModal">Онлайн Меморіал видалено.</h4>
+      </div>
+      <div class="modal-body"></div>
     </div>
   </div>
 </div>

@@ -69,3 +69,14 @@ function footerNavCollapse(e) {
 //     scrollTop: $($.attr(this, 'href')).offset().top - headerH
 //   }, 500);
 // });
+
+
+// Current Menu Item
+// function currentMenuItem(){
+$('a').each(function(){
+  if (   this.href === window.location.href
+      )
+    this.classList.add('active')
+})
+// }
+// currentMenuItem()

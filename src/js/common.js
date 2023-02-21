@@ -32,6 +32,7 @@ window.onload = function (){
 	//= partials/post-slider.js
 	//= partials/post-gallery .js
 	//= partials/comments-excerpt.js
+	//= partials/user-cabinet.js
 	//= partials/for-tests.js
 	/*_forms_*/
 	//= partials/form-all.js
@@ -44,4 +45,5 @@ window.onload = function (){
 	//= partials/donate-form.js
 	//= partials/user-cabinet-form.js
 	//= partials/user-cabinet-pass.js
+	//= partials/form-del-account.js
 }

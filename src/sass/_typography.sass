@@ -141,6 +141,17 @@ p
     margin-bottom: 30px
   @include media-breakpoint-down(sm)
     margin-bottom: 20px
+a,
+span
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
+  color: inherit
+.link-blue, .btn-blue-txt
+  color: #3E9AF6
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
 
 ul
   padding: 5px 0 0 0 
@@ -221,6 +232,38 @@ ol
           margin: 0
           margin-right: 10px
           transition: .3s
+// couter mes..
+[data-count]
+  position: relative
+  // display: inline-flex
+  &::before
+    content: attr(data-count)
+    position: absolute
+    top: 6px
+    // right: 6px
+    left: calc( 100% - 26px )
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-width: 20px
+    min-height: 20px
+    padding: 0 4px
+    word-spacing: 0
+    border-radius: 100px
+    color: #323232
+    background-color: $yellow
+    font-size: 10px
+    line-height: 10px
+    transition: opacity .3s
+    @include media-breakpoint-down(md)
+      min-width: 15px
+      min-height: 15px
+      font-size: 8px
+      line-height: 8px
+[data-count=""],
+[data-count="0"]
+  &::before
+    opacity: 0
 // -- text --
 .dash-block
   display: flex
@@ -260,6 +303,7 @@ ol
     max-width: 280px
     font-size: 14px
     line-height: 20px
+    color: $text-c
     padding: 30px
     background-color: #F2F2F2
     border-radius: 5px

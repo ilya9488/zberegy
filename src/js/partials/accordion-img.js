@@ -15,7 +15,7 @@ $('.accordion-images-wrap').each(function () {
     // Smooth anchor scrolling
     if (window.innerWidth < 992) {
       // close accordion in second container
-      $('.accordion-btn').not(this).each(function () {
+      $('.btn-accordion').not(this).each(function () {
         if (this.tagName === 'BUTTON') this.classList.add('collapsed');
       })
       $('.site-accordion .collapse').each(function () {
@@ -59,8 +59,8 @@ function accordionImg(pos, thisParent, i, zi) {
 
 /* show / hide #accordion 2 first elem */
 if (window.innerWidth > 992 && $('#accordionCapabilities_2').length !== 0) {
-  $('#accordionCapabilities_2 .accordion-btn')[0].classList.remove('collapsed');
-  $('#accordionCapabilities_2 .accordion-btn')[0].setAttribute('aria-expanded', 'true');
+  $('#accordionCapabilities_2 .btn-accordion')[0].classList.remove('collapsed');
+  $('#accordionCapabilities_2 .btn-accordion')[0].setAttribute('aria-expanded', 'true');
   $('#accordionCapabilities_2 .collapse')[0].classList.add('show');
 }
 

@@ -123,11 +123,11 @@ function htmlConcat() {
           'file' : 'version.json'
         }
     }))
-    .pipe(formatHtml())
     .pipe(removeEmptyLines({
       removeComments: false,
-      removeSpaces: false
+      removeSpaces: true
     }))
+    .pipe(formatHtml())
     .pipe(dest('./'))
     .pipe(browserSync.stream());
 }
