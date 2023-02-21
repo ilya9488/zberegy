@@ -3,13 +3,14 @@ if ($('.donate').length !== 0) {
   const payWarn = $('.pay-period-warn')[0],
     emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/,
     validFilds = {
-      pay_enother: false,
+      pay_amount: false,
       email: false,
       card_num: false,
       card_date: false,
       card_cvc: false
     };
-  
+  let payAmount = 0;
+    
   function isAllValidFilds() {
     return Object.keys(validFilds).filter(function (k) { return !validFilds[k] }).length
   }
@@ -17,11 +18,13 @@ if ($('.donate').length !== 0) {
   function typePeriod(e) {
     if (e === true) {
       $('.type-period').each(function () { this.removeAttribute('hidden') })
-      $('[for="pay_1"]').trigger('click')
+      if ($('[type="radio"][name="sum"]:not(#pay_enother):checked').length === 0) {
+        $('[for="pay_1"]').trigger('click')
+      }
     }
     if (e === false) {
       $('.type-period').each(function () { this.setAttribute('hidden', '') })
-      $('[for="pay_enother"]').trigger('click')
+        $('[for="pay_enother"]').trigger('click')
     }
   }
   typePeriod($('#pay_monthly')[0].checked)
@@ -63,25 +66,37 @@ if ($('.donate').length !== 0) {
       : $('#donate_submit')[0].setAttribute("disabled","");
   }
 
+  // pay 100 / 200... input
+  $('[type="radio"][name="sum"]:not(#pay_enother)').on('change', function () {
+    payAmount = this.value
+  })
   // pay enother input
+  $('#pay_enother').on('change', function () {
+    payAmount = $('#payEnother')[0].value
+  })
   $('#payEnother').on('input', function () {
     // only numbers
     let thisValue = this.value.replace(/[^0-9]/g, '');
     thisValue = thisValue.startsWith('0') ? thisValue.slice(1) : thisValue;
     this.value = thisValue;
+    payAmount = thisValue;
     // validation
     payEnotherValid.call(this)
   })
-  function payEnotherValid() {
-    if ($(this).val() == '') {
-      $(this).addClass('error');
-      validFilds.pay_enother = false;
-      $('#formCard')[0].hidden = true;
-      $('#donate_submit')[0].removeAttribute("disabled");
+  function payEnotherValid(){
+    if ($('#pay_enother')[0].checked) {
+      if ($(this).val() == '') {
+        $(this).addClass('error');
+        validFilds.pay_amount = false;
+        $('#formCard')[0].hidden = true;
+        $('#donate_submit')[0].removeAttribute("disabled");
+      } else {
+        $(this).removeClass('error')
+        validFilds.pay_amount = true;
+        if(validFilds.email === false) $('#formCard')[0].hidden = true;
+      }
     } else {
-      $(this).removeClass('error')
-      validFilds.pay_enother = true;
-      if(validFilds.email === false) $('#formCard')[0].hidden = true;
+      validFilds.pay_amount = true
     }
   }
 
@@ -104,7 +119,7 @@ if ($('.donate').length !== 0) {
         $('#donate_submit')[0].removeAttribute("disabled")
       } else {
         validFilds.email = true
-        if (validFilds.pay_enother === false) $('#formCard')[0].hidden = true;
+        if (validFilds.pay_amount === false) $('#formCard')[0].hidden = true;
       }
     })
   })
@@ -226,8 +241,8 @@ if ($('.donate').length !== 0) {
 
       let inputId = $(this).attr('id')
 
-      // pay enother sum
-      if (inputId === 'payEnother' && $('#pay_enother')[0].checked) {
+      // pay amount sum ( enother / proposed )
+      if (inputId === 'payEnother') {
         payEnotherValid.call(this)
       }
       // email
@@ -237,7 +252,7 @@ if ($('.donate').length !== 0) {
     })
 
     // show formCard
-    if (validFilds.pay_enother === true && validFilds.email === true){
+    if (validFilds.pay_amount === true && validFilds.email === true){
       $('#formCard')[0].hidden = false;
       isAllValidFilds() === 0 ? donSubmDisEnab(1) : donSubmDisEnab(0);
     }
@@ -260,6 +275,7 @@ if ($('.donate').length !== 0) {
           if (!$('.load-block .pay-success')[0].hidden) { $('.load-block .pay-success')[0].hidden = true }
           $('.load-block')[0].hidden = false
           $('.load-block .pay-in-process')[0].hidden = false
+          $('#you_paid_amount')[0].innerText = payAmount
           donSubmDisEnab(0)
           setTimeout(function() {
             $('.load-block .pay-in-process')[0].hidden = true
