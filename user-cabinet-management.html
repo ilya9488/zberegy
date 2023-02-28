@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=10d4c43cd40b124bfd2615b9194367b3">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=93529f97d049d32041b5125d9e7b3688">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -391,34 +391,33 @@
                     </div>
                   </a>
                 </div>
-                <div class="accordion" id="accordionCriateMemorial">
+                <div class="site-accordion-type-br" id="accordionCriateMemorial">
                   <div class="card">
                     <div class="card-header" id="headCrMem_1">
-                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCrMem_1" aria-expanded="true" aria-controls="collapseCrMem_1">
+                      <button class="btn-accordion" type="button" data-toggle="collapse" data-target="#collapseCrMem_1" aria-expanded="true" aria-controls="collapseCrMem_1">
                         <span>Життєпис</span>
                         <svg class="icon-accordion-brecket" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" fill="#323232" fill-opacity="0.6" />
+                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" />
                         </svg>
                       </button>
                     </div>
                     <div id="collapseCrMem_1" class="collapse show" aria-labelledby="headCrMem_1" data-parent="#accordionCriateMemorial">
                       <div class="card-body">
-                        <form class="site-form">
+                        <form class="site-form form-create-memorial" id="form_create_memorial">
                           <h6>Головне фото</h6>
                           <div class="img-wrap">
-                            <img src="../../img/no-photo.jpg" alt="">
-                          </div>
-                          <h6>Особисті дані</h6>
+                            <img src="static/img/no-foto.jpg" alt="">
+                          </div> <!-- <h6>Особисті дані</h6> -->
                         </form>
                       </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="headCrMem_2">
-                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_2" aria-expanded="false" aria-controls="collapseCrMem_2">
+                      <button class="btn-accordion collapsed collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_2" aria-expanded="false" aria-controls="collapseCrMem_2">
                         <span>Галерея</span>
                         <svg class="icon-accordion-brecket" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" fill="#323232" fill-opacity="0.6" />
+                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" />
                         </svg>
                       </button>
                     </div>
@@ -428,10 +427,10 @@
                   </div>
                   <div class="card">
                     <div class="card-header" id="headCrMem_3">
-                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_3" aria-expanded="false" aria-controls="collapseCrMem_3">
+                      <button class="btn-accordion collapsed collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_3" aria-expanded="false" aria-controls="collapseCrMem_3">
                         <span>Пам'ятні дати</span>
                         <svg class="icon-accordion-brecket" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" fill="#323232" fill-opacity="0.6" />
+                          <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" />
                         </svg>
                       </button>
                     </div>
@@ -896,8 +895,8 @@
       </div>
     </div>
   </div> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=10d4c43cd40b124bfd2615b9194367b3">
-  <script defer src="static/js/common.min.js?_v=10d4c43cd40b124bfd2615b9194367b3"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=93529f97d049d32041b5125d9e7b3688">
+  <script defer src="static/js/common.min.js?_v=93529f97d049d32041b5125d9e7b3688"></script>
 </body>
 
 </html>

@@ -126,4 +126,28 @@
     .icon-lock
       left: 20px
 
+form[disabled=true]:not(#user_data_form)
+  [type=submit]
+    background-color: #F2F2F2
+    color: rgba(50, 50, 50, 0.4)
+    pointer-events: none
+
+.custom-checkbox-wrap
+  display: flex
+  align-items: center
+.custom-checkbox
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 20px
+  height: 20px
+  color: #3E9AF6
+  background-color: $clear
+  border: 1px solid #DEDEDE
+  border-radius: 4px
+  margin-right: 10px
+  font-size: 0
+  transition: .2s
+input:checked + .custom-checkbox
+  font-size: 14px
     
