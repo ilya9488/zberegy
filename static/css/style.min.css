@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*_Variable Colors_*/
 /*_Variable Colors SVG_*/
 /*_Variable borders radius*/
@@ -1159,6 +1160,23 @@ button:focus-visible {
   color: #990000;
 }
 
+.btn-add-foto {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #3E9AF6;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-add-foto:hover {
+  color: #2780d9;
+}
+.btn-add-foto svg {
+  margin-right: 13px;
+}
+
 a {
   text-decoration: none;
   color: rgba(50, 50, 50, 0.8);
@@ -1337,6 +1355,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1199.98px) {
   h6, .h6 {
@@ -1371,6 +1390,15 @@ p {
 @media (max-width: 767.98px) {
   .p-mb-40 {
     margin-bottom: 20px;
+  }
+}
+
+small {
+  font-size: 14px;
+}
+@media (max-width: 767.98px) {
+  small {
+    font-size: 12px;
   }
 }
 
@@ -1628,6 +1656,15 @@ img {
   text-align: center;
 }
 
+.red-t {
+  color: #FF0000;
+}
+
+@media (min-width: 992px) {
+  .pl-xl-15 {
+    padding-left: 15px !important;
+  }
+}
 @keyframes opacity {
   0% {
     opacity: 0.5;
@@ -2554,6 +2591,119 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: block;
 }
 
+/**
+ * @package PickMeUp
+ * @author  Nazar Mokrynskyi <nazar@mokrynskyi.com>
+ * @license 0BSD
+ */
+.pickmeup {
+  background: #000;
+  border-radius: 10px;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  position: absolute;
+  touch-action: manipulation;
+}
+.pickmeup * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pickmeup.pmu-flat {
+  position: relative;
+}
+.pickmeup.pmu-hidden {
+  display: none;
+}
+.pickmeup .pmu-instance {
+  display: inline-block;
+  height: 13.8em;
+  padding: 0.5em;
+  text-align: center;
+  width: 15em;
+}
+.pickmeup .pmu-instance .pmu-button {
+  color: #eee;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.pickmeup .pmu-instance .pmu-today {
+  background: #17384d;
+  color: #88c5eb;
+}
+.pickmeup .pmu-instance .pmu-button:hover {
+  background: transparent;
+  color: #88c5eb;
+}
+.pickmeup .pmu-instance .pmu-not-in-month {
+  color: #666;
+}
+.pickmeup .pmu-instance .pmu-disabled,
+.pickmeup .pmu-instance .pmu-disabled:hover {
+  color: #333;
+  cursor: default;
+}
+.pickmeup .pmu-instance .pmu-selected {
+  background: #136a9f;
+  color: #eee;
+}
+.pickmeup .pmu-instance .pmu-not-in-month.pmu-selected {
+  background: #17384d;
+}
+.pickmeup .pmu-instance nav {
+  color: #eee;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 2em;
+}
+.pickmeup .pmu-instance nav *:first-child :hover {
+  color: #88c5eb;
+}
+.pickmeup .pmu-instance nav .pmu-prev,
+.pickmeup .pmu-instance nav .pmu-next {
+  display: none;
+  height: 2em;
+  width: 1em;
+}
+.pickmeup .pmu-instance nav .pmu-month {
+  width: 14em;
+}
+.pickmeup .pmu-instance .pmu-years *,
+.pickmeup .pmu-instance .pmu-months * {
+  display: inline-block;
+  line-height: 3.6em;
+  width: 3.5em;
+}
+.pickmeup .pmu-instance .pmu-day-of-week {
+  color: #999;
+  cursor: default;
+}
+.pickmeup .pmu-instance .pmu-day-of-week *,
+.pickmeup .pmu-instance .pmu-days * {
+  display: inline-block;
+  line-height: 1.5em;
+  width: 2em;
+}
+.pickmeup .pmu-instance .pmu-day-of-week * {
+  line-height: 1.8em;
+}
+.pickmeup .pmu-instance:first-child .pmu-prev,
+.pickmeup .pmu-instance:last-child .pmu-next {
+  display: block;
+}
+.pickmeup .pmu-instance:first-child .pmu-month,
+.pickmeup .pmu-instance:last-child .pmu-month {
+  width: 13em;
+}
+.pickmeup .pmu-instance:first-child:last-child .pmu-month {
+  width: 12em;
+}
+.pickmeup:not(.pmu-view-days) .pmu-days, .pickmeup:not(.pmu-view-days) .pmu-day-of-week, .pickmeup:not(.pmu-view-months) .pmu-months, .pickmeup:not(.pmu-view-years) .pmu-years {
+  display: none;
+}
+
 /*_Sections_*/
 .home-capabilities,
 .accordion-images-wrap {
@@ -3330,11 +3480,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 .site-form .error-mess {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
   display: block;
   overflow: hidden;
   max-height: 0;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 12px;
   color: #FF0000;
   transition: 0.3s;
 }
@@ -3399,22 +3552,27 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: block;
   margin-bottom: 16px;
 }
-.site-form .form-group {
+.site-form .form-group,
+.site-form .input-group {
   position: relative;
 }
-.site-form .form-group .icon-for-input {
+.site-form .form-group .icon-for-input,
+.site-form .input-group .icon-for-input {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.site-form .form-group .icon-for-input.pass-show {
+.site-form .form-group .icon-for-input.pass-show,
+.site-form .input-group .icon-for-input.pass-show {
   right: 15px;
   cursor: pointer;
 }
-.site-form .form-group .icon-for-input.input-curency {
+.site-form .form-group .icon-for-input.input-curency,
+.site-form .input-group .icon-for-input.input-curency {
   left: 20px;
 }
-.site-form .form-group .icon-lock {
+.site-form .form-group .icon-lock,
+.site-form .input-group .icon-lock {
   left: 20px;
 }
 
@@ -3441,11 +3599,29 @@ form[disabled=true]:not(#user_data_form) [type=submit] {
   border-radius: 4px;
   margin-right: 10px;
   font-size: 0;
+  font-weight: 900;
   transition: 0.2s;
+}
+.custom-checkbox::before {
+  content: "✓";
+}
+.custom-checkbox-box {
+  width: 19px;
+  height: 19px;
+  box-shadow: 0 0 0 1px #DEDEDE;
+  border: 4px solid #ffffff;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-right: 10px;
 }
 
 input:checked + .custom-checkbox {
   font-size: 14px;
+}
+
+input:checked + .custom-checkbox-box {
+  box-shadow: 0 0 0 1px #3E9AF6;
+  background-color: #3E9AF6;
 }
 
 .comments-wrap {
@@ -3827,6 +4003,72 @@ input:checked + .custom-checkbox {
   color: #323232;
   border-color: #FAD101;
   background-color: #FAD101;
+}
+
+.pickmeup {
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.pickmeup nav div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pickmeup nav .pmu-prev,
+.pickmeup nav .pmu-next {
+  line-height: 32px;
+  padding: 0 20px 0 15px;
+}
+.pickmeup nav .pmu-month {
+  flex: auto;
+}
+.pickmeup .pmu-day-of-week {
+  align-items: center;
+}
+.pickmeup .pmu-day-of-week div {
+  flex: auto;
+}
+.pickmeup .pmu-day-of-week div {
+  color: #3a3a3a;
+  font-weight: 500;
+}
+.pickmeup .pmu-instance {
+  width: 100%;
+}
+.pickmeup .pmu-instance .pmu-days .pmu-button {
+  padding: 5px 0;
+}
+.pickmeup .pmu-instance .pmu-button {
+  width: 14.2857142857%;
+  color: #5B5B5B;
+}
+.pickmeup .pmu-instance .pmu-button:hover {
+  background-color: #fff8d2;
+  color: rgba(50, 50, 50, 0.8);
+}
+.pickmeup .pmu-instance .pmu-button.pmu-not-in-month {
+  color: #c0c0c0;
+}
+.pickmeup .pmu-instance .pmu-button.pmu-selected {
+  background-color: #ffed95;
+}
+.pickmeup .pmu-instance .pmu-button.pmu-selected.pmu-today {
+  background-color: #ffed95;
+}
+.pickmeup .pmu-instance .pmu-button.pmu-today:not(.pmu-selected) {
+  background-color: transparent;
+}
+.pickmeup .pmu-instance .pmu-button.pmu-today:not(.pmu-selected):hover {
+  background-color: #fff8d2;
+}
+.pickmeup .pmu-instance .pmu-button.pmu-saturday, .pickmeup .pmu-instance .pmu-button.pmu-sunday {
+  color: #B0742E;
+}
+.pickmeup .pmu-years .pmu-button,
+.pickmeup .pmu-months .pmu-button {
+  width: 25%;
 }
 
 /*_Pages_*/
