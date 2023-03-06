@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=93529f97d049d32041b5125d9e7b3688">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -50,31 +50,39 @@
             <path d="M12.3048 40.6827C13.2 40.6827 13.9258 39.9516 13.9258 39.0496C13.9258 38.1477 13.2 37.4165 12.3048 37.4165C11.4096 37.4165 10.6838 38.1477 10.6838 39.0496C10.6838 39.9516 11.4096 40.6827 12.3048 40.6827Z" fill="currentColor" />
           </svg>
         </a>
-        <div class="search-wrap">
-          <button id="search_btn" type="button" aria-label="Кнопка активувати поле пошуку" data-btn-name="Знайти" class="btn-search">
-            <svg class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
+        <div>
+          <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="25" fill="#F2F2F2"></circle>
+              <path d="M35.0547 15H14.9453C13.3213 15 12 16.3503 12 18.01V31.99C12 33.6497 13.3213 35 14.9453 35H35.0547C36.6787 35 38 33.6497 38 31.99V18.01C38 16.3503 36.6787 15 35.0547 15ZM37.1875 18.01V31.99C37.1875 32.459 37.0414 32.8934 36.7938 33.2493L27.7904 22.5794L36.6446 16.5591C36.9819 16.9448 37.1875 17.4532 37.1875 18.01ZM35.0547 15.8303C35.3645 15.8301 35.6706 15.8993 35.9515 16.0331L25 23.4794L14.0485 16.0331C14.3293 15.8993 14.6355 15.8301 14.9453 15.8303H35.0547ZM12.8125 31.99V18.01C12.8125 17.4532 13.0181 16.9448 13.3554 16.5592L22.2096 22.5794L13.2062 33.2493C12.9586 32.8934 12.8125 32.459 12.8125 31.99ZM14.9453 34.1697C14.5372 34.17 14.1376 34.0499 13.7946 33.8238L22.9045 23.0519L24.775 24.3237C24.8417 24.369 24.9199 24.3932 25 24.3932C25.0801 24.3932 25.1583 24.369 25.225 24.3237L27.0955 23.0519L36.2054 33.8238C35.8624 34.0499 35.4628 34.17 35.0547 34.1697H14.9453Z" fill="#323232"></path>
             </svg>
-          </button>
-          <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
-          <button class="btn-search-reset hide">
-            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.8828 0.117299C7.7264 -0.0390995 7.4736 -0.0390995 7.31721 0.117299L4.00005 3.43446L0.682892 0.117299C0.526494 -0.0390995 0.273696 -0.0390995 0.117298 0.117299C-0.0390995 0.273697 -0.0390995 0.526494 0.117298 0.682892L3.43446 4.00005L0.117298 7.31721C-0.0390995 7.47361 -0.0390995 7.7264 0.117298 7.8828C0.195297 7.9608 0.297696 8 0.400095 8C0.502494 8 0.604893 7.9608 0.682892 7.8828L4.00005 4.56564L7.31721 7.8828C7.39521 7.9608 7.4976 8 7.6 8C7.7024 8 7.8048 7.9608 7.8828 7.8828C8.0392 7.7264 8.0392 7.47361 7.8828 7.31721L4.56564 4.00005L7.8828 0.682892C8.0392 0.526494 8.0392 0.273697 7.8828 0.117299Z" fill="#323232" fill-opacity="0.8" />
-            </svg>
-          </button>
-          <button class="btn-search-toggler close d-xl-none">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="10" fill="#F2F2F2" />
-              <path d="M13.625 9.99997C13.625 10.1119 13.5823 10.2239 13.4968 10.3093L9.12184 14.6843C8.95089 14.8552 8.67406 14.8552 8.50321 14.6843C8.33237 14.5133 8.33226 14.2365 8.50321 14.0657L12.5689 9.99997L8.50321 5.93428C8.33226 5.76332 8.33226 5.48649 8.50321 5.31565C8.67417 5.14481 8.951 5.1447 9.12184 5.31565L13.4968 9.69065C13.5823 9.77608 13.625 9.88808 13.625 9.99997Z" fill="#323232" fill-opacity="0.8" />
+          </a>
+          <div class="search-wrap">
+            <button id="search_btn" type="button" aria-label="Кнопка активувати поле пошуку" data-btn-name="Знайти" class="btn-search">
+              <svg class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
+              </svg>
+            </button>
+            <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
+            <button class="btn-search-reset hide">
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.8828 0.117299C7.7264 -0.0390995 7.4736 -0.0390995 7.31721 0.117299L4.00005 3.43446L0.682892 0.117299C0.526494 -0.0390995 0.273696 -0.0390995 0.117298 0.117299C-0.0390995 0.273697 -0.0390995 0.526494 0.117298 0.682892L3.43446 4.00005L0.117298 7.31721C-0.0390995 7.47361 -0.0390995 7.7264 0.117298 7.8828C0.195297 7.9608 0.297696 8 0.400095 8C0.502494 8 0.604893 7.9608 0.682892 7.8828L4.00005 4.56564L7.31721 7.8828C7.39521 7.9608 7.4976 8 7.6 8C7.7024 8 7.8048 7.9608 7.8828 7.8828C8.0392 7.7264 8.0392 7.47361 7.8828 7.31721L4.56564 4.00005L7.8828 0.682892C8.0392 0.526494 8.0392 0.273697 7.8828 0.117299Z" fill="#323232" fill-opacity="0.8" />
+              </svg>
+            </button>
+            <button class="btn-search-toggler close d-xl-none">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#F2F2F2" />
+                <path d="M13.625 9.99997C13.625 10.1119 13.5823 10.2239 13.4968 10.3093L9.12184 14.6843C8.95089 14.8552 8.67406 14.8552 8.50321 14.6843C8.33237 14.5133 8.33226 14.2365 8.50321 14.0657L12.5689 9.99997L8.50321 5.93428C8.33226 5.76332 8.33226 5.48649 8.50321 5.31565C8.67417 5.14481 8.951 5.1447 9.12184 5.31565L13.4968 9.69065C13.5823 9.77608 13.625 9.88808 13.625 9.99997Z" fill="#323232" fill-opacity="0.8" />
+              </svg>
+            </button>
+          </div>
+          <button class="btn-search-toggler d-xl-none">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15" cy="15" r="15" fill="#F2F2F2" />
+              <path d="M21.9146 21.5021L17.6548 17.2423C18.5396 16.2599 19.0834 14.9647 19.0834 13.5416C19.0833 10.486 16.5973 8 13.5417 8C10.486 8 8 10.486 8 13.5417C8 16.5973 10.486 19.0834 13.5417 19.0834C14.9647 19.0834 16.2599 18.5396 17.2424 17.6548L21.5021 21.9146C21.5591 21.9715 21.6337 22 21.7084 22C21.783 22 21.8576 21.9715 21.9146 21.9146C22.0285 21.8006 22.0285 21.616 21.9146 21.5021ZM13.5417 18.5C10.8079 18.5 8.58335 16.2758 8.58335 13.5417C8.58335 10.8076 10.8079 8.58332 13.5417 8.58332C16.2755 8.58332 18.5 10.8076 18.5 13.5417C18.5 16.2758 16.2755 18.5 13.5417 18.5Z" fill="#323232" />
             </svg>
           </button>
         </div>
-        <button class="btn-search-toggler d-xl-none">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="15" fill="#F2F2F2" />
-            <path d="M21.9146 21.5021L17.6548 17.2423C18.5396 16.2599 19.0834 14.9647 19.0834 13.5416C19.0833 10.486 16.5973 8 13.5417 8C10.486 8 8 10.486 8 13.5417C8 16.5973 10.486 19.0834 13.5417 19.0834C14.9647 19.0834 16.2599 18.5396 17.2424 17.6548L21.5021 21.9146C21.5591 21.9715 21.6337 22 21.7084 22C21.783 22 21.8576 21.9715 21.9146 21.9146C22.0285 21.8006 22.0285 21.616 21.9146 21.5021ZM13.5417 18.5C10.8079 18.5 8.58335 16.2758 8.58335 13.5417C8.58335 10.8076 10.8079 8.58332 13.5417 8.58332C16.2755 8.58332 18.5 10.8076 18.5 13.5417C18.5 16.2758 16.2755 18.5 13.5417 18.5Z" fill="#323232" />
-          </svg>
-        </button>
         <nav class="header-nav navbar-expand-xl">
           <div class="navbar-collapse collapse btn-wrap" id="headerMenu">
             <a href="login.html" class="btn-green d-none d-xl-block"> Створити Меморіал </a>
@@ -394,35 +402,404 @@
                 <div class="site-accordion-type-br" id="accordionCriateMemorial">
                   <div class="card">
                     <div class="card-header" id="headCrMem_1">
-                      <button class="btn-accordion" type="button" data-toggle="collapse" data-target="#collapseCrMem_1" aria-expanded="true" aria-controls="collapseCrMem_1">
+                      <button class="btn-accordion collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_1" aria-expanded="true" aria-controls="collapseCrMem_1">
                         <span>Життєпис</span>
                         <svg class="icon-accordion-brecket" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" />
                         </svg>
                       </button>
                     </div>
-                    <div id="collapseCrMem_1" class="collapse show" aria-labelledby="headCrMem_1" data-parent="#accordionCriateMemorial">
+                    <div id="collapseCrMem_1" class="collapse" aria-labelledby="headCrMem_1" data-parent="#accordionCriateMemorial">
                       <div class="card-body">
                         <form class="site-form form-create-memorial" id="form_create_memorial">
                           <h6>Головне фото</h6>
-                          <div class="img-wrap">
-                            <img src="static/img/no-foto.jpg" alt="">
-                          </div> <!-- <h6>Особисті дані</h6> -->
+                          <div class="select-img-wrap">
+                            <div class="select-img">
+                              <img src="static/img/no-foto.jpg" alt="Зображення акаунта">
+                            </div>
+                            <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="load_memorial_img" id="load_memorial_img">
+                            <label class="btn-load-select-img" for="load_memorial_img">
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="currentColor" />
+                                <path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white" />
+                              </svg>
+                            </label>
+                            <button class="btn-del-select-img" id="del_memorial_img" data-reset-img="static/img/no-foto.jpg">
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="currentColor" />
+                                <path d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z" fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z" fill="white" />
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="row fields-wrap">
+                            <div class="col-12">
+                              <h6>Особисті дані</h6>
+                            </div>
+                            <div class="col-xl-4">
+                              <div class="form-group">
+                                <label for="memorial_last_name">Прізвище*</label>
+                                <input type="text" id="memorial_last_name" placeholder="Введіть Прізвище">
+                                <span class="error-mess">Вкажіть Прізвище</span>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label for="memorial_name">Ім'я*</label>
+                                <input type="text" id="memorial_name" placeholder="Введіть Ім'я">
+                                <span class="error-mess">Вкажіть ім'я</span>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label for="memorialsurname">По батькові*</label>
+                                <input type="text" id="memorial_surname" placeholder="Введіть По батькові">
+                                <span class="error-mess">Вкажіть По батькові</span>
+                              </div>
+                            </div>
+                            <div class="col-xl-4">
+                              <label for="birth_day">Дата народження*</label>
+                              <div class="form-group">
+                                <div class="form-group">
+                                  <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.22907 1.57434H4.81106V0.466472C4.81106 0.233236 5.0009 0 5.3173 0C5.6337 0 5.88682 0.233236 5.88682 0.466472V1.57434H14.1132V0.466472C14.1132 0.233236 14.3663 0 14.6827 0C14.9358 0 15.1889 0.233236 15.1889 0.466472V1.57434H16.7709C18.5428 1.57434 19.9982 2.91545 19.9982 4.4898V17.0262C19.9982 18.6589 18.5428 20 16.7709 20H3.22907C1.45724 20 0.0018034 18.6589 0.0018034 17.0262V4.4898C0.0018034 2.91545 1.45724 1.57434 3.22907 1.57434ZM15.1889 2.5656V3.73178C15.1889 4.02332 14.9358 4.25656 14.6827 4.25656C14.3663 4.25656 14.1132 4.02332 14.1132 3.73178V2.5656H5.88682V3.73178C5.88682 4.02332 5.6337 4.25656 5.3173 4.25656C5.0009 4.25656 4.81106 4.02332 4.81106 3.73178V2.5656H3.22907C2.02675 2.5656 1.07756 3.44023 1.07756 4.4898V6.23907H18.9224V4.4898C18.9224 3.44023 17.9732 2.5656 16.7709 2.5656H15.1889ZM18.9224 7.23032H1.07756V17.0262C1.07756 18.0758 2.02675 19.0087 3.22907 19.0087H16.7709C17.9732 19.0087 18.9224 18.0758 18.9224 17.0262V7.23032Z" fill="#323232" fill-opacity="0.8" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.73441 8.74636H11.2656C11.582 8.74636 11.8351 8.97959 11.8351 9.27114V11.5452C11.8351 11.8367 11.582 12.07 11.2656 12.07H8.73441C8.41801 12.07 8.16489 11.8367 8.16489 11.5452V9.27114C8.16489 8.97959 8.41801 8.74636 8.73441 8.74636ZM14.1132 8.74636H16.5811C16.8975 8.74636 17.1506 8.97959 17.1506 9.27114V11.5452C17.1506 11.8367 16.8975 12.07 16.5811 12.07H14.1132C13.7968 12.07 13.5437 11.8367 13.5437 11.5452V9.27114C13.5437 8.97959 13.7968 8.74636 14.1132 8.74636ZM3.35563 13.5277H5.88682C6.20322 13.5277 6.45634 13.7609 6.45634 14.0525V16.3265C6.45634 16.6181 6.20322 16.8513 5.88682 16.8513H3.35563C3.03923 16.8513 2.78611 16.6181 2.78611 16.3265V14.0525C2.78611 13.7609 3.03923 13.5277 3.35563 13.5277ZM8.73441 13.5277H11.2656C11.582 13.5277 11.8351 13.7609 11.8351 14.0525V16.3265C11.8351 16.6181 11.582 16.8513 11.2656 16.8513H8.73441C8.41801 16.8513 8.16489 16.6181 8.16489 16.3265V14.0525C8.16489 13.7609 8.41801 13.5277 8.73441 13.5277ZM14.1132 13.5277H16.5811C16.8975 13.5277 17.1506 13.7609 17.1506 14.0525V16.3265C17.1506 16.6181 16.8975 16.8513 16.5811 16.8513H14.1132C13.7968 16.8513 13.5437 16.6181 13.5437 16.3265V14.0525C13.5437 13.7609 13.7968 13.5277 14.1132 13.5277Z" fill="#323232" fill-opacity="0.8" />
+                                  </svg>
+                                  <input readonly type="text" id="birth_day" value="" placeholder="дд.мм.рррр">
+                                  <span class="error-mess">Вкажіть Дату</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label for="death_day">Дата смерті*</label>
+                                <div class="form-group">
+                                  <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.22907 1.57434H4.81106V0.466472C4.81106 0.233236 5.0009 0 5.3173 0C5.6337 0 5.88682 0.233236 5.88682 0.466472V1.57434H14.1132V0.466472C14.1132 0.233236 14.3663 0 14.6827 0C14.9358 0 15.1889 0.233236 15.1889 0.466472V1.57434H16.7709C18.5428 1.57434 19.9982 2.91545 19.9982 4.4898V17.0262C19.9982 18.6589 18.5428 20 16.7709 20H3.22907C1.45724 20 0.0018034 18.6589 0.0018034 17.0262V4.4898C0.0018034 2.91545 1.45724 1.57434 3.22907 1.57434ZM15.1889 2.5656V3.73178C15.1889 4.02332 14.9358 4.25656 14.6827 4.25656C14.3663 4.25656 14.1132 4.02332 14.1132 3.73178V2.5656H5.88682V3.73178C5.88682 4.02332 5.6337 4.25656 5.3173 4.25656C5.0009 4.25656 4.81106 4.02332 4.81106 3.73178V2.5656H3.22907C2.02675 2.5656 1.07756 3.44023 1.07756 4.4898V6.23907H18.9224V4.4898C18.9224 3.44023 17.9732 2.5656 16.7709 2.5656H15.1889ZM18.9224 7.23032H1.07756V17.0262C1.07756 18.0758 2.02675 19.0087 3.22907 19.0087H16.7709C17.9732 19.0087 18.9224 18.0758 18.9224 17.0262V7.23032Z" fill="#323232" fill-opacity="0.8" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.73441 8.74636H11.2656C11.582 8.74636 11.8351 8.97959 11.8351 9.27114V11.5452C11.8351 11.8367 11.582 12.07 11.2656 12.07H8.73441C8.41801 12.07 8.16489 11.8367 8.16489 11.5452V9.27114C8.16489 8.97959 8.41801 8.74636 8.73441 8.74636ZM14.1132 8.74636H16.5811C16.8975 8.74636 17.1506 8.97959 17.1506 9.27114V11.5452C17.1506 11.8367 16.8975 12.07 16.5811 12.07H14.1132C13.7968 12.07 13.5437 11.8367 13.5437 11.5452V9.27114C13.5437 8.97959 13.7968 8.74636 14.1132 8.74636ZM3.35563 13.5277H5.88682C6.20322 13.5277 6.45634 13.7609 6.45634 14.0525V16.3265C6.45634 16.6181 6.20322 16.8513 5.88682 16.8513H3.35563C3.03923 16.8513 2.78611 16.6181 2.78611 16.3265V14.0525C2.78611 13.7609 3.03923 13.5277 3.35563 13.5277ZM8.73441 13.5277H11.2656C11.582 13.5277 11.8351 13.7609 11.8351 14.0525V16.3265C11.8351 16.6181 11.582 16.8513 11.2656 16.8513H8.73441C8.41801 16.8513 8.16489 16.6181 8.16489 16.3265V14.0525C8.16489 13.7609 8.41801 13.5277 8.73441 13.5277ZM14.1132 13.5277H16.5811C16.8975 13.5277 17.1506 13.7609 17.1506 14.0525V16.3265C17.1506 16.6181 16.8975 16.8513 16.5811 16.8513H14.1132C13.7968 16.8513 13.5437 16.6181 13.5437 16.3265V14.0525C13.5437 13.7609 13.7968 13.5277 14.1132 13.5277Z" fill="#323232" fill-opacity="0.8" />
+                                  </svg>
+                                  <input readonly type="text" id="death_day" value="" placeholder="дд.мм.рррр">
+                                  <span class="error-mess">Вкажіть Дату</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label>Країна народження*</label>
+                                <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+                                  <input class="select-dropdown" hidden id="selected_country">
+                                  <div class="site-dropdown-header">
+                                    <span class="select-sort">Виберіть зі списку</span>
+                                    <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"></path>
+                                    </svg>
+                                  </div>
+                                  <ul class="site-dropdown-select" id="country"> </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4">
+                              <div class="form-group">
+                                <label>Місто народження*</label>
+                                <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+                                  <input class="select-dropdown" hidden id="selected_city">
+                                  <div class="site-dropdown-header">
+                                    <span class="select-sort">Виберіть зі списку</span>
+                                    <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"></path>
+                                    </svg>
+                                  </div>
+                                  <ul class="site-dropdown-select" id="city">
+                                    <li class="site-dropdown-options dis">Виберіть спочатку країну</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label>Релігія</label>
+                                <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+                                  <input class="select-dropdown" hidden name="selected_religion" id="selected_religion">
+                                  <div class="site-dropdown-header">
+                                    <span class="select-sort">Виберіть зі списку</span>
+                                    <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"></path>
+                                    </svg>
+                                  </div>
+                                  <ul class="site-dropdown-select">
+                                    <li class="site-dropdown-options" data-val="orthodox">Православ'я</li>
+                                    <li class="site-dropdown-options" data-val="catholic">Католицизм</li>
+                                    <li class="site-dropdown-options" data-val="islam">Іслам</li>
+                                    <li class="site-dropdown-options" data-val="judaism">Юдаїзм</li>
+                                    <li class="site-dropdown-options" data-val="taoizm">Таосизм</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <h6>Шаблони</h6>
+                            </div>
+                            <div class="col-12">
+                              <div class="templates-top-bg">
+                                <label for="standart" class="custom-checkbox-wrap">
+                                  <input checked hidden type="radio" id="standart" name="templates">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Стандартний</span>
+                                </label>
+                                <label for="standart">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/standart.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="templates-top-bg">
+                                <label for="war_woman" class="custom-checkbox-wrap">
+                                  <input hidden type="radio" id="war_woman" name="templates">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Військовослужбовець (чоловік)</span>
+                                </label>
+                                <label for="war_woman">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/war-man.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="templates-top-bg">
+                                <label for="war_man" class="custom-checkbox-wrap">
+                                  <input hidden type="radio" id="war_man" name="templates">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Військовослужбовець (жінка)</span>
+                                </label>
+                                <label for="war_man">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/war-woman.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="templates-top-bg">
+                                <label for="war_boy" class="custom-checkbox-wrap">
+                                  <input hidden type="radio" id="war_boy" name="templates">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Дитина (хлопчик)</span>
+                                </label>
+                                <label for="war_boy">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/boy.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="templates-top-bg">
+                                <label for="war_girl" class="custom-checkbox-wrap">
+                                  <input hidden type="radio" id="war_girl" name="templates">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Дитина (дівчинка)</span>
+                                </label>
+                                <label for="war_girl">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/girl.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="templates-top-bg"> <!-- <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="load_memorial_img" id="load_memorial_img"> -->
+                                <input hidden type="file" accept="image/*" id="donl_templ" name="templates">
+                                <label class="btn-downl-templ" for="donl_templ">
+                                  <span>Завантажте шаблон</span>
+                                  <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path class="down-arr" d="M10 1.0625V12.4346" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18.9375 12.4375V18.125C18.9375 18.3405 18.8519 18.5472 18.6995 18.6995C18.5472 18.8519 18.3405 18.9375 18.125 18.9375H1.875C1.65951 18.9375 1.45285 18.8519 1.30048 18.6995C1.1481 18.5472 1.0625 18.3405 1.0625 18.125V12.4375" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </label>
+                                <div class="img-wrap">
+                                  <img id="donl_templ_img" src="static/img/fake-img.png" alt="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <h6>Епітафія</h6>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="epitaph">Тут Ви можете додати епітафію. Розмір тексту повинен бути не менш за 50 символів та не більше ХХХХ символів.</label>
+                                <textarea name="epitaph" id="epitaph" placeholder="Введіть текст" maxlength="1000"></textarea>
+                                <span class="textarea-maxlength">0/1000</span>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <p>Оберіть один з фонів для епітафії.</p>
+                            </div>
+                            <div class="col-12">
+                              <div class="templates-top-bg epitaph-bg">
+                                <label for="epitaph_blue_bg" class="custom-checkbox-wrap">
+                                  <input checked hidden type="radio" id="epitaph_blue_bg" name="epitaph_bg">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Блакитний</span>
+                                </label>
+                                <label for="epitaph_blue_bg">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/epitaph/epitaph-blue.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="templates-top-bg epitaph-bg">
+                                <label for="epitaph_yellow_bg" class="custom-checkbox-wrap">
+                                  <input hidden type="radio" id="epitaph_yellow_bg" name="epitaph_bg">
+                                  <span class="custom-checkbox-box"></span>
+                                  <span>Жовтий</span>
+                                </label>
+                                <label for="epitaph_yellow_bg">
+                                  <div class="img-wrap">
+                                    <img src="static/img/cabinet/memorial/epitaph/epitaph-yellow.jpg" alt="">
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <h5>Біографія</h5>
+                                <p>Тут Ви можете написати інформацію про людину для якої створюєте Онлайн Меморіал. Якщо Вам складно написати щось зараз (це можна буде зробити у будь-який зручний для Вас момент пізніше), то не заповнюйте це поле (залишіть його порожнім). Розмір тексту повинен бути не менш за 100 символів та не більше ХХХХ символів.</p>
+                                <textarea name="biography" id="biography" maxlength="1000"></textarea>
+                                <span class="textarea-maxlength">0/1000</span>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <h5>Місце поховання</h5>
+                              <p>Тут Ви можете додати повну інформацію (включно з геолокацією місця) де похована людина.</p>
+                            </div>
+                            <div class="col-xl-4">
+                              <div class="form-group">
+                                <label>Країна поховання</label>
+                                <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+                                  <input class="select-dropdown" hidden id="burial_country">
+                                  <div class="site-dropdown-header">
+                                    <span class="select-sort">Виберіть зі списку</span>
+                                    <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"></path>
+                                    </svg>
+                                  </div>
+                                  <ul class="site-dropdown-select" id="burial_countries_list"></ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label>Країна поховання</label>
+                                <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+                                  <input class="select-dropdown" hidden id="burial_city">
+                                  <div class="site-dropdown-header">
+                                    <span class="select-sort">Виберіть зі списку</span>
+                                    <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"></path>
+                                    </svg>
+                                  </div>
+                                  <ul class="site-dropdown-select" id="burial_cities_list">
+                                    <li class="site-dropdown-options dis">Виберіть спочатку країну</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label for="cemetery_name">Цвинтар</label>
+                                <input type="text" id="cemetery_name" placeholder="Введіть назву цвинтаря">
+                              </div>
+                            </div>
+                            <div class="col-xl-4">
+                              <div class="form-group">
+                                <label for="cemetery_area">Ділянка</label>
+                                <input type="text" id="cemetery_area" placeholder="Введіть номер ділянки">
+                              </div>
+                            </div>
+                            <div class="col-xl-4 pl-xl-0">
+                              <div class="form-group">
+                                <label for="cemetery_geolocation">Геолокація</label>
+                                <input type="text" id="cemetery_geolocation" placeholder="Введіть координати">
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="monument_foto">Фото пам'ятника/ділянки</label>
+                              </div>
+                              <div class="select-img-wrap square-type">
+                                <div class="select-img">
+                                  <img id="monument_foto_img" src="static/img/no-foto.jpg" alt="Фото пам'ятника/ділянки">
+                                </div>
+                                <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="monument_foto" id="monument_foto">
+                                <label class="btn-load-select-img" for="monument_foto">
+                                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15" cy="15" r="15" fill="currentColor" />
+                                    <path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white" />
+                                  </svg>
+                                </label>
+                                <button class="btn-del-select-img" id="del_monument_foto" data-reset-img="static/img/no-foto.jpg">
+                                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15" cy="15" r="15" fill="currentColor" />
+                                    <path d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z" fill="white" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <h6>Приватність</h6>
+                              <p>Якщо Ви оберете цю опцію, будь-які коментарі на цій сторінці будуть відключені.</p>
+                              <label for="this_private_memorial" class="custom-checkbox-wrap">
+                                <input hidden type="checkbox" id="this_private_memorial" name="this_private_memorial">
+                                <span class="custom-checkbox"></span>
+                                <span>Приватний Меморіал</span>
+                              </label>
+                            </div>
+                            <div class="col-12 btn-wrap">
+                              <button class="btn-yellow btn-edit-memorial" id="btn_edit_memorial" type="submit"> Редагувати </button>
+                              <button class="btn-reset" id="btn_reset_memorial" type="button"> Скасувати </button>
+                            </div>
+                            <div class="col-12">
+                              <small>* відзначені поля, які є <span class="red-t">обов'язковими</span> для заповнення.</small>
+                            </div>
+                          </div><!-- /.row -->
                         </form>
                       </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="headCrMem_2">
-                      <button class="btn-accordion collapsed collapsed" type="button" data-toggle="collapse" data-target="#collapseCrMem_2" aria-expanded="false" aria-controls="collapseCrMem_2">
+                      <button class="btn-accordion" type="button" data-toggle="collapse" data-target="#collapseCrMem_2" aria-expanded="false" aria-controls="collapseCrMem_2">
                         <span>Галерея</span>
                         <svg class="icon-accordion-brecket" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M11.0001 11.6251C10.7603 11.6251 10.5203 11.5334 10.3373 11.3504L0.962246 1.97537C0.595918 1.60904 0.595918 1.01584 0.962246 0.649746C1.32857 0.283652 1.92178 0.283418 2.28787 0.649746L11.0001 9.36193L19.7123 0.649746C20.0786 0.283418 20.6718 0.283418 21.0379 0.649746C21.404 1.01607 21.4042 1.60928 21.0379 1.97537L11.6629 11.3504C11.4798 11.5334 11.2398 11.6251 11.0001 11.6251Z" />
                         </svg>
                       </button>
                     </div>
-                    <div id="collapseCrMem_2" class="collapse" aria-labelledby="headCrMem_2" data-parent="#accordionCriateMemorial">
-                      <div class="card-body"> ...2... </div>
+                    <div id="collapseCrMem_2" class="collapse show" aria-labelledby="headCrMem_2" data-parent="#accordionCriateMemorial">
+                      <div class="card-body">
+                        <form action="#" method="post" enctype="multipart/form-data" id="formGallery" class="form-gallery">
+                          <h6>Завантажте фото</h6>
+                          <p> Додайте фотографії на сторінку Онлайн Меморіалу. Розмір фото не повинен перевищувати ХХХ Кб (.jpg .jpeg, .png, .gif) а його вміст має відповідати <a href="#" class="link-blue">правилам</a> нашого сервісу. </p>
+                          <div class="imgs-previews"></div>
+                          <input hidden id="gallery_img" type="file" accept="image/*" name="uploadfile[]" multiple>
+                          <label for="gallery_img" class="btn-add-foto">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6" />
+                              <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6" />
+                            </svg> Додати фото <!-- Додати ще фото -->
+                          </label>
+                          <h6>Завантажте відео</h6>
+                          <p>Ви можете додати відео на сторінку Онлайн Меморіалу. Нагадуємо, що контент, який Ви розміщуєте, повинен відповідати нашим правилам і бути завантажений з сервісу YouTube. Для того, щоб коректно додати відеоролик (посилання на нього), Ви можете скористатися розділом Допомога, в якому буде надано докладне пояснення цього процесу.</p>
+                          <div class="videos-wrap"> <!-- <div class="iframe-wrap"> <button type="button" class="btn-del-select-video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#FF0000"></circle><path d="M17.4998 7.5C17.7209 7.5 17.9328 7.5878 18.0891 7.74408C18.2454 7.90036 18.3332 8.11232 18.3332 8.33333H19.9998C20.2209 8.33333 20.4328 8.42113 20.5891 8.57741C20.7454 8.73369 20.8332 8.94565 20.8332 9.16667C20.8332 9.38768 20.7454 9.59964 20.5891 9.75592C20.4328 9.9122 20.2209 10 19.9998 10H9.99984C9.77882 10 9.56686 9.9122 9.41058 9.75592C9.2543 9.59964 9.1665 9.38768 9.1665 9.16667C9.1665 8.94565 9.2543 8.73369 9.41058 8.57741C9.56686 8.42113 9.77882 8.33333 9.99984 8.33333H11.6665C11.6665 8.11232 11.7543 7.90036 11.9106 7.74408C12.0669 7.5878 12.2788 7.5 12.4998 7.5H17.4998Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.834H20V20.834C20 21.276 19.8244 21.6999 19.5118 22.0125C19.1993 22.3251 18.7754 22.5007 18.3333 22.5007H11.6667C11.2246 22.5007 10.8007 22.3251 10.4882 22.0125C10.1756 21.6999 10 21.276 10 20.834V10.834ZM12.9167 12.5007C12.8062 12.5007 12.7002 12.5445 12.622 12.6227C12.5439 12.7008 12.5 12.8068 12.5 12.9173V20.4173C12.5 20.5278 12.5439 20.6338 12.622 20.7119C12.7002 20.7901 12.8062 20.834 12.9167 20.834C13.0272 20.834 13.1332 20.7901 13.2113 20.7119C13.2894 20.6338 13.3333 20.5278 13.3333 20.4173V12.9173C13.3333 12.8068 13.2894 12.7008 13.2113 12.6227C13.1332 12.5445 13.0272 12.5007 12.9167 12.5007ZM17.0833 12.5007C16.9728 12.5007 16.8668 12.5445 16.7887 12.6227C16.7106 12.7008 16.6667 12.8068 16.6667 12.9173V20.4173C16.6667 20.5278 16.7106 20.6338 16.7887 20.7119C16.8668 20.7901 16.9728 20.834 17.0833 20.834C17.1938 20.834 17.2998 20.7901 17.378 20.7119C17.4561 20.6338 17.5 20.5278 17.5 20.4173V12.9173C17.5 12.8068 17.4561 12.7008 17.378 12.6227C17.2998 12.5445 17.1938 12.5007 17.0833 12.5007Z" fill="white"></path></svg></button> <button type="button" class="btn-load-select-video" id="btn_edit_gallery_video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg></button> <iframe id="video" width="216" height="216" src="https://www.youtube.com/embed/aiYpDDHKy18" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> <div class="iframe-wrap"> <button type="button" class="btn-del-select-video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#FF0000"></circle><path d="M17.4998 7.5C17.7209 7.5 17.9328 7.5878 18.0891 7.74408C18.2454 7.90036 18.3332 8.11232 18.3332 8.33333H19.9998C20.2209 8.33333 20.4328 8.42113 20.5891 8.57741C20.7454 8.73369 20.8332 8.94565 20.8332 9.16667C20.8332 9.38768 20.7454 9.59964 20.5891 9.75592C20.4328 9.9122 20.2209 10 19.9998 10H9.99984C9.77882 10 9.56686 9.9122 9.41058 9.75592C9.2543 9.59964 9.1665 9.38768 9.1665 9.16667C9.1665 8.94565 9.2543 8.73369 9.41058 8.57741C9.56686 8.42113 9.77882 8.33333 9.99984 8.33333H11.6665C11.6665 8.11232 11.7543 7.90036 11.9106 7.74408C12.0669 7.5878 12.2788 7.5 12.4998 7.5H17.4998Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.834H20V20.834C20 21.276 19.8244 21.6999 19.5118 22.0125C19.1993 22.3251 18.7754 22.5007 18.3333 22.5007H11.6667C11.2246 22.5007 10.8007 22.3251 10.4882 22.0125C10.1756 21.6999 10 21.276 10 20.834V10.834ZM12.9167 12.5007C12.8062 12.5007 12.7002 12.5445 12.622 12.6227C12.5439 12.7008 12.5 12.8068 12.5 12.9173V20.4173C12.5 20.5278 12.5439 20.6338 12.622 20.7119C12.7002 20.7901 12.8062 20.834 12.9167 20.834C13.0272 20.834 13.1332 20.7901 13.2113 20.7119C13.2894 20.6338 13.3333 20.5278 13.3333 20.4173V12.9173C13.3333 12.8068 13.2894 12.7008 13.2113 12.6227C13.1332 12.5445 13.0272 12.5007 12.9167 12.5007ZM17.0833 12.5007C16.9728 12.5007 16.8668 12.5445 16.7887 12.6227C16.7106 12.7008 16.6667 12.8068 16.6667 12.9173V20.4173C16.6667 20.5278 16.7106 20.6338 16.7887 20.7119C16.8668 20.7901 16.9728 20.834 17.0833 20.834C17.1938 20.834 17.2998 20.7901 17.378 20.7119C17.4561 20.6338 17.5 20.5278 17.5 20.4173V12.9173C17.5 12.8068 17.4561 12.7008 17.378 12.6227C17.2998 12.5445 17.1938 12.5007 17.0833 12.5007Z" fill="white"></path></svg></button> <button type="button" class="btn-load-select-video" id="btn_edit_gallery_video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg></button> <iframe id="video" width="216" height="216" src="https://www.youtube.com/embed/aiYpDDHKy18" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> --> <!-- <div class="iframe-wrap"> <button type="button" class="btn-del-select-video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#FF0000"></circle><path d="M17.4998 7.5C17.7209 7.5 17.9328 7.5878 18.0891 7.74408C18.2454 7.90036 18.3332 8.11232 18.3332 8.33333H19.9998C20.2209 8.33333 20.4328 8.42113 20.5891 8.57741C20.7454 8.73369 20.8332 8.94565 20.8332 9.16667C20.8332 9.38768 20.7454 9.59964 20.5891 9.75592C20.4328 9.9122 20.2209 10 19.9998 10H9.99984C9.77882 10 9.56686 9.9122 9.41058 9.75592C9.2543 9.59964 9.1665 9.38768 9.1665 9.16667C9.1665 8.94565 9.2543 8.73369 9.41058 8.57741C9.56686 8.42113 9.77882 8.33333 9.99984 8.33333H11.6665C11.6665 8.11232 11.7543 7.90036 11.9106 7.74408C12.0669 7.5878 12.2788 7.5 12.4998 7.5H17.4998Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.834H20V20.834C20 21.276 19.8244 21.6999 19.5118 22.0125C19.1993 22.3251 18.7754 22.5007 18.3333 22.5007H11.6667C11.2246 22.5007 10.8007 22.3251 10.4882 22.0125C10.1756 21.6999 10 21.276 10 20.834V10.834ZM12.9167 12.5007C12.8062 12.5007 12.7002 12.5445 12.622 12.6227C12.5439 12.7008 12.5 12.8068 12.5 12.9173V20.4173C12.5 20.5278 12.5439 20.6338 12.622 20.7119C12.7002 20.7901 12.8062 20.834 12.9167 20.834C13.0272 20.834 13.1332 20.7901 13.2113 20.7119C13.2894 20.6338 13.3333 20.5278 13.3333 20.4173V12.9173C13.3333 12.8068 13.2894 12.7008 13.2113 12.6227C13.1332 12.5445 13.0272 12.5007 12.9167 12.5007ZM17.0833 12.5007C16.9728 12.5007 16.8668 12.5445 16.7887 12.6227C16.7106 12.7008 16.6667 12.8068 16.6667 12.9173V20.4173C16.6667 20.5278 16.7106 20.6338 16.7887 20.7119C16.8668 20.7901 16.9728 20.834 17.0833 20.834C17.1938 20.834 17.2998 20.7901 17.378 20.7119C17.4561 20.6338 17.5 20.5278 17.5 20.4173V12.9173C17.5 12.8068 17.4561 12.7008 17.378 12.6227C17.2998 12.5445 17.1938 12.5007 17.0833 12.5007Z" fill="white"></path></svg></button> <button type="button" class="btn-load-select-video" id="btn_edit_gallery_video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg></button> <iframe id="video" width="216" height="216" src="https://www.youtube.com/embed/aiYpDDHKy18" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> <div class="iframe-wrap"> <button type="button" class="btn-del-select-video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#FF0000"></circle><path d="M17.4998 7.5C17.7209 7.5 17.9328 7.5878 18.0891 7.74408C18.2454 7.90036 18.3332 8.11232 18.3332 8.33333H19.9998C20.2209 8.33333 20.4328 8.42113 20.5891 8.57741C20.7454 8.73369 20.8332 8.94565 20.8332 9.16667C20.8332 9.38768 20.7454 9.59964 20.5891 9.75592C20.4328 9.9122 20.2209 10 19.9998 10H9.99984C9.77882 10 9.56686 9.9122 9.41058 9.75592C9.2543 9.59964 9.1665 9.38768 9.1665 9.16667C9.1665 8.94565 9.2543 8.73369 9.41058 8.57741C9.56686 8.42113 9.77882 8.33333 9.99984 8.33333H11.6665C11.6665 8.11232 11.7543 7.90036 11.9106 7.74408C12.0669 7.5878 12.2788 7.5 12.4998 7.5H17.4998Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.834H20V20.834C20 21.276 19.8244 21.6999 19.5118 22.0125C19.1993 22.3251 18.7754 22.5007 18.3333 22.5007H11.6667C11.2246 22.5007 10.8007 22.3251 10.4882 22.0125C10.1756 21.6999 10 21.276 10 20.834V10.834ZM12.9167 12.5007C12.8062 12.5007 12.7002 12.5445 12.622 12.6227C12.5439 12.7008 12.5 12.8068 12.5 12.9173V20.4173C12.5 20.5278 12.5439 20.6338 12.622 20.7119C12.7002 20.7901 12.8062 20.834 12.9167 20.834C13.0272 20.834 13.1332 20.7901 13.2113 20.7119C13.2894 20.6338 13.3333 20.5278 13.3333 20.4173V12.9173C13.3333 12.8068 13.2894 12.7008 13.2113 12.6227C13.1332 12.5445 13.0272 12.5007 12.9167 12.5007ZM17.0833 12.5007C16.9728 12.5007 16.8668 12.5445 16.7887 12.6227C16.7106 12.7008 16.6667 12.8068 16.6667 12.9173V20.4173C16.6667 20.5278 16.7106 20.6338 16.7887 20.7119C16.8668 20.7901 16.9728 20.834 17.0833 20.834C17.1938 20.834 17.2998 20.7901 17.378 20.7119C17.4561 20.6338 17.5 20.5278 17.5 20.4173V12.9173C17.5 12.8068 17.4561 12.7008 17.378 12.6227C17.2998 12.5445 17.1938 12.5007 17.0833 12.5007Z" fill="white"></path></svg></button> <button type="button" class="btn-load-select-video" id="btn_edit_gallery_video"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg></button> <iframe id="video" width="216" height="216" src="https://www.youtube.com/embed/aiYpDDHKy18" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> --> </div>
+                          <button id="btn_add_gallery_video" class="btn-add-foto">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6" />
+                              <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6" />
+                            </svg> Додати відео
+                          </button>
+                          <div class="btn-wrap">
+                            <button class="btn-yellow" id="button">Зберегти</button>
+                            <button class="btn-reset" id="btn_reset_gallery" type="button"> Скасувати </button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                   <div class="card">
@@ -818,7 +1195,7 @@
           <form id="del_account_form" class="del-account-form site-form" action="#" disabled="true">
             <label for="confirm_remove" class="custom-checkbox-wrap">
               <input hidden type="checkbox" name="confirm_remove" id="confirm_remove">
-              <span class="custom-checkbox">&#10004;</span>
+              <span class="custom-checkbox"></span>
               <span>Я усвідомленно видаляю свій акаунт</span>
             </label>
             <p>Відмовляюсь від можливості отримувати будь яку інформацію з сервісу Збережи та відповіді на мої коментарі.</p>
@@ -835,7 +1212,7 @@
       </div>
     </div>
   </div> <!-- Modal deleting account -->
-  <div class="modal fade site-modal del-acc-alert-modal" id="delAccAlert" tabindex="-1" aria-labelledby="delAccAlert" aria-hidden="true">
+  <div class="modal fade site-modal del-acc-alert-modal" id="delAccAlert" tabindex="-1" aria-labelledby="delAccAlertLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -847,7 +1224,7 @@
           </span>
         </button>
         <div class="modal-header">
-          <h4 class="modal-title" id="delAccAlert">Видалення акаунту</h4>
+          <h4 class="modal-title" id="delAccAlertLabel">Видалення акаунту</h4>
         </div>
         <div class="modal-body">
           <p>Ви є Хранителем одного або кількох Онлайн Меморіалів. Щоб видалити свій обліковий запис Вам необхідно спочатку видалити Меморіали. Після цього Ви отримаєте можливість видалити свій запис.</p>
@@ -856,7 +1233,7 @@
       </div>
     </div>
   </div> <!-- Modal deleting memorial -->
-  <div class="modal fade site-modal del-memorial-modal" id="delMemorialModal" tabindex="-1" aria-labelledby="delMemorialModal" aria-hidden="true">
+  <div class="modal fade site-modal del-memorial-modal" id="delMemorialModal" tabindex="-1" aria-labelledby="delMemorialModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -868,7 +1245,7 @@
           </span>
         </button>
         <div class="modal-header">
-          <h4 class="modal-title" id="delMemorialModal">Ви впевнені що бажаєте видалити обраний Онлайн Меморіал?</h4>
+          <h4 class="modal-title" id="delMemorialModalLabel">Ви впевнені що бажаєте видалити обраний Онлайн Меморіал?</h4>
         </div>
         <div class="modal-body">
           <button id="btnConfirmDelMemorial" data-which-del-memorial data-confirm-text="Онлайн Меморіал видалено." class="btn-yellow"> Так </button>
@@ -877,7 +1254,7 @@
       </div>
     </div>
   </div> <!-- Modal info memorial -->
-  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModal" aria-hidden="true">
+  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -889,14 +1266,115 @@
           </span>
         </button>
         <div class="modal-header">
-          <h4 class="modal-title" id="infoModal">Онлайн Меморіал видалено.</h4>
+          <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
         </div>
         <div class="modal-body"></div>
       </div>
     </div>
+  </div> <!-- Modal gallery descr -->
+  <div class="modal fade site-modal gallery-descr" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="galleryDescrLabel">Створення галереї</h4>
+        </div>
+        <div class="modal-body"> <!-- <form id="complain_form" class="site-form" action="#"> -->
+          <form id="gallery_descr_form" class="site-form" action="#">
+            <div class="form-group">
+              <label for="gallery_descr_text">Додати опис до фото</label>
+              <textarea name="gallery_descr_text" id="gallery_descr_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+              <span class="textarea-maxlength">0/1000</span>
+            </div>
+            <div class="imgs-previews">
+              <div class="select-img-wrap square-type">
+                <input hidden type="file" id="сhange_image">
+                <label for="сhange_image" class="btn-load-select-img">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="15" fill="#F2F2F2"></circle>
+                    <path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="currentColor"></path>
+                  </svg>
+                </label>
+                <div class="select-img">
+                  <img src="static/img/load.gif" alt="">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-circle">
+              <span class="text"> Надіслати </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal gallery Video -->
+  <div class="modal fade site-modal gallery-video" id="galleryVideoModal" tabindex="-1" aria-labelledby="galleryVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="galleryVideoLabel">Створення галереї</h4>
+        </div>
+        <div class="modal-body">
+          <form id="gallery_video_form" class="site-form" action="#">
+            <div class="form-group">
+              <label for="input_gallery_video">Відео</label>
+              <input type="text" id="input_gallery_video" placeholder="Додати посилання на YouTube">
+              <span class="error-mess">Поле не можете бути пустим</span>
+            </div>
+            <button type="submit" class="btn-circle">
+              <span class="text"> Надіслати </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal gallery Edit Video -->
+  <div class="modal fade site-modal gallery-video" id="galleryEditVideoModal" tabindex="-1" aria-labelledby="galleryEditVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="galleryEditVideoLabel">Створення галереї</h4>
+        </div>
+        <div class="modal-body">
+          <form id="gallery_edit_video_form" class="site-form" action="#">
+            <div class="form-group">
+              <label for="input_edit_gallery_video">Нове посилання на відео</label>
+              <input type="text" id="input_edit_gallery_video" placeholder="Додати посилання на YouTube">
+              <span class="error-mess">Поле не можете бути пустим</span>
+            </div>
+            <button type="submit" class="btn-circle">
+              <span class="text"> Надіслати </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=93529f97d049d32041b5125d9e7b3688">
-  <script defer src="static/js/common.min.js?_v=93529f97d049d32041b5125d9e7b3688"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
+  <script defer src="static/js/common.min.js?_v=3d5b786c75953b23582a59a8c66627cf"></script>
 </body>
 
 </html>
