@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=7afea185c55534438d8a6b218ce461bd">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -50,8 +50,8 @@
             <path d="M12.3048 40.6827C13.2 40.6827 13.9258 39.9516 13.9258 39.0496C13.9258 38.1477 13.2 37.4165 12.3048 37.4165C11.4096 37.4165 10.6838 38.1477 10.6838 39.0496C10.6838 39.9516 11.4096 40.6827 12.3048 40.6827Z" fill="currentColor" />
           </svg>
         </a>
-        <div>
-          <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none">
+        <div class="search-block"> <!-- <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none"> -->
+          <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="25" cy="25" r="25" fill="#F2F2F2"></circle>
               <path d="M35.0547 15H14.9453C13.3213 15 12 16.3503 12 18.01V31.99C12 33.6497 13.3213 35 14.9453 35H35.0547C36.6787 35 38 33.6497 38 31.99V18.01C38 16.3503 36.6787 15 35.0547 15ZM37.1875 18.01V31.99C37.1875 32.459 37.0414 32.8934 36.7938 33.2493L27.7904 22.5794L36.6446 16.5591C36.9819 16.9448 37.1875 17.4532 37.1875 18.01ZM35.0547 15.8303C35.3645 15.8301 35.6706 15.8993 35.9515 16.0331L25 23.4794L14.0485 16.0331C14.3293 15.8993 14.6355 15.8301 14.9453 15.8303H35.0547ZM12.8125 31.99V18.01C12.8125 17.4532 13.0181 16.9448 13.3554 16.5592L22.2096 22.5794L13.2062 33.2493C12.9586 32.8934 12.8125 32.459 12.8125 31.99ZM14.9453 34.1697C14.5372 34.17 14.1376 34.0499 13.7946 33.8238L22.9045 23.0519L24.775 24.3237C24.8417 24.369 24.9199 24.3932 25 24.3932C25.0801 24.3932 25.1583 24.369 25.225 24.3237L27.0955 23.0519L36.2054 33.8238C35.8624 34.0499 35.4628 34.17 35.0547 34.1697H14.9453Z" fill="#323232"></path>
@@ -63,7 +63,7 @@
                 <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
               </svg>
             </button>
-            <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
+            <input type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
             <button class="btn-search-reset hide">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.8828 0.117299C7.7264 -0.0390995 7.4736 -0.0390995 7.31721 0.117299L4.00005 3.43446L0.682892 0.117299C0.526494 -0.0390995 0.273696 -0.0390995 0.117298 0.117299C-0.0390995 0.273697 -0.0390995 0.526494 0.117298 0.682892L3.43446 4.00005L0.117298 7.31721C-0.0390995 7.47361 -0.0390995 7.7264 0.117298 7.8828C0.195297 7.9608 0.297696 8 0.400095 8C0.502494 8 0.604893 7.9608 0.682892 7.8828L4.00005 4.56564L7.31721 7.8828C7.39521 7.9608 7.4976 8 7.6 8C7.7024 8 7.8048 7.9608 7.8828 7.8828C8.0392 7.7264 8.0392 7.47361 7.8828 7.31721L4.56564 4.00005L7.8828 0.682892C8.0392 0.526494 8.0392 0.273697 7.8828 0.117299Z" fill="#323232" fill-opacity="0.8" />
@@ -163,6 +163,9 @@
                   <li class="menu-item">
                     <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
                   </li>
+                  <li class="menu-item">
+                    <a class="menu-item-link" href="privacy-policy.html">Політика безпеки</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -183,7 +186,9 @@
           <div class="row memorial-header-data">
             <div class="col-md-3">
               <div class="img-gift-wrap">
-                <div class="img-wrap" title="Фотографія людини"> <!-- example img --> </div>
+                <div class="img-wrap" title="Фотографія людини"> <!-- example img -->
+                  <img src="../../../static/img/memorials/foto-3.jpg" alt="">
+                </div>
                 <div class="gift-wrap">
                   <img class="gift-img" width="100" height="100" src="static/img/memorials/gifts/gift-6.png" alt="Подарунок">
                 </div>
@@ -212,7 +217,7 @@
                   <path class="icon-star-border" d="M5.74504 29.891L6.41395 29.0177L6.41244 29.0166L5.74504 29.891ZM5.53186 29.3398L6.61716 29.5191L6.61745 29.5173L5.53186 29.3398ZM7.19169 19.1857L8.27729 19.3631C8.33369 19.0181 8.22268 18.6667 7.97825 18.4167L7.19169 19.1857ZM0.161963 11.9953L-0.625893 12.7629L-0.624593 12.7643L0.161963 11.9953ZM0.0261042 11.4182L-1.02439 11.0919L-1.02492 11.0936L0.0261042 11.4182ZM0.459992 11.0344L0.294139 9.947L0.293515 9.94709L0.459992 11.0344ZM10.1741 9.55283L10.34 10.6403C10.7024 10.585 11.0135 10.3528 11.1695 10.021L10.1741 9.55283ZM14.5189 0.314464L15.5143 0.782605L15.5152 0.780787L14.5189 0.314464ZM15.4812 0.314464L14.4839 0.77851L14.4858 0.782556L15.4812 0.314464ZM19.8254 9.55283L18.83 10.0209C18.986 10.3527 19.2971 10.585 19.6596 10.6403L19.8254 9.55283ZM29.5401 11.0344L29.7066 9.94709L29.706 9.947L29.5401 11.0344ZM29.974 11.4182L31.025 11.0936L31.024 11.0902L29.974 11.4182ZM29.8382 11.9953L29.0532 11.2247L29.0515 11.2264L29.8382 11.9953ZM22.8084 19.1868L22.0218 18.4179C21.7774 18.6679 21.6664 19.0192 21.7228 19.3642L22.8084 19.1868ZM24.4677 29.3404L25.5535 29.1638L25.5533 29.163L24.4677 29.3404ZM24.2545 29.8916L23.5858 29.0182L23.5834 29.02L24.2545 29.8916ZM23.6886 29.9344L24.2241 28.9736L24.2199 28.9713L23.6886 29.9344ZM15.0001 25.1408L15.5314 24.1776C15.2007 23.9952 14.7995 23.9952 14.4687 24.1776L15.0001 25.1408ZM6.31049 29.9344L6.83787 30.8997L6.84183 30.8976L6.31049 29.9344ZM6.06079 28.8986C6.18819 28.8986 6.31282 28.9403 6.41395 29.0177L5.07614 30.7642C5.36415 30.9849 5.71109 31.0986 6.06079 31.0986V28.8986ZM6.41244 29.0166C6.58189 29.1459 6.6462 29.3433 6.61716 29.5191L4.44656 29.1606C4.34771 29.7591 4.57741 30.3836 5.07765 30.7654L6.41244 29.0166ZM6.61745 29.5173L8.27729 19.3631L6.1061 19.0082L4.44627 29.1624L6.61745 29.5173ZM7.97825 18.4167L0.948519 11.2263L-0.624593 12.7643L6.40514 19.9547L7.97825 18.4167ZM0.949818 11.2276C1.09107 11.3726 1.13046 11.5701 1.07713 11.7428L-1.02492 11.0936C-1.20391 11.6732 -1.05926 12.3182 -0.625892 12.7629L0.949818 11.2276ZM1.0766 11.7445C1.02214 11.9198 0.862871 12.0856 0.626469 12.1218L0.293515 9.94709C-0.347777 10.0453 -0.843203 10.5086 -1.02439 11.0919L1.0766 11.7445ZM0.625845 12.1218L10.34 10.6403L10.0083 8.46541L0.294139 9.947L0.625845 12.1218ZM11.1695 10.021L15.5143 0.782604L13.5235 -0.153676L9.17872 9.08469L11.1695 10.021ZM15.5152 0.780787C15.4333 0.95572 15.2435 1.1 15.0001 1.1V-1.1C14.3485 -1.1 13.785 -0.712264 13.5227 -0.151859L15.5152 0.780787ZM15.0001 1.1C14.7582 1.1 14.5667 0.95648 14.4839 0.778507L16.4785 -0.149578C16.2164 -0.713024 15.6511 -1.1 15.0001 -1.1V1.1ZM14.4858 0.782556L18.83 10.0209L20.8209 9.08474L16.4766 -0.153628L14.4858 0.782556ZM19.6596 10.6403L29.3743 12.1218L29.706 9.947L19.9913 8.46541L19.6596 10.6403ZM29.3737 12.1218C29.1367 12.0855 28.978 11.9189 28.9241 11.7462L31.024 11.0902C30.8422 10.5083 30.3485 10.0454 29.7066 9.94709L29.3737 12.1218ZM28.923 11.7428C28.8706 11.5731 28.9072 11.3734 29.0532 11.2247L30.6232 12.7659C31.0623 12.3185 31.2031 11.6702 31.025 11.0936L28.923 11.7428ZM29.0515 11.2264L22.0218 18.4179L23.595 19.9557L30.6248 12.7642L29.0515 11.2264ZM21.7228 19.3642L23.3821 29.5178L25.5533 29.163L23.894 19.0094L21.7228 19.3642ZM23.382 29.517C23.3538 29.3433 23.4169 29.1475 23.5858 29.0182L24.9233 30.7649C25.4219 30.3831 25.6504 29.7602 25.5535 29.1638L23.382 29.517ZM23.5834 29.02C23.7644 28.8806 24.0191 28.8593 24.2241 28.9736L23.153 30.8952C23.7199 31.2112 24.4139 31.1572 24.9257 30.7631L23.5834 29.02ZM24.2199 28.9713L15.5314 24.1776L14.4687 26.1039L23.1572 30.8975L24.2199 28.9713ZM14.4687 24.1776L5.77916 28.9712L6.84183 30.8976L15.5314 26.104L14.4687 24.1776ZM5.78313 28.969C5.86658 28.9235 5.96202 28.8986 6.06079 28.8986V31.0986C6.33033 31.0986 6.5976 31.031 6.83786 30.8997L5.78313 28.969Z" mask="url(#path-1-inside-1_18_3)" />
                 </svg>
               </button>
-              <button data-title="Поділитись сторінкою" class="btn-share-it btn-round">
+              <button data-title="Поділитись сторінкою" data-toggle="modal" data-target="#shareLinksModal" class="btn-share-it btn-round">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20" r="20" fill="#F2F2F2" />
                   <path d="M25 23.4333C24.3667 23.4333 23.8 23.6833 23.3667 24.075L17.425 20.6167C17.4667 20.425 17.5 20.2333 17.5 20.0333C17.5 19.8333 17.4667 19.6417 17.425 19.45L23.3 16.025C23.75 16.4417 24.3417 16.7 25 16.7C26.3833 16.7 27.5 15.5833 27.5 14.2C27.5 12.8167 26.3833 11.7 25 11.7C23.6167 11.7 22.5 12.8167 22.5 14.2C22.5 14.4 22.5333 14.5917 22.575 14.7833L16.7 18.2083C16.25 17.7917 15.6583 17.5333 15 17.5333C13.6167 17.5333 12.5 18.65 12.5 20.0333C12.5 21.4167 13.6167 22.5333 15 22.5333C15.6583 22.5333 16.25 22.275 16.7 21.8583L22.6333 25.325C22.5917 25.5 22.5667 25.6833 22.5667 25.8667C22.5667 27.2083 23.6583 28.3 25 28.3C26.3417 28.3 27.4333 27.2083 27.4333 25.8667C27.4333 24.525 26.3417 23.4333 25 23.4333Z" fill="#323232" />
@@ -320,7 +325,7 @@
                       <form action="#" id="comments_form" class="site-form comments-form">
                         <div class="form-group form-text-wrap">
                           <label for="comment_text">Ваші спогади</label>
-                          <textarea name="comment_text" id="comment_text" maxlength="1000" placeholder="Введіть текст"></textarea>
+                          <textarea name="comment_text" id="comment_text" placeholder="Введіть текст" maxlength="1000"></textarea>
                           <span class="textarea-maxlength">0/1000</span>
                         </div>
                         <div class="form-img-wrap">
@@ -375,9 +380,11 @@
                               <p>Ти... ти одного разу сказав мені, що ти не герой. Були часи, коли я навіть гадав, що ти не людина. Але дозволь мені сказати, ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що ти обманював. Я був такий самотній, і я стільки тобі зобов'язаний. Але, будь ласка, залишилася ще одна річ, ще одна річ, ще одне диво, Шерлок, Але дозволь мені сказати, ти був найкращою людиною. Любов до тебе рідний наш помре лиш з нами. І наш сум і нашу біль не виразити словами.</p>
                               <p>Не має стільки капель в морі і степ не має стільки роз щоб виплакати наше горе рясним дощем пекучих сліз.</p>
                             </div>
-                            <div class="comment-img">
-                              <img src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" alt="Фото">
-                            </div>
+                            <a data-fancybox="gallery-comments_id-1" data-type='image' href="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg">
+                              <div class="comment-img">
+                                <img data-src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" />
+                              </div>
+                            </a>
                           </div> <!-- child-comments -->
                           <div class="child-comments">
                             <div class="child-comments-block">
@@ -466,9 +473,11 @@
                         </div>
                         <div class="comment-body">
                           <div class="comment-wrap"> <!-- only img -->
-                            <div class="comment-img">
-                              <img src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" alt="Фото">
-                            </div>
+                            <a data-fancybox="gallery-comments_id-2" data-type='image' href="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg">
+                              <div class="comment-img">
+                                <img data-src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" />
+                              </div>
+                            </a>
                           </div>
                           <form action="#" class="site-form form-to-comments">
                             <label for="">Прокоментувати</label>
@@ -488,81 +497,1492 @@
                 </div>
                 <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-tab-2">
                   <div class="gallery-wrap">
-                    <a data-fancybox="gallery" data-comments=' <br> <h4>Sidebar-(1) <button data-fancybox-close class="btn">х</button> </h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(1).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(1).jpg">
+                      <div hidden class="qwe">
+                        <h1>hgfhgf</h1>
+                      </div>
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 1 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(1).jpg" />
                     </a>
-                    <a data-fancybox="gallery" data-fancybox-type="iframe" class="various fancybox" data-comments=' <br> <h4>Sidebar-(video youtube 1) <button data-fancybox-close class="btn">х</button> </h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="https://www.youtube.com/embed/jid2A7ldc_8?autoplay=0">
-                      <iframe id="video" width="636" height="440" data-src="https://www.youtube.com/embed/D7SlK16o82o" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0"></iframe>
+                    <a data-fancybox="gallery" data-fancybox-type="iframe" class="various fancybox" data-comments='' href="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0">
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 2 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <iframe id="video" width="636" height="440" data-src="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                       <button class="btn-play">
                         <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M23.7241 14.3473C23.7241 14.5155 23.6805 14.6808 23.5976 14.8269C23.5146 14.973 23.3952 15.0949 23.251 15.1805L2.054 27.7599C1.9077 27.8468 1.7411 27.8932 1.5711 27.8946C1.4011 27.8959 1.2338 27.852 1.0861 27.7674C0.9384 27.6828 0.8157 27.5605 0.7304 27.4128C0.645 27.2652 0.6001 27.0975 0.6001 26.9267V1.7679C0.6001 1.5972 0.645 1.4295 0.7304 1.2818C0.8157 1.1342 0.9384 1.0118 1.0861 0.9272C1.2338 0.8426 1.4011 0.7988 1.5711 0.8001C1.7411 0.8014 1.9077 0.847899 2.054 0.934799L23.251 13.5142C23.3952 13.5998 23.5146 13.7217 23.5976 13.8678C23.6805 14.0138 23.7241 14.1791 23.7241 14.3473Z" fill="white" />
                         </svg>
                       </button>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(2)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(2).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(2).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(2).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 3 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(3)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(3).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(3).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(3).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 4 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(4)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(4).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(4).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(4).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 5 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(5)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(5).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(5).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(5).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 6 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-fancybox-type="iframe" class="various fancybox" data-comments=' <br> <h4>Sidebar-(video youtube 1) <button data-fancybox-close class="btn">х</button> </h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="https://www.youtube.com/embed/jid2A7ldc_8?autoplay=0">
-                      <iframe id="video" width="636" height="440" data-src="https://www.youtube.com/embed/D7SlK16o82o" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0"></iframe>
+                    <a data-fancybox="gallery" data-fancybox-type="iframe" class="various fancybox" data-comments='' href="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0">
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 7 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <iframe id="video" width="636" height="440" data-src="https://www.youtube.com/embed/D7SlK16o82o?autoplay=0" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                       <button class="btn-play">
                         <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M23.7241 14.3473C23.7241 14.5155 23.6805 14.6808 23.5976 14.8269C23.5146 14.973 23.3952 15.0949 23.251 15.1805L2.054 27.7599C1.9077 27.8468 1.7411 27.8932 1.5711 27.8946C1.4011 27.8959 1.2338 27.852 1.0861 27.7674C0.9384 27.6828 0.8157 27.5605 0.7304 27.4128C0.645 27.2652 0.6001 27.0975 0.6001 26.9267V1.7679C0.6001 1.5972 0.645 1.4295 0.7304 1.2818C0.8157 1.1342 0.9384 1.0118 1.0861 0.9272C1.2338 0.8426 1.4011 0.7988 1.5711 0.8001C1.7411 0.8014 1.9077 0.847899 2.054 0.934799L23.251 13.5142C23.3952 13.5998 23.5146 13.7217 23.5976 13.8678C23.6805 14.0138 23.7241 14.1791 23.7241 14.3473Z" fill="white" />
                         </svg>
                       </button>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(6)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(6).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(6).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(6).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 8 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(7)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(7).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(7).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(7).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 9 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(8)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(8).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(8).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(8).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 10 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(9)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(9).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(9).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(9).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 11 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(10)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(10).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(10).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(10).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 12 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(11)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(11).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(11).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(11).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 13 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(12)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(12).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(12).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(12).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 14 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(13)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(13).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(13).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(13).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 15 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(14)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(14).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(14).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(14).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 16 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(15)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(15).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(15).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(15).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 17 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(16)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(16).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(16).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(16).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 18 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(17)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(17).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(17).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(17).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 19 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(18)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(18).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(18).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(18).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 20 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(19)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(19).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(19).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(19).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 21 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
-                    <a data-fancybox="gallery" data-comments=' <h4>Sidebar-(20)</h4> <img src="static/img/memorials/temp/comments.jpg" alt=""> ' href="static/img/memorials/person-1/gallery/gallery0img-(20).jpg">
+                    <a data-fancybox="gallery" data-comments='' href="static/img/memorials/person-1/gallery/gallery0img-(20).jpg">
                       <img class="rounded" data-src="static/img/memorials/person-1/gallery/gallery0img-(20).jpg" />
+                      <div hidden class="sidebar-img-comments">
+                        <br>
+                        <h6>&nbsp;&nbsp;&nbsp;___ 22 ___</h6>
+                        <div class="comments-to-photo"> <!-- a word of memory from the keeper -->
+                          <div class="word-memory">
+                            <div class="word-memory-header">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                              <div class="user-data">
+                                <div class="name h6">Прізвище Ім'я По-батькові</div>
+                                <div class="date-time">23.11.2021 14:15</div>
+                              </div>
+                            </div>
+                            <div class="text">
+                              <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <div class="word-memory-comment">
+                            <div class="word-memory-img">
+                              <div class="img-wrap">
+                                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                              </div>
+                            </div>
+                            <div class="comment-wrap">
+                              <div class="comment">
+                                <div class="name">Прізвище Ім'я По-батькові</div>
+                                <div class="comment-text">
+                                  <p>Ти був найкращою людиною. Найлюдянішим із усіх. І ніхто ніколи не переконає мене, що це не так.</p>
+                                </div>
+                              </div>
+                              <div class="date-time">23.11.2021 14:15</div>
+                            </div>
+                          </div>
+                          <form action="#" id="form_to_comments_ctf_0" class="site-form form-comments-to-foto">
+                            <label class="h6">Прокоментувати</label>
+                            <div class="form-group">
+                              <textarea hidden name="id_inp_ctf_0" id="id_inp_ctf_0" placeholder="Введіть текст"></textarea>
+                              <div contenteditable="true" data-input-id="id_inp_ctf_0" data-placeholder="Введіть текст"></div>
+                              <button type="submit">
+                                <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M28.3866 12.9991C28.3867 12.8166 28.3335 12.638 28.2335 12.4852C28.1335 12.3325 27.9911 12.2123 27.8238 12.1393L1.97019 0.869791C1.81097 0.800379 1.63559 0.776566 1.46363 0.801008C1.29166 0.82545 1.12986 0.897185 0.996288 1.00821C0.862711 1.11924 0.762605 1.26519 0.707136 1.42979C0.651668 1.59439 0.643018 1.77117 0.682151 1.94039L2.67089 10.5583C2.70692 10.7147 2.78253 10.8593 2.89048 10.9782C2.99843 11.0971 3.1351 11.1862 3.28739 11.2371L8.57479 12.9991L3.2874 14.7611C3.1351 14.812 2.99843 14.9012 2.89048 15.02C2.78253 15.1389 2.70692 15.2835 2.67089 15.4399L0.68215 24.0578C0.646396 24.2127 0.650636 24.3742 0.69447 24.5271C0.738307 24.6799 0.820297 24.8191 0.932731 24.9315L0.993718 24.9925C1.12741 25.1036 1.28933 25.1753 1.46141 25.1996C1.63349 25.224 1.80895 25.2 1.9682 25.1304L27.8218 13.8609C27.9898 13.7881 28.1328 13.6677 28.2332 13.5145C28.3336 13.3614 28.3869 13.1822 28.3866 12.9991Z" fill="#FAD101" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </a>
                   </div> <!-- <div id="gallery-data" class="hidden"> <h2 class="text-2xl font-semibold">Comments</h2> <p class="py-4 text-lg text-gray-700"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. </p> </div> -->
                 </div>
@@ -610,24 +2030,21 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-5"> <!-- <aside class="memorial-sidebar"> <div class="gifts-block"> <h5>Пам’ять вшанували: <span class="count">3</span></h5> <div class="gifts-wrap"> <div class="gift-img"> <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-1"> </div> <div class="gift-img"> <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-1"> </div> <div class="gift-img"> <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-1"> </div> <div class="gift-img"> <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-1"> </div> </div> </div> <button class="btn-add-gift"> Залишити поминок <svg class="btn-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.5098 5.09804H12.4902V7.39216H13.5098V5.09804Z"/> <path d="M11.7707 5.51608C11.7627 5.50843 11.7627 5.50843 11.7548 5.50078C11.2519 4.88137 11.2678 4.00196 11.7627 3.3749C12.2976 2.69431 13.008 1.60078 12.6408 1.01961C12.6408 1.01961 14.5406 2.4802 14.2532 3.42843C14.2532 3.42843 15.0594 2.93137 14.9956 2.35784C14.9956 2.35784 15.4186 5.52372 13.7743 5.83725H12.4652C12.1938 5.83725 11.9384 5.72255 11.7707 5.51608ZM16.8235 8.29196V21.6514C14.2772 21.4984 11.7228 21.5061 9.17647 21.6667V8.28431C9.17647 7.62667 9.73523 7.09137 10.4217 7.09137H15.5783C16.2648 7.10667 16.8235 7.63431 16.8235 8.29196Z"/> <path d="M10.3438 11.5825C10.3438 11.0058 9.30954 9.43137 9.30954 9.43137C9.30954 9.43137 8.27526 10.998 8.27526 11.5825C8.27526 12.1593 8.73837 12.6269 9.30954 12.6269C9.88072 12.6347 10.3438 12.1671 10.3438 11.5825ZM17.4217 14.2091C17.4217 13.8038 16.6962 12.6269 16.6962 12.6269C16.6962 12.6269 15.9707 13.8038 15.9707 14.2091C15.9707 14.6144 16.2948 14.9417 16.6962 14.9417C17.0976 14.9417 17.4217 14.6144 17.4217 14.2091ZM12.999 23.1878C14.234 23.1878 15.4612 23.2345 16.6962 23.3125C19.7836 23.5151 22.8556 23.9672 25.8813 24.6686C26.0588 24.7076 26.0279 24.9804 25.8504 24.9804H12.999H0.155331C-0.0299141 24.9804 -0.0607879 24.7154 0.124458 24.6686C3.15785 23.9672 6.22984 23.5151 9.30954 23.3125C10.5368 23.2267 11.764 23.1878 12.999 23.1878Z"/> </svg> </button> </aside> -->
+            <div class="col-lg-4 col-md-5">
               <aside class="memorial-sidebar">
                 <div class="sidebar-block">
                   <h5>Пам’ять вшанували: <button id="gifts-count" class="gifts-count" data-toggle="modal" data-target="#giverModal" data-gifts-count="0"></button>
                   </h5>
                   <div class="gifts-wrap">
-                    <div class="gift-img">
-                      <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-1">
+                    <div class="gift-img gift-no">
+                      <img src="static/img/memorials/gifts/gift-no.png" alt="Подарунок-1">
                     </div>
-                    <div class="gift-img">
-                      <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-1">
+                    <div class="gift-img gift-no">
+                      <img src="static/img/memorials/gifts/gift-no.png" alt="Подарунок-1">
                     </div>
-                    <div class="gift-img">
-                      <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-1">
+                    <div class="gift-img gift-no">
+                      <img src="static/img/memorials/gifts/gift-no.png" alt="Подарунок-1">
                     </div>
-                    <div class="gift-img">
-                      <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-1">
-                    </div> <!-- <div class="gift-img" data-giver-id="1"> <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="2"> <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="3"> <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="4"> <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="5"> <img src="static/img/memorials/gifts/gift-5.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="6"> <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="7"> <img src="static/img/memorials/gifts/gift-7.png" alt="Подарунок-3"> </div> <div class="gift-img" data-giver-id="8"> <img src="static/img/memorials/gifts/gift-8.png" alt="Подарунок-3"> </div> -->
                   </div>
                   <button data-toggle="modal" data-target="#giftsModal" class="btn-add-gift btn-light"> Залишити поминок <svg class="btn-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13.5098 5.09804H12.4902V7.39216H13.5098V5.09804Z" />
@@ -1131,7 +2548,7 @@
       </div>
     </div>
   </div> <!-- Modal gallery descr -->
-  <div class="modal fade site-modal gallery-descr" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
+  <div class="modal fade site-modal gallery-descr-modal" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -1189,9 +2606,12 @@
           <h4 class="modal-title" id="galleryVideoLabel">Створення галереї</h4>
         </div>
         <div class="modal-body">
-          <form id="gallery_video_form" class="site-form" action="#">
+          <form id="gallery_video_form" class="site-form gallery-video-form" action="#">
+            <label for="input_gallery_video">Відео</label>
             <div class="form-group">
-              <label for="input_gallery_video">Відео</label>
+              <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.4238 8.59709L15.2778 11.7431C15.0698 11.9511 14.7578 11.9511 14.5498 11.7431C14.3418 11.5351 14.3418 11.2231 14.5498 11.0151L17.6958 7.86909C19.2298 6.33509 19.2298 3.83909 17.6958 2.30509C16.9418 1.55109 15.9798 1.16109 14.9138 1.16109C13.8738 1.16109 12.8858 1.57709 12.1318 2.30509L8.98581 5.45109C7.45181 6.98509 7.45181 9.48109 8.98581 11.0151C9.34981 11.3791 9.79181 11.6911 10.2858 11.8731C10.5458 11.9771 10.6758 12.2891 10.5718 12.5491C10.3378 13.0951 9.73981 12.7831 9.89581 12.8351C9.27181 12.5751 8.72581 12.2111 8.25781 11.7431C6.30781 9.81909 6.30781 6.64709 8.25781 4.72309L11.4038 1.57709C12.3398 0.641094 13.5878 0.121094 14.9138 0.121094C16.2398 0.121094 17.4878 0.641094 18.4238 1.57709C20.3738 3.50109 20.3738 6.67309 18.4238 8.59709ZM10.1038 7.16709C9.84381 7.06309 9.53181 7.19309 9.42781 7.45309C9.32381 7.71309 9.45381 8.02509 9.71381 8.12909C10.2078 8.33709 10.6498 8.62309 11.0138 8.98709C12.5478 10.5211 12.5478 13.0171 11.0138 14.5511L7.86781 17.6971C7.11381 18.4511 6.15181 18.8411 5.08581 18.8411C4.04581 18.8411 3.05781 18.4251 2.30381 17.6971C0.769812 16.1631 0.769812 13.6671 2.30381 12.1331L5.44981 8.98709C5.65781 8.77909 5.65781 8.46709 5.44981 8.25909C5.24181 8.05109 4.92981 8.05109 4.72181 8.25909L1.57581 11.4051C-0.348187 13.3291 -0.348187 16.5011 1.57581 18.4251C2.51181 19.3611 3.75981 19.8811 5.08581 19.8811C6.41181 19.8811 7.65981 19.3611 8.59581 18.4251L11.7418 15.2791C13.6918 13.3551 13.6918 10.1831 11.7418 8.25909C11.2738 7.79109 10.7278 7.42709 10.1038 7.16709Z" fill="#323232" fill-opacity="0.8" />
+              </svg>
               <input type="text" id="input_gallery_video" placeholder="Додати посилання на YouTube">
               <span class="error-mess">Поле не можете бути пустим</span>
             </div>
@@ -1231,9 +2651,56 @@
         </div>
       </div>
     </div>
+  </div> <!-- Modal share links -->
+  <div class="modal fade site-modal share-links-modal" id="shareLinksModal" tabindex="-1" aria-labelledby="shareLinksLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="shareLinksLabel">Поділитись сторінкою</h4>
+        </div>
+        <div class="modal-body">
+          <ul class="share-links">
+            <li class="socl-item"> <!-- https://www.addtoany.com/add_to/facebook?linkurl=YOUR_LINK_SHARE -->
+              <a href="https://www.addtoany.com/add_to/facebook?linkurl=https://zberegy.uadev.fun" class="btn-facebook">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20Z" fill="currentColor"></path>
+                  <path d="M21.5948 31.2888V20.5831H25.1884L25.7273 16.4109H21.5948V13.747C21.5948 12.5392 21.9304 11.7159 23.6626 11.7159H25.8719V7.98537C24.8025 7.87224 23.7278 7.81744 22.6524 7.82123C19.467 7.82123 17.2862 9.76548 17.2862 13.3363V16.4109H13.6835V20.5831H17.2862V31.2888H21.5948Z" fill="#FDFDFD"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="socl-item"> <!-- https://twitter.com/intent/tweet?text=&amp;url=YOUR_LINK_SHARE -->
+              <a href="https://twitter.com/intent/tweet?text=&amp;url=https://zberegy.uadev.fun" class="btn-twitter">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.0002 39.9996C31.0458 39.9996 40 31.0454 40 19.9998C40 8.95423 31.0458 0 20.0002 0C8.95459 0 0.000366211 8.95423 0.000366211 19.9998C0.000366211 31.0454 8.95459 39.9996 20.0002 39.9996Z" fill="currentColor"></path>
+                  <path d="M32.2508 14.3734C31.3783 14.76 30.4526 15.0134 29.5049 15.1253C30.5034 14.5282 31.2506 13.5883 31.6073 12.481C30.6689 13.0378 29.6422 13.43 28.5715 13.6407C28.1241 13.1636 27.5834 12.7834 26.9831 12.5238C26.3827 12.2642 25.7353 12.1307 25.0812 12.1316C22.4416 12.1316 20.3007 14.2725 20.3007 16.9121C20.3007 17.2868 20.3431 17.6515 20.4251 18.0016C16.4521 17.8023 12.9294 15.8993 10.5714 13.0061C10.1462 13.7357 9.92275 14.5653 9.92397 15.4098C9.92397 17.0679 10.7686 18.5318 12.0506 19.3888C11.2914 19.3654 10.5489 19.1601 9.88547 18.7902L9.88511 18.8508C9.88511 21.1671 11.5336 23.0991 13.7202 23.538C13.3098 23.6499 12.8863 23.7064 12.4609 23.7059C12.1522 23.7059 11.8531 23.6763 11.5615 23.6207C12.1697 25.5195 13.9348 26.9017 16.0272 26.9405C14.3337 28.2697 12.2422 28.9905 10.0894 28.9869C9.70436 28.9869 9.32289 28.9645 8.94962 28.9199C11.135 30.325 13.679 31.0707 16.2771 31.0679C25.0702 31.0679 29.8789 23.7836 29.8789 17.4658C29.8789 17.2587 29.8742 17.0522 29.865 16.8476C30.8013 16.1715 31.6092 15.3336 32.2508 14.3734Z" fill="#F1F2F2"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="socl-item"> <!-- the link will be copied from the address bar -->
+              <button data-title="Копіювати" data-news-copy="http://localhost:3000/news-1.html" class="btn-share-post">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- <mask id="mask0_77_10" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26"> -->
+                  <path d="M26 0H0V26H26V0Z" fill="white"></path>
+                  <path d="M12.9999 25.9998C20.1795 25.9998 25.9998 20.1795 25.9998 12.9999C25.9998 5.82025 20.1795 0 12.9999 0C5.82025 0 0 5.82025 0 12.9999C0 20.1795 5.82025 25.9998 12.9999 25.9998Z" fill="#F7AF23"></path>
+                  <path d="M15.6667 9H8.33333C7.59695 9 7 9.65665 7 10.4667V18.5333C7 19.3434 7.59695 20 8.33333 20H15.6667C16.403 20 17 19.3434 17 18.5333V10.4667C17 9.65665 16.403 9 15.6667 9Z" fill="white"></path>
+                  <path d="M17.8 6H11.2C10.882 6.00121 10.5774 6.15612 10.3526 6.43091C10.1277 6.7057 10.001 7.07805 10 7.46667V8.29167H15.8238C16.1686 8.29288 16.7682 8.26824 17 8.5C17.5 9 17.499 9.46065 17.5 9.88208V17H17.8C18.118 16.9988 18.4226 16.8439 18.6474 16.5691C18.8723 16.2943 18.999 15.9219 19 15.5333V7.46667C18.999 7.07805 18.8723 6.7057 18.6474 6.43091C18.4226 6.15612 18.118 6.00121 17.8 6Z" fill="white"></path> <!-- </g> -->
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
-  <script defer src="static/js/common.min.js?_v=3d5b786c75953b23582a59a8c66627cf"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=7afea185c55534438d8a6b218ce461bd">
+  <script defer src="static/js/common.min.js?_v=7afea185c55534438d8a6b218ce461bd"></script>
 </body>
 
 </html>

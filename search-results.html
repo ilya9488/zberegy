@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=7afea185c55534438d8a6b218ce461bd">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -50,8 +50,8 @@
             <path d="M12.3048 40.6827C13.2 40.6827 13.9258 39.9516 13.9258 39.0496C13.9258 38.1477 13.2 37.4165 12.3048 37.4165C11.4096 37.4165 10.6838 38.1477 10.6838 39.0496C10.6838 39.9516 11.4096 40.6827 12.3048 40.6827Z" fill="currentColor" />
           </svg>
         </a>
-        <div>
-          <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none">
+        <div class="search-block"> <!-- <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none"> -->
+          <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="25" cy="25" r="25" fill="#F2F2F2"></circle>
               <path d="M35.0547 15H14.9453C13.3213 15 12 16.3503 12 18.01V31.99C12 33.6497 13.3213 35 14.9453 35H35.0547C36.6787 35 38 33.6497 38 31.99V18.01C38 16.3503 36.6787 15 35.0547 15ZM37.1875 18.01V31.99C37.1875 32.459 37.0414 32.8934 36.7938 33.2493L27.7904 22.5794L36.6446 16.5591C36.9819 16.9448 37.1875 17.4532 37.1875 18.01ZM35.0547 15.8303C35.3645 15.8301 35.6706 15.8993 35.9515 16.0331L25 23.4794L14.0485 16.0331C14.3293 15.8993 14.6355 15.8301 14.9453 15.8303H35.0547ZM12.8125 31.99V18.01C12.8125 17.4532 13.0181 16.9448 13.3554 16.5592L22.2096 22.5794L13.2062 33.2493C12.9586 32.8934 12.8125 32.459 12.8125 31.99ZM14.9453 34.1697C14.5372 34.17 14.1376 34.0499 13.7946 33.8238L22.9045 23.0519L24.775 24.3237C24.8417 24.369 24.9199 24.3932 25 24.3932C25.0801 24.3932 25.1583 24.369 25.225 24.3237L27.0955 23.0519L36.2054 33.8238C35.8624 34.0499 35.4628 34.17 35.0547 34.1697H14.9453Z" fill="#323232"></path>
@@ -63,7 +63,7 @@
                 <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
               </svg>
             </button>
-            <input type="text" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
+            <input type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
             <button class="btn-search-reset hide">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.8828 0.117299C7.7264 -0.0390995 7.4736 -0.0390995 7.31721 0.117299L4.00005 3.43446L0.682892 0.117299C0.526494 -0.0390995 0.273696 -0.0390995 0.117298 0.117299C-0.0390995 0.273697 -0.0390995 0.526494 0.117298 0.682892L3.43446 4.00005L0.117298 7.31721C-0.0390995 7.47361 -0.0390995 7.7264 0.117298 7.8828C0.195297 7.9608 0.297696 8 0.400095 8C0.502494 8 0.604893 7.9608 0.682892 7.8828L4.00005 4.56564L7.31721 7.8828C7.39521 7.9608 7.4976 8 7.6 8C7.7024 8 7.8048 7.9608 7.8828 7.8828C8.0392 7.7264 8.0392 7.47361 7.8828 7.31721L4.56564 4.00005L7.8828 0.682892C8.0392 0.526494 8.0392 0.273697 7.8828 0.117299Z" fill="#323232" fill-opacity="0.8" />
@@ -163,6 +163,9 @@
                   <li class="menu-item">
                     <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
                   </li>
+                  <li class="menu-item">
+                    <a class="menu-item-link" href="privacy-policy.html">Політика безпеки</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -187,7 +190,7 @@
         <div class="container-xl">
           <div class="row search-head">
             <div class="col-lg-8 col-md-8">
-              <h1>Знайдено Меморіалів: <span class="search-count">4 </span>
+              <h1>Знайдено Меморіалів:&nbsp;<span class="search-count">457</span>
               </h1>
             </div>
             <div class="col-lg-4 col-md-4 search-drop-wrap">
@@ -213,7 +216,7 @@
           </div>
           <div class="row search-sort-container" data-sort-type="surname">
             <div class="col-12">
-              <a class="link-to-memorial" href="example-memorial.html">
+              <a class="link-to-memorial" href="real-memorial.html">
                 <div class="preview-item">
                   <div class="img-wrap">
                     <img width="312" height="312" src="static/img/memorials/person-2/foto-2.jpg" alt="foto">
@@ -239,7 +242,7 @@
               </a>
             </div>
             <div class="col-12">
-              <a class="link-to-memorial" href="example-memorial.html">
+              <a class="link-to-memorial" href="real-memorial.html">
                 <div class="preview-item">
                   <div class="img-wrap">
                     <img width="312" height="312" src="static/img/memorials/person-1/foto-1.jpg" alt="foto">
@@ -270,7 +273,7 @@
               </a>
             </div>
             <div class="col-12">
-              <a class="link-to-memorial" href="example-memorial.html">
+              <a class="link-to-memorial" href="real-memorial.html">
                 <div class="preview-item">
                   <div class="img-wrap">
                     <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
@@ -451,8 +454,8 @@
       </div> <!-- /.container -->
     </footer>
   </main> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=3d5b786c75953b23582a59a8c66627cf">
-  <script defer src="static/js/common.min.js?_v=3d5b786c75953b23582a59a8c66627cf"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=7afea185c55534438d8a6b218ce461bd">
+  <script defer src="static/js/common.min.js?_v=7afea185c55534438d8a6b218ce461bd"></script>
 </body>
 
 </html>

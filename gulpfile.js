@@ -1,4 +1,4 @@
-const localUrl = 'zberegy.loc'
+const localUrl = 'zberegy'
 
 const {src, dest, parallel, series, watch} = require('gulp');
 const browserSync  = require('browser-sync').create();
