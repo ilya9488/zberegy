@@ -1,39 +1,44 @@
-$('.btn-goto-add-gift').on('click', function(){
+// Go to the Gift button
+$('.btn-goto-add-gift').on('click', function () {
   $('html, body').animate({ scrollTop: $('.memorial-sidebar .btn-add-gift').offset().top - $('#header').outerHeight() - 150 }, 500);
 })
 
-
-function giftsCount(){ 
-  if($('#gifts-count').length){
-    const giftsCount = $('.memorial-sidebar .gifts-wrap .gift-img').not('.gift-no').length
-    $('#gifts-count')[0].setAttribute('data-gifts-count', giftsCount)
-  }
+// calculation of gifts, imitation of adding a new gift
+let giftsCounter = 0;
+function giftsCount() {
+  giftsCounter++;
+  $('#gifts-count')[0].dataset.giftsCount = giftsCounter
 }
-giftsCount()
 
-function newImg(src){
+function newImg(src) {
   let giftImg = new Image
-      giftImg.src = src
+  giftImg.src = src
   return giftImg
 }
-$('#giftsModal .gift-img').on('click',function(){
+$('#giftsModal .gift-img').on('click', function () {
   let giftWrap = document.createElement('div'),
-      thisSrc = $(this).children('img')[0].src
-      
-      giftWrap.classList.add('gift-img')
-      giftWrap.append(newImg(thisSrc))
-
-    // add img to sidebar
-    $('.memorial-sidebar .gifts-wrap').prepend(giftWrap)
-    // add img to header memorial img
-    $('.memorial-header .gift-wrap').html(newImg(thisSrc))
-
-  // maybe delete (?)
-  if($('.gift-no').length){
-    $('.gift-no')[0].remove()
+    thisSrc = $(this).children('img')[0].src
+  // delete the third last gift to start a new gift
+  if ($('.memorial-sidebar .gift-no').length === 0 & $('.memorial-sidebar .gift-img').length === 3) {
+    $('.memorial-sidebar .gift-img')[2].remove()
   }
-  // appdate count on sidebar
-  giftsCount()
+  giftWrap.classList.add('gift-img')
+  giftWrap.append(newImg(thisSrc))
+
+  // add img gift to sidebar
+  $('.memorial-sidebar .gifts-wrap').prepend(giftWrap)
+  // add img gift to header memorial img
+  $('.memorial-header .gift-wrap').html(newImg(thisSrc))
+
+  // replace the gray icon with a gift
+  if ($('.memorial-sidebar .gift-no').length) {
+    $('.memorial-sidebar .gift-no')[0].remove()
+  }
+  
   // modal hide
   $('#giftsModal').modal('hide')
+
+  // appdate count on sidebar
+  giftsCount()
+
 })

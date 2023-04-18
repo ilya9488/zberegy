@@ -1,5 +1,6 @@
 // delete this code (start code)
 // $('#sucsesModal').modal('show')
+// $('#shareLinksModal').modal('show')
 
 // delete this code (start code)
 // setInterval(function () {
@@ -32,7 +33,7 @@ $('.btn-lock').on('click',function(e){
   e.preventDefault() // because we are inside the link
 })
 // (!important a > button)
-$('a button').on('click', function (e) {
+$('a:not(.fancybox) button').on('click', function (e) {
   e.preventDefault() // because we are inside the link
 })
 $('[data-favorite]').on('click',function(e){

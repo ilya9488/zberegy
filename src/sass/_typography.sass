@@ -17,20 +17,30 @@ input:-webkit-autofill::first-line
   font-family: $text
   font-weight: 400
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+  -webkit-appearance: none
+
 *
   &::-webkit-scrollbar
-    width: 5px
-    height: 5px
+    width: 10px
+    height: 10px
     cursor: pointer
+    @include media-breakpoint-down(md)
+      width: 5px
+      height: 5px
+
   &::-webkit-scrollbar-track
     box-shadow: inset 0 0 5px lighten($yellow, 75%)
     background-color: lighten($blue, 40%)
   &::-webkit-scrollbar-thumb
     background-color: lighten($yellow, 20%)
-    background-color: transparentize($yellow, .8)
-    border-radius: 50px
+    background-color: transparentize($yellow, .6)
+    // border-radius: 50px
   &::-webkit-scrollbar-thumb:hover
-    background: lighten($yellow, 5%)
+    background: lighten($yellow, 10%)
 
 // .rate-pay-form
 //   -moz-user-select: none
@@ -40,7 +50,7 @@ input:-webkit-autofill::first-line
 //   -ms-user-select: none
 //   user-select: none
 
-.page-content
+// .page-content
   // max-width: 1330px
   // width: calc( 100% - (56px + 56px))
   // margin-left: auto
@@ -261,11 +271,14 @@ ol
     font-size: 10px
     line-height: 10px
     transition: opacity .3s
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       min-width: 15px
       min-height: 15px
       font-size: 8px
       line-height: 8px
+      top: 0
+      left: calc( 100% - 15px )
+      
 [data-count=""],
 [data-count="0"]
   &::before

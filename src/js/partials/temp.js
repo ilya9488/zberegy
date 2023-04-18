@@ -19,8 +19,8 @@
 // // Review Card
 // for (let i  = 0; i < $('.review-card').length; i++) {
 //   const dropImg = $('.review-card')[i];
-//   if($(dropImg).find('.user-img > img').length === 0){
-//     $(dropImg).find('.user-img').html(getFirstLetters($(dropImg).find('.user-name').text()))
+//   if($(dropImg).find('.select-img > img').length === 0){
+//     $(dropImg).find('.select-img').html(getFirstLetters($(dropImg).find('.user-name').text()))
 //   }
 // }
 

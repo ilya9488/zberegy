@@ -1,6 +1,6 @@
 // SITE-FORM
 .site-form
-  label
+  label:not(.btn-edit)
     font-size: 14px
     line-height: 20px
     color: rgba(50, 50, 50, 0.6)
@@ -50,11 +50,14 @@
       @include media-breakpoint-down(sm)
         padding-top: 4px
   .error-mess
+    position: absolute
+    bottom: 0
+    transform: translateY(100%)
     display: block
     overflow: hidden
     max-height: 0
-    font-size: 14px
-    line-height: 20px
+    font-size: 12px
+    line-height: 12px
     color: $error
     transition: .3s
     @include media-breakpoint-down(sm)
@@ -112,7 +115,8 @@
     color: #3E9AF6
     display: block
     margin-bottom: 16px
-  .form-group
+  .form-group,
+  .input-group
     position: relative
     .icon-for-input
       position: absolute
@@ -147,7 +151,21 @@ form[disabled=true]:not(#user_data_form)
   border-radius: 4px
   margin-right: 10px
   font-size: 0
+  font-weight: 900
   transition: .2s
+  &::before
+    content: "\2713"
+  &-box
+    width: 19px
+    height: 19px
+    box-shadow: 0 0 0 1px #DEDEDE
+    border: 4px solid #ffffff
+    border-radius: 4px
+    background-color: #ffffff
+    margin-right: 10px
+
 input:checked + .custom-checkbox
   font-size: 14px
-    
+input:checked + .custom-checkbox-box
+  box-shadow: 0 0 0 1px #3E9AF6
+  background-color: #3E9AF6

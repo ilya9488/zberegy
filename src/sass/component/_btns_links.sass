@@ -153,7 +153,7 @@ button
       width: 100%
   &:active
     &::before
-      background-color: #FFE874    
+      background-color: #FFE874
 
 // btn excerpt
 .btn-excerpt
@@ -307,14 +307,64 @@ button
     color: darken(#3ED05E, 10%)
 // Btn edit, rejected
 .btn-edit
-  color: $text-c
+  color: $title-c
+  border-radius: 50%
+  cursor: pointer
   &:hover
     color: $link
+    box-shadow: 0 0 3px $clear
 // Btn delete
 .btn-delete
   color: $title-c
+  background-color: #F2F2F2
+  border-radius: 50%
+  transition: .3s
+  svg
+    transition: .3s
   &:hover
-    color: darken($error, 20%)
+    background-color: $error
+    color: $clear
+.btn-delete-red
+  color: #F2F2F2
+  background-color: $error
+  border-radius: 50%
+  transition: .3s
+  svg
+    transition: .3s
+  &:hover
+    background-color: #F2F2F2
+    color: $title-c
+
+.btn-add-foto
+  cursor: pointer
+  display: flex
+  align-items: center
+  color: #3E9AF6
+  font-size: 18px
+  line-height: 18px
+  font-weight: 600
+  margin-bottom: 20px
+  transition: .3s
+  &:hover
+    color: #2780d9
+    
+  svg
+    margin-right: 13px
+
+.btn-add-new-memorial
+  &-wrap
+    display: flex
+    justify-content: center
+    border: 1px solid #DEDEDE
+    border-radius: $border-radius
+    padding: 20px
+    margin-bottom: 30px
+  .line
+    stroke: #C2C2C2
+    transition: .3s
+  &:hover
+    .line
+      stroke: $link 
 
 // links
 a

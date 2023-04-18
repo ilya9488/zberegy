@@ -1,10 +1,16 @@
 .login_signup-block
   padding: 100px 0
   @include media-breakpoint-down(sm)
-    padding: 45px 0
+    padding: 60px 0
   &.login-block
-    background-image: url(../img/login/login-bg.jpg)
-    background-size: auto 115%
+    min-height: 100vh
+    background-color: #E3F0FF
+    background-image: url(../img/login/login-bg.svg)
+    background-size: auto 94%
+    @include media-breakpoint-down(md)
+      background-image: url(../img/login/login-bg-sm-t.svg), url(../img/login/login-bg-sm-b.svg)
+      background-size: 100% auto, 100% auto
+      background-position: top 18px center, bottom 0 left 0
   &.signup-block
     background-image: url(../img/signup/signup-bg.png)
     background-size: calc( 50% - 100px ) auto
@@ -79,3 +85,19 @@
       display: none
       @include media-breakpoint-down(md)
         display: block
+
+.forgot-password
+  &-block
+    display: flex
+    align-items: center
+  &-message
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    font-size: 18px
+    line-height: 24px
+    color: #797F85
+    svg
+      margin-bottom: 15px
+

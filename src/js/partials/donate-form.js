@@ -44,22 +44,22 @@ if ($('.donate').length !== 0) {
     $('.input-curency')[0].innerText = symb
   }
   $('[name=currency]').on('change', function () {
-    switch (this.id) {
+    currencyChange(this.id)
+  })
+  function currencyChange(id) {
+    switch (id) {
       case 'pay_usd':
-        // typeCurency('$')
         typeCurency('USD', '$')
         break;
       case 'pay_eur':
-        // typeCurency('€')
         typeCurency('EUR', '€')
         break;
       case 'pay_uah':
-        // typeCurency('₴')
         typeCurency('грн', '₴')
         break;
     }
-  })
-
+  }
+  
   function donSubmDisEnab(e) {
     e
       ? $('#donate_submit')[0].removeAttribute("disabled")
@@ -276,11 +276,14 @@ if ($('.donate').length !== 0) {
           $('.load-block')[0].hidden = false
           $('.load-block .pay-in-process')[0].hidden = false
           $('#you_paid_amount')[0].innerText = payAmount
+          $('.success-type-curency')[0].innerText = $('.type-curency')[0].textContent
+
           donSubmDisEnab(0)
           setTimeout(function() {
             $('.load-block .pay-in-process')[0].hidden = true
             $('.load-block .pay-success')[0].hidden = false
             thisForm.reset()
+            currencyChange($('[name=currency]:checked')[0].id)
           }, 3000);
         },
         error: function (error) {

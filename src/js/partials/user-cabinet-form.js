@@ -1,4 +1,4 @@
-let old_user_data_filds = '', new_user_data_filds, userImgPath = $('.user-img img').length ? $('.user-img img')[0].src : '';
+let old_user_data_filds = '', new_user_data_filds, userImgPath = $('.user-img img')[0].src;
 
 function oldUserDataFilds() {
   old_user_data_filds = '';

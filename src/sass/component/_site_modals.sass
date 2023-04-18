@@ -133,6 +133,46 @@
           min-width: 80px
         &:last-of-type
           margin-right: 0
-          
-
-      
+  &.gallery-descr-modal
+    .select-img-wrap
+      width: 100%
+      height: 320px
+      padding: 5px
+      border: 1px solid #DEDEDE
+      border-radius: $border-radius
+      @include media-breakpoint-down(lg)
+        height: 200px
+    .select-img
+      width: 100%
+    .btn-load-select-img
+      top: 20px
+      right: 20px
+  &.gallery-video
+    .gallery-video-form
+      [type=text]
+        padding-right: 50px
+        @include media-breakpoint-down(sm)
+          padding-right: 40px
+      .icon-for-input
+        right: 20px
+        @include media-breakpoint-down(sm)
+          width: 16px
+          height: 16px
+  &.share-links-modal
+    .modal-header
+      justify-content: center
+      margin-bottom: 0
+      padding: 16px
+    .share-links
+      display: flex
+      justify-content: center
+      padding: 0
+      li
+        display: flex
+        padding: 0
+        margin: 5px
+      a
+        display: flex
+      svg
+        max-width: 26px
+        max-height: 26px

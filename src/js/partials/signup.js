@@ -11,7 +11,7 @@ $('#signup_form').on('submit', function (e) {
 
     // Name
     if (inputId === 'name') {
-      if ($(this).val() !== '') {
+      if ($(this).val() !== '' && $(this).val().length > 1) {
         $(this).removeClass('error')
       } else {
         $(this).addClass('error')
@@ -20,7 +20,7 @@ $('#signup_form').on('submit', function (e) {
 
     // Surname
     if (inputId === 'surname') {
-      if ($(this).val() !== '') {
+      if ($(this).val() !== '' && $(this).val().length > 1) {
         $(this).removeClass('error')
       } else {
         $(this).addClass('error')
@@ -52,12 +52,9 @@ $('#signup_form').on('submit', function (e) {
   } else {
     valid = true
   }
+  
   if (valid) { 
     localStorage.login = true
-    localStorage.name = $(this).find('#name')[0].value
-    localStorage.surname = $(this).find('#surname')[0].value
-    localStorage.email = $(this).find('#email')[0].value
-    localStorage.pass = $(this).find('#pass')[0].value
 
     setTimeout(() => {
       location.href = 'mail_confirmation.html'

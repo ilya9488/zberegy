@@ -8,6 +8,7 @@
 if (document.location.href.indexOf('#gallery') >= 1) {
   $('.fancybox__button--close').trigger('click')
 }
+
 // gallery tab-2...
 Fancybox.bind('[data-fancybox="gallery"]', {
   click: false,
@@ -76,7 +77,7 @@ Fancybox.bind('[data-fancybox="gallery"]', {
       const data = $trigger.querySelector('.sidebar-img-comments').innerHTML || ''
       // Update comments
       fancybox.$comments.innerHTML = data
-      $('.fancybox__container').addClass('active')
+      $('.fancybox__container').addClass('active memorial-gallery')
     },
   },
 })

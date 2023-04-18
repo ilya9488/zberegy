@@ -1,5 +1,6 @@
 let admin_data
 
+// backend simulation with jason ( get email and password )
 function getFile(fileName) {
 	let request = new XMLHttpRequest()
 			request.open('GET', fileName)
@@ -16,11 +17,9 @@ getFile('/admin-data.json')
 $('#login_form').on('submit', function (e) {
 	e.preventDefault()
 	const adminEmail = admin_data.email,
-				adminPass = admin_data.pass,
-				adminNmae = admin_data.name,
-				adminSurName = admin_data.surname
+				adminPass = admin_data.pass;
 
-	let valid, inputId
+	let valid, inputId;
 	
 	$(this).find('input').not('[type=submit]').each(function () {
 
@@ -34,7 +33,6 @@ $('#login_form').on('submit', function (e) {
 					$(this).addClass('error')
 				}
 		}
-		console.log(adminEmail);
 			// Email
 			if (inputId === 'email') {
 				if ($(this).val() !== '' && $(this).val() === adminEmail) {
@@ -58,27 +56,3 @@ $('#login_form').on('submit', function (e) {
 		}
 	}, 1000);
 })
-
-$('.pass-show').on('click', function () {
-	let thisInput = $(this)[0].parentNode.querySelector('input'),
-		thisSlashEye = $(this).find('.eye-slash')[0]
-	
-	thisInput.type === 'password'
-		? (thisInput.type = 'text' && thisSlashEye.setAttribute('hidden', ''))
-		: (thisInput.type = 'password') && thisSlashEye.removeAttribute('hidden')
-	// thisSlashEye.classList.toggle('hidden')
-})
-$('#btn_logout').on('click', function (e) {
-	e.preventDefault();
-	location.href = 'login.html';
-	localStorage.login = false;
-})
-if (localStorage.login === 'true') {
-  $('#page').addClass('IS_LOG_IN')
-	$('a').each(function () {
-		if (this.href.includes('login.html') && !$(this).hasClass('btn-user-login'))
-			this.href = 'user-cabinet-data.html';
-	})
-}
-
-

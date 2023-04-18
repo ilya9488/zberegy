@@ -10,6 +10,8 @@
 /*_Plugins_ */
 //= ../../node_modules/slick-carousel/slick/slick.min.js
 //= ../../node_modules/@fancyapps/ui/dist/fancybox.umd.js
+// calendar
+//= ../../node_modules/pickmeup/dist/pickmeup.min.js
 
 /*_if_need_ */
 //= partials/functions.js
@@ -19,6 +21,7 @@ window.onload = function (){
 	/*_all_js_*/
 	//= partials/login.js
 	//= partials/signup.js
+	//= partials/forgot-password.js
 	//= partials/app.js
 	//= partials/nav.js
 	// search
@@ -43,7 +46,9 @@ window.onload = function (){
 	//= partials/comments-to-comment-form.js
 	//= partials/contact-us.js
 	//= partials/donate-form.js
-	//= partials/user-cabinet-form.js
+	//= partials/user-cabinet-data-form.js
 	//= partials/user-cabinet-pass.js
+	//= partials/user-cabinet-management-create-form.js
 	//= partials/form-del-account.js
+	//= partials/form-answer-mess.js
 }

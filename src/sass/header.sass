@@ -92,44 +92,34 @@ body
     position: relative
     flex: auto
     justify-content: space-between
-
   // Search
+  .search-block
+    display: flex
+    align-items: center
+    flex: auto
+    margin-left: 70px
+    // padding-left: 20px
+    max-width: 500px
+    @media (max-width: 1300px)
+      margin-left: 0
+    @include media-breakpoint-down(lg)
+      flex: none
+    .btn-user-mesage
+      @include media-breakpoint-up(xl)
+        display: none
   .search-wrap
     display: flex
     align-items: center
+    width: 100%
     border: 1px solid #DEDEDE
     border-radius: 100px
     padding-left: 20px
-    max-width: 500px
+    // max-width: 500px
     overflow: hidden
-    flex: auto
+    // flex: auto
     background-color: $clear
-    margin-left: 70px
+    // margin-left: 70px
     transition: .3s
-    &:focus-within
-      padding-left: 0
-      .btn-search
-        font-size: 16px
-        border-color: #DEDEDE
-        border-radius: 100px
-        padding: 19px
-        transform: scale(100px)
-        color: #959393
-        font-size: 14px
-        font-weight: 400
-        @include media-breakpoint-down(lg)
-          padding: 0 10px
-          font-size: 12px
-        @include media-breakpoint-down(sm)
-          padding: 0 5px 0 10px
-          font-size: 0
-        &:hover
-          color: $text-c
-          background-color: #fafafa
-        .search-icon
-          margin-right: 10px
-          @include media-breakpoint-down(sm)          
-            margin-right: 5px
     @media (max-width: 1400px)
       margin-left: 15px
     @include media-breakpoint-down(lg)
@@ -155,6 +145,31 @@ body
       @include media-breakpoint-down(sm)
         right: 0
         width: calc( 100% - 40px )
+    &:focus-within
+      padding-left: 0
+      .btn-search
+        font-size: 16px
+        border-color: #DEDEDE
+        border-radius: 100px
+        padding: 19px
+        transform: scale(100px)
+        color: #959393
+        font-size: 14px
+        font-weight: 400
+        @include media-breakpoint-down(lg)
+          padding: 0 10px
+          font-size: 12px
+        @include media-breakpoint-down(sm)
+          padding: 0 5px 0 10px
+          font-size: 0
+        &:hover
+          color: $text-c
+          background-color: #fafafa
+        .search-icon
+          margin-right: 10px
+          @include media-breakpoint-down(sm)          
+            margin-right: 5px
+    
     &.active + .btn-search-toggler
       opacity: .3
       z-index: -1
@@ -196,6 +211,7 @@ body
   .btn-search-toggler
     padding: 0
     min-width: 20px
+    margin-left: 10px
     &-close
       padding: 0
   // Btn-Menu Toggler
@@ -250,9 +266,16 @@ body
   .btn-user-mesage
     @include media-breakpoint-down(lg)
       margin-top: 20px
-
+      width: 30px
+      height: 30px
+      margin-top: 0
+      svg
+        max-width: 100%
+        max-height: 100%
+  .btn-user-mesage
+    display: none
   .btn-user
-    &-login,
+    // &-login,
     &-cabinet,
     &-mesage
       color: #F2F2F2
@@ -260,7 +283,39 @@ body
         display: none
       &:hover
         color: #eeeeee
-    // &-mesage
+    &-login
+      display: inline-flex
+      align-items: center
+      color: #F2F2F2
+      flex-wrap: nowrap
+      svg
+        min-width: 20px
+      @include media-breakpoint-down(lg)
+        margin-top: 23px
+        width: auto
+        align-items: center
+        font-family: $title
+        font-weight: 600
+        background-color: #DBEDFF
+        gap: 10px
+        padding: 5px 10px
+        border-radius: $border-radius
+        &:hover
+          &::after
+            color: $link
+        svg
+          width: 20px
+          height: 20px
+        &::after
+          content: 'Вхід / Реєстрація'
+          color: $title-c
+          white-space: nowrap
+          transition: .3s
+    &-mesage
+      @include media-breakpoint-down(lg)
+        display: inline-flex
+
+    
       
     // If user (not) logged in
     &-cabinet,
@@ -272,11 +327,51 @@ body
   .btn-user
     &-login
       display: none
-    &-cabinet,
+    &-cabinet
+      display: inline-flex
+      align-items: center
+      flex-wrap: nowrap
+      svg
+        min-width: 20px
+      @include media-breakpoint-down(lg)
+        margin-top: 23px
+        width: auto
+        align-items: center
+        font-family: $title
+        font-weight: 600
+        background-color: #DBEDFF
+        gap: 10px
+        padding: 5px 10px
+        border-radius: $border-radius
+        &:hover
+          &::after
+            color: $link
+        svg
+          width: 20px
+          height: 20px
+        &::after
+          content: 'Особистий кабінет'
+          color: $title-c
+          white-space: nowrap
+          transition: .3s
     &-mesage
       display: inline-flex
       @include media-breakpoint-down(lg)
         display: none
+    &-mesage
+      @include media-breakpoint-up(xl)
+        display: inline-flex
+  .search-block
+    @include media-breakpoint-down(lg)
+      // flex: none
+    .btn-user-mesage
+      @include media-breakpoint-up(xl)
+        display: none
+        // display: inline-flex
+      @include media-breakpoint-down(lg)
+        display: inline-flex
+      // @include media-breakpoint-up(xl)
+      //   display: none
       
 /*_component_*/
 @import "component/breadcrumbs"
@@ -296,6 +391,10 @@ body
 @import "sections/_user_cabinet_favorites"
 @import "sections/_user_cabinet_management"
 @import "sections/_user_cabinet_management_create"
+@import "sections/_user_cabinet_my_comments"
+@import "sections/_user_cabinet_private_mess"
+@import "sections/_user_cabinet_gifts"
+@import "sections/_user_cabinet_mailing_reminder"
 
 // ? to style.sass ?
 @import "sections/memorial_body"
