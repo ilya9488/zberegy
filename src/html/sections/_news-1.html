@@ -16,6 +16,7 @@
           <span class="share-label">Поділитися новиною:</span>
           <ul class="share-links">
             <li class="socl-item">
+              <!-- https://www.addtoany.com/add_to/facebook?linkurl=YOUR_LINK_SHARE -->
               @@include('../component/btns_links.html', {
                 "type": "link",
                 "style": "facebook",
@@ -23,6 +24,7 @@
               })
             </li>
             <li class="socl-item">
+              <!-- https://twitter.com/intent/tweet?text=&amp;url=YOUR_LINK_SHARE -->
               @@include('../component/btns_links.html', {
                 "type": "link",
                 "style": "twitter",
@@ -30,6 +32,7 @@
               })
             </li>
             <li class="socl-item">
+              <!-- the link will be copied from the address bar -->
               @@include('../component/btns_links.html', {
                 "type": "btn",
                 "style": "share-post",

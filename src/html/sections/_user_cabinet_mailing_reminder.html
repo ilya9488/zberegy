@@ -1,4 +1,4 @@
-<div class="user-cabinet-management">
+<div class="user-cabinet-mailing-reminder">
   <h3 class="user-cabinet-title">Оповіщення про пам'ятні події</h3>
   <p>
     Ви будете отримувати повідомлення про пам'ятні дати, які відмічені в Онлайн Меморіалах з Вашого списку (Обрані
@@ -7,9 +7,22 @@
   </p>
   <p>Якщо Ви не хочете отримувати такі повідомлення, просто приберіть галочку з цього пункту.</p>
   <h5>Канали зв'язку:</h5>
-  <label for="mail_chan"><input type="checkbox" name="chan_type" id="mail_chan"> Email-листи</label>
-  <br>
-  <label for="teleg_chan"><input type="checkbox" name="chan_type" id="teleg_chan"> Повідомлення у Telegram</label>
-  <br>
-  <label for="vibe_chan"><input type="checkbox" name="chan_type" id="vibe_chan"> Повідомлення у Viber</label>
+
+  <label for="mail_chan" class="custom-checkbox-wrap">
+    <input checked hidden type="checkbox" name="chan_type" id="mail_chan">
+    <span class="custom-checkbox-box"></span>
+    <span>Email-листи</span>
+  </label>
+  <!-- disabled -->
+  <label disabled for="teleg_chan" class="custom-checkbox-wrap">
+    <input hidden type="checkbox" name="chan_type" id="teleg_chan">
+    <span class="custom-checkbox-box"></span>
+    <span>Повідомлення у Telegram</span>
+  </label>
+  <!-- disabled -->
+  <label disabled for="vibe_chan" class="custom-checkbox-wrap">
+    <input hidden type="checkbox" name="chan_type" id="vibe_chan">
+    <span class="custom-checkbox-box"></span>
+    <span>Повідомлення у Viber</span>
+  </label>
 </div>
