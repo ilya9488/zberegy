@@ -159,20 +159,104 @@
           width: 16px
           height: 16px
   &.share-links-modal
+    .modal-header 
+      gap: 15px
+      .close
+        position: relative
+        transform: none 
+        padding: 0
+        margin: auto 0 auto auto
+
+    .modal-dialog
+      max-width: 500px
     .modal-header
-      justify-content: center
+      // justify-content: center
       margin-bottom: 0
       padding: 16px
     .share-links
-      display: flex
-      justify-content: center
       padding: 0
+      .more-item-tog
+        cursor: pointer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .vertical
+          opacity: 0
+      .more-item-tog.more-item
+        .vertical
+          opacity: 1
+        &~.extra-points
+          overflow: hidden
+          max-height: 0
+          padding: 0
+          margin: 0
+          border-color: transparent
+          opacity: 0
+      .extra-points
+        transition: .5s
       li
         display: flex
         padding: 0
-        margin: 5px
-      a
+        margin-bottom: 10px
+        border: 1px solid #DEDEDE
+        border-radius: $border-radius
+        padding: 10px
+      a, button
         display: flex
+        align-items: center
+        gap: 10px
+        span
+          font-size: 16px
+          font-weight: 500
+          color: $text-c
+          &:hover
+            color: $link
+
       svg
         max-width: 26px
         max-height: 26px
+  &.donate-modal
+    .close
+      position: absolute
+      right: 20px
+      top: 20px
+      z-index: 1
+    .modal-content
+      padding: 0
+    .modal-dialog
+      max-width: 1300px
+    .modal-body
+      padding: 0
+    .donate-block
+      position: relative
+      overflow: hidden
+      margin: 0
+    .bg
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(-40%, -50%)
+      height: 100%
+      width: auto
+      max-width: none
+    .text-wrap
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+      padding-left: 70px
+      @include media-breakpoint-down(lg)
+        padding-left: 16px
+      @include media-breakpoint-down(sm)
+        align-items: center
+        order: 1
+        padding-bottom: 40px
+        text-align: center
+    .img-wrap
+      text-align: center
+      padding-bottom: 60px
+      @include media-breakpoint-down(sm)
+        padding-bottom: 16px
+      img
+        @include media-breakpoint-down(sm)
+          max-height: 280px

@@ -18,6 +18,9 @@
       input
         flex: 1
         margin-right: 10px
+        margin-bottom: 0
+        .error
+          margin-bottom: 0
       .this-input-value
         flex: 0
         overflow: hidden
@@ -32,6 +35,7 @@
     @include media-breakpoint-down(md)
       margin-bottom: 40px
     @include media-breakpoint-down(sm)
+      padding-top: 10px
       margin-bottom: 20px
     .btn-conect
       display: inline-flex
@@ -127,6 +131,8 @@
       input
         flex: 0
         margin: 0
+        .error
+          margin: 0
       .this-input-value
         margin-right: 10px
         flex: none

@@ -29,7 +29,7 @@
 // // }
 // }) 
 // // can be deleted: $(window).on...
-// //   // console.log(slickInit());
+// //   
 // //   if(window.innerWidth < 992){
 // //     mySlickInit()
 // //   }

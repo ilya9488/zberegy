@@ -101,13 +101,39 @@ if ($('.donate').length !== 0) {
   }
 
   function emailValid() {
-    if (!emailReg.test($(this).val()) || $(this).val() == '') {
+
+    if ($(this).val() == '') {
       $(this).addClass('error')
+      $('#' + this.id + ' ~ .error-mess')[0].textContent = 'Вкажіть email'
+      validFilds.email = false
+    }else if (!$(this).val().includes('@')) {
+      $(this).addClass('error')
+      $('#' + this.id + ' ~ .error-mess')[0].textContent = 'Пропущено "@"'
+      validFilds.email = false
+    }else if (/[а-яА-ЯЪъЫыЭэЁё]/i.test($(this).val())) {
+      $(this).addClass('error')
+      $('#' + this.id + ' ~ .error-mess')[0].textContent = 'Не можна писати кирилицею'
+      validFilds.email = false
+    }else if ($(this).val().length > 320) {
+      $(this).addClass('error')
+      $('#' + this.id + ' ~ .error-mess')[0].textContent = 'Не можна бiльше 320 символiв'
+      validFilds.email = false
+    }else if (!emailReg.test($(this).val())) {
+      $(this).addClass('error')
+      $('#' + this.id + ' ~ .error-mess')[0].textContent = 'Перевірте E-mail'
       validFilds.email = false
     } else {
       $(this).removeClass('error')
       validFilds.email = true
     }
+
+    // if (!emailReg.test($(this).val()) || $(this).val() == '') {
+    //   $(this).addClass('error')
+    //   validFilds.email = false
+    // } else {
+    //   $(this).removeClass('error')
+    //   validFilds.email = true
+    // }
   }
   // email
   $('#email').on('focus', function () {
@@ -256,9 +282,6 @@ if ($('.donate').length !== 0) {
       $('#formCard')[0].hidden = false;
       isAllValidFilds() === 0 ? donSubmDisEnab(1) : donSubmDisEnab(0);
     }
-
-    // all filds valid: true / false
-    console.log(validFilds);
     
     // if all filds valid !
     if (isAllValidFilds() === 0) {
@@ -271,7 +294,7 @@ if ($('.donate').length !== 0) {
         type: "POST",
         data: dataForm,
         success: function (data) {
-          // console.log(data);
+          
           if (!$('.load-block .pay-success')[0].hidden) { $('.load-block .pay-success')[0].hidden = true }
           $('.load-block')[0].hidden = false
           $('.load-block .pay-in-process')[0].hidden = false
@@ -287,12 +310,9 @@ if ($('.donate').length !== 0) {
           }, 3000);
         },
         error: function (error) {
-          // console.log(error);
+          // code
         }
       });
     }
-
-
-
   })
 }

@@ -17,14 +17,22 @@
         </svg>
       </a>
       <div class="search-wrap">
+        <input id="search_input" type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input" list="character">
+        <datalist id="character">
+          <option value="Соловейко Іван Юрійович"></option>
+          <option value="Іваннов Іван Юрійович"></option>
+          <option value="Серов Петро Iванович"></option>
+          <option value="Смирнов Петро Петрович"></option>
+          <option value="Смирнов Петро Iванович"></option>
+          <option value="Про проект"></option>
+          <option value="Умови використання сайта"></option>
+        </datalist>
+        @@include('component/btns_links.html', {"type": "btn","style": "search-reset", "class": "hide" })
         @@include('component/btns_links.html', {
           "type": "btn",
           "style": "search",
           "attr": " id=\"search_btn\" type=\"button\" aria-label=\"Кнопка активувати поле пошуку\" data-btn-name=\"Знайти\" "
         })
-        <input type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input">
-        <!-- <div id="search-result" class=""></div> -->
-        @@include('component/btns_links.html', {"type": "btn","style": "search-reset", "class": "hide" })
         @@include('component/btns_links.html', {"type": "btn","style": "search-toggler close", "class": "d-xl-none"})
       </div>
       @@include('component/btns_links.html', {"type": "btn", "style": "search-toggler", "class": "d-xl-none"})
@@ -36,22 +44,33 @@
         @@include('component/btns_links.html', {
           "type": "link",
           "style": "green",
-          "text": "Створити Меморіал",
+          "text": "Створити меморіал",
           "attr": "href=\"login.html\" ",
           "class": "d-none d-xl-block"
         })
-        @@include('component/btns_links.html', {
+        <!-- @@include('component/btns_links.html', {
           "type": "link",
           "style": "blue",
-          "text": "Підтримати Проект",
+          "text": "Підтримати проект",
           "attr": "href=\"donate.html\" ",
           "class": "d-none d-xl-block"
-        })
-        @@include('component/btns_links.html', {
-          "type": "link",
-          "style": "user-login",
-          "attr": "href=\"login.html\" ",
-        })
+        }) -->
+        <div class="btn-user-login active">
+          <a href="login.html">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="25" fill="currentColor"></circle>
+              <path d="M25 25.0258C19.7295 25.0258 15.4414 29.3139 15.4414 34.5844C15.4414 34.8138 15.6276 35 15.857 35C16.0864 35 16.2726 34.8138 16.2726 34.5844C16.2726 29.7718 20.1875 25.8569 25.0001 25.8569C29.8126 25.8569 33.7275 29.7718 33.7275 34.5844C33.7275 34.8138 33.9137 35 34.1431 35C34.3725 35 34.5587 34.8138 34.5587 34.5844C34.5587 29.313 30.2706 25.0258 25 25.0258Z" fill="#323232"></path>
+              <path d="M25 15C22.4798 15 20.4285 17.0505 20.4285 19.5715C20.4285 22.0925 22.4798 24.143 25 24.143C27.5201 24.143 29.5715 22.0925 29.5715 19.5715C29.5715 17.0505 27.5201 15 25 15ZM25 23.3118C22.9378 23.3118 21.2596 21.6337 21.2596 19.5715C21.2596 17.5093 22.9378 15.8312 25 15.8312C27.0621 15.8312 28.7403 17.5093 28.7403 19.5715C28.7403 21.6337 27.0621 23.3118 25 23.3118Z" fill="#323232"></path>
+            </svg>
+          </a>
+          <a class="link" href="login.html">
+            Вхід
+          </a>
+          <span class="delimer">/</span>
+          <a class="link" href="signup.html">
+            Реєстрація
+          </a>
+        </div>
         @@include('component/btns_links.html', {
           "type": "link",
           "style": "user-cabinet",
@@ -65,14 +84,14 @@
         })
 
         <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
           @@include('component/btns_links.html', {
             "type": "btn",
             "style": "drop",
             "text": "Про Нас",
-            "class": "collapsed",
-            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#aboutUs\" aria-expanded=\"false\" aria-controls=\"aboutUs\""
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#aboutUs\" aria-expanded=\"true\" aria-controls=\"aboutUs\""
           })
-          <div class="collapse" id="aboutUs">
+          <div class="collapse show" id="aboutUs">
             <ul class="header-nav-menu list-yellow-mark has-links">
               <li class="menu-item">
                 <a class="menu-item-link" href="about-us.html">Про проект</a>
@@ -88,14 +107,14 @@
         </div>
 
         <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
           @@include('component/btns_links.html', {
             "type": "btn",
             "style": "drop",
             "text": "Послуги",
-            "class": "collapsed",
             "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#services\" aria-expanded=\"false\" aria-controls=\"services\""
           })
-          <div class="collapse" id="services">
+          <div class="collapse show" id="services">
             <ul class="header-nav-menu list-yellow-mark has-links">
               <li class="menu-item">
                 <a class="menu-item-link" href="capabilities.html">Можливості сервісу</a>
@@ -108,14 +127,14 @@
         </div>
 
         <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
           @@include('component/btns_links.html', {
             "type": "btn",
             "style": "drop",
             "text": "Важлива інформація",
-            "class": "collapsed",
             "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#importantInfo\" aria-expanded=\"false\" aria-controls=\"importantInfo\""
           })
-          <div class="collapse" id="importantInfo">
+          <div class="collapse show" id="importantInfo">
             <ul class="header-nav-menu list-yellow-mark has-links">
               <li class="menu-item">
                 <a class="menu-item-link" href="capabilities.html">Контакти</a>

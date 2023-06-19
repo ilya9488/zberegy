@@ -15,6 +15,7 @@
     @include media-breakpoint-down(sm)
       margin-top: 0
   .text-under-logo
+    font-size: 14px
     @include media-breakpoint-down(lg)
       text-align: center
       max-width: 800px
@@ -22,12 +23,14 @@
       margin-right: auto
   .nav-collapse
     padding-top: 0
+    max-width: fit-content
+    margin: 0 auto
     @include media-breakpoint-down(lg)
       display: flex
       flex-direction: column
       justify-content: center
-      .menu-item
-        text-align: center
+      // .menu-item
+        // text-align: center
       .menu-item-link
         display: inline-flex
         padding-right: 20px
@@ -39,6 +42,8 @@
       @include media-breakpoint-down(sm)
         line-height: 22px
         margin-bottom: 10px
+        &[aria-expanded="true"]
+          justify-content: flex-start
       &.disabled
         pointer-events: none
         @include media-breakpoint-down(lg)

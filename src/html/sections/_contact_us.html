@@ -3,26 +3,26 @@
     <div class="row">
       <div class="col-md-6">
         <div class="contact-us-wrap">
-          <h4>Зв'язатися з нами</h4>
+          <h1>Зв'язатися з нами</h1>
           <p>
             Якщо у Вас виникли питання щодо роботи нашого сервісу, маєте цікаві пропозиції щодо його розвитку, варіанти співпраці
             або Ви помітили помилку, то зв'яжіться з нами, і ми спробуємо максимально швидко відповісти. Ми завжди раді будь-яким
             новим ідеям та адекватно ставимося до конструктивної критики.
           </p>
-          <form action="#" class="site-form" id="contact_us_form">
+          <form class="site-form" id="contact_us_form">
             <div class="form-group">
               <label for="name">ПІБ</label>
               <input type="text" name="name" id="name" placeholder="Ваше Ім’я">
-              <span class="error-mess">Некоректно заповнене поле</span>
+              <span class="error-mess">Додайте інформацію</span>
             </div>
             
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" placeholder="Введіть Ваш e-mail">
-              <span class="error-mess">Некоректно заповнене поле</span>
+              <input type="email" name="email" id="email" placeholder="Введіть Ваш e-mail" required>
+              <span class="error-mess">Перевірте E-mail</span>
             </div>
 
-            <label data-dropdown-for="message_subject">Текст повідомлення</label>            
+            <label data-dropdown-for="message_subject">Тема повідомлення</label>            
             <div class="site-dropdown" data-dropdown-id="message_subject">
               <!-- hiden elem (select)(!) -->
               <select class="select-dropdown" hidden>
@@ -50,7 +50,7 @@
               <label for="text">Текст повідомлення</label>
               <textarea name="text" id="text" placeholder="Напишіть текст" maxlength="1000"></textarea>
               <span class="textarea-maxlength">0/1000</span>
-              <span class="error-mess">Не заповнене поле</span>
+              <span class="error-mess">Додайте інформацію</span>
             </div>
 
             @@include('../component/btns_links.html', {
@@ -63,11 +63,11 @@
           </form>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="img-wrap">
-          <img src="static/img/contact-us/contact-us.png" alt="">
+      <!-- <div class="col-md-6">
+        <div class="img-wrap"> -->
+          <!-- </div>
+          </div> -->
         </div>
       </div>
-    </div>
-  </div>
+      <img class="bg" src="static/img/contact-us/contact-us.svg" alt="">
 </section>

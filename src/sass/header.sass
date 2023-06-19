@@ -7,6 +7,9 @@
 @import "../../node_modules/bootstrap/scss/reboot"
 @import "../../node_modules/bootstrap/scss/transitions"
 
+@import "../../node_modules/bootstrap/scss/nav"
+@import "../../node_modules/bootstrap/scss/modal"
+
 @import "../../node_modules/bootstrap/scss/mixins"
 @import "../../node_modules/bootstrap/scss/bootstrap-grid"
 @import "../../node_modules/bootstrap/scss/navbar"
@@ -17,6 +20,8 @@
 
 body
   display: flex
+  flex-wrap: wrap
+  align-items: flex-start
   position: relative
   min-width: 320px
   background-color: $clear
@@ -41,16 +46,18 @@ body
   display: flex
   flex-direction: column
   align-items: center
+  // overflow-x: hidden
 #content
   flex-grow: 1
   width: 100%
-  max-width: 1920px
-  margin: 0 auto
+  overflow: hidden
+  // overflow-x: hidden
 
 // # Header
 .header
   position: sticky
   width: 100%
+  // flex: 100%
   top: 0
   left: 0
   padding: 20px 15px
@@ -138,29 +145,29 @@ body
         width: 50%
         right: 50%
         max-width: 100%
-        padding: 5px 5px 5px 20px
+        padding: 5px 5px 5px 45px
         border-color: #DEDEDE
-        &:focus-within
-          padding-left: 0
+        // &:focus-within
+          // padding-left: 35px
       @include media-breakpoint-down(sm)
-        right: 0
-        width: calc( 100% - 40px )
+        right: -5px
+        width: calc( 100% - 30px )
     &:focus-within
-      padding-left: 0
       .btn-search
         font-size: 16px
         border-color: #DEDEDE
+        background-color: #f5f5f5
         border-radius: 100px
         padding: 19px
         transform: scale(100px)
-        color: #959393
+        color: #535353
         font-size: 14px
         font-weight: 400
         @include media-breakpoint-down(lg)
-          padding: 0 10px
+          padding: 12px 10px
           font-size: 12px
         @include media-breakpoint-down(sm)
-          padding: 0 5px 0 10px
+          padding: 7px 5px 8px 12px
           font-size: 0
         &:hover
           color: $text-c
@@ -169,26 +176,39 @@ body
           margin-right: 10px
           @include media-breakpoint-down(sm)          
             margin-right: 5px
+      .btn-search-reset
+        border-color: #DEDEDE
     
+      
     &.active + .btn-search-toggler
       opacity: .3
       z-index: -1
+    .btn-search-toggler
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 5px
+      margin: 0
     .btn-search
       display: inline-flex
       align-items: center
       padding: 0
-      margin-right: 10px
-      margin-left: auto
+      margin: 0
+      padding-right: 15px
       font-size: 0
+      border-left: 1px solid transparent
       border-right: 1px solid transparent
+      @include media-breakpoint-down(lg)
+        padding-right: 5px
       &::after
         content: attr(data-btn-name)
       .search-icon
         min-width: 14px
     .search-input
+      min-width: 0
       flex: auto
       border: none
-      padding: 16px 10px 16px 0
+      padding: 16px 10px 16px 20px
       transition: .3s
       &:focus-visible                 
         outline: none
@@ -199,19 +219,30 @@ body
         padding: 0
     .btn-search-reset
       padding: 0
-      margin-right: 20px
+      margin: 0
+      padding: 15px
       min-width: 8px
+      height: 100%
+      border-left: 1px solid transparent
+      border-radius: 100px
       transition: .3s
+      @include media-breakpoint-down(lg)
+        svg
+          width: 12px
+          height: 12px
       @include media-breakpoint-down(sm)
-        margin-right: 15px
+        // margin-right: 15px
+        padding: 10px
       &.hide
         opacity: 0
         pointer-events: none
+      svg
+        min-width: 8px
 
   .btn-search-toggler
     padding: 0
     min-width: 20px
-    margin-left: 10px
+    margin-left: 5px
     &-close
       padding: 0
   // Btn-Menu Toggler
@@ -249,6 +280,8 @@ body
     @media (max-width: 1300px)
       padding-left: 10px
     @include media-breakpoint-down(lg)
+      flex-direction: column
+
       align-items: flex-start
       justify-content: flex-start
       padding-left: 0
@@ -261,7 +294,8 @@ body
       margin-right: 0
     @media (max-width: 1300px)
       margin-right: 10px
-      
+  .nav-collapse
+    // padding-top: 15px
   .btn-user-cabinet,
   .btn-user-mesage
     @include media-breakpoint-down(lg)
@@ -275,7 +309,6 @@ body
   .btn-user-mesage
     display: none
   .btn-user
-    // &-login,
     &-cabinet,
     &-mesage
       color: #F2F2F2
@@ -287,11 +320,11 @@ body
       display: inline-flex
       align-items: center
       color: #F2F2F2
-      flex-wrap: nowrap
-      svg
-        min-width: 20px
+      flex-wrap: nowrap 
+      &:hover
+        color: #e2e0e0
       @include media-breakpoint-down(lg)
-        margin-top: 23px
+        margin: 18px 30px 15px 0
         width: auto
         align-items: center
         font-family: $title
@@ -300,17 +333,23 @@ body
         gap: 10px
         padding: 5px 10px
         border-radius: $border-radius
-        &:hover
-          &::after
-            color: $link
         svg
           width: 20px
           height: 20px
-        &::after
-          content: 'Вхід / Реєстрація'
-          color: $title-c
-          white-space: nowrap
-          transition: .3s
+      svg
+        min-width: 30px
+        min-height: 30px
+      a
+        color: inherit
+      .link,
+      .delimer
+        color: $text-c
+        margin: 0
+        @include media-breakpoint-up(xl)
+          display: none            
+      .link
+        &:hover
+          color: $link
     &-mesage
       @include media-breakpoint-down(lg)
         display: inline-flex
@@ -335,6 +374,7 @@ body
         min-width: 20px
       @include media-breakpoint-down(lg)
         margin-top: 23px
+        margin-bottom: 5px
         width: auto
         align-items: center
         font-family: $title
@@ -376,6 +416,7 @@ body
 /*_component_*/
 @import "component/breadcrumbs"
 @import "component/site_dropdown"
+@import "component/site_form"
 /*_sections_*/
 @import "sections/home_page_first"
 @import "sections/home_about_project"

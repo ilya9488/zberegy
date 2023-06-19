@@ -1,32 +1,21 @@
-/*_Jquery_ */
-//= jquery/jquery.min.js
 
-/*_Bootstrap_ */
-//= ../../node_modules/bootstrap/js/dist/util.js
-//= ../../node_modules/bootstrap/js/dist/collapse.js
-//= ../../node_modules/bootstrap/js/dist/tab.js
-//= ../../node_modules/bootstrap/js/dist/modal.js
 
-/*_Plugins_ */
-//= ../../node_modules/slick-carousel/slick/slick.min.js
-//= ../../node_modules/@fancyapps/ui/dist/fancybox.umd.js
-// calendar
-//= ../../node_modules/pickmeup/dist/pickmeup.min.js
+window.onload = function () {
+	
+	//= partials/functions.js
 
-/*_if_need_ */
-//= partials/functions.js
-//= partials/preloader.js
-
-window.onload = function (){
 	/*_all_js_*/
 	//= partials/login.js
 	//= partials/signup.js
 	//= partials/forgot-password.js
+
 	//= partials/app.js
 	//= partials/nav.js
+
 	// search
 	//= partials/search.js
 	//= partials/search-sort.js
+
 	//= partials/accordion-img.js
 	//= partials/home-how-create-slider.js
 	//= partials/site-dropdown.js
@@ -35,8 +24,19 @@ window.onload = function (){
 	//= partials/post-slider.js
 	//= partials/post-gallery .js
 	//= partials/comments-excerpt.js
-	//= partials/user-cabinet.js
 	//= partials/for-tests.js
+
+	//= user-cabinet/user-cabinet.js
+	//= user-cabinet/user-data-form.js
+	//= user-cabinet/user-cabinet-pass.js
+	//= user-cabinet/user-cabinet-management.js
+
+	//= user-cabinet/user-cabinet-management-create-form.js
+
+	//= user-cabinet/user-cabinet-management-create-gen-info.js
+	//= user-cabinet/user-cabinet-management-create-events.js
+
+
 	/*_forms_*/
 	//= partials/form-all.js
 	//= partials/complain-form.js
@@ -46,9 +46,6 @@ window.onload = function (){
 	//= partials/comments-to-comment-form.js
 	//= partials/contact-us.js
 	//= partials/donate-form.js
-	//= partials/user-cabinet-data-form.js
-	//= partials/user-cabinet-pass.js
-	//= partials/user-cabinet-management-create-form.js
 	//= partials/form-del-account.js
 	//= partials/form-answer-mess.js
 }

@@ -13,7 +13,8 @@ function searchInput() {
 }
 
 if (localStorage.search_query !== '' && $('.search-results').length !== 0) {
-	$('.search-input').val(localStorage.search_query)
+	$('#search_input')[0].value = localStorage.search_query
+	$('#search_query')[0].textContent = '"'+localStorage.search_query+'"'
 }
 
 // (lg,md,sm) search (show/hide)
@@ -21,12 +22,12 @@ $('.btn-search-toggler').on('click', function () {
   $('.search-wrap')[0].classList.toggle('active')
 })
 
-$('.search-input').on('input', function(){
+$('.search-input').on('input focus', function(){
 	$(this).val() !== ''
 		? $('.btn-search-reset').removeClass('hide') &&
 		// if user press Enter
 		$(this).on('keypress',function (e) {
-			if (e.which === 13) {
+			if (e.key === 'Enter') {
 				e.preventDefault();
 				searchInput()
 			}

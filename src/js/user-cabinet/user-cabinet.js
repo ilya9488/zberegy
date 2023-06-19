@@ -1,3 +1,6 @@
+/* ********************
+  User Cabinet Menu 
+******************** */
 const user_cabinet_menu = $('#user_cabinet_menu')
 
 $('.btn-back-to-menu').on('click', function (e) {
@@ -14,28 +17,17 @@ $('#delete_accout').on('click',function(){
   $('#delAccModal').modal('show')
 })
 
-// 
-$('#btnConfirmDelMemorial').on('click', function () {
-  $('#delMemorialModal').modal('hide')
-  $('#infoModal').modal('show')
-  $('#infoModal .modal-title')[0].innerText = this.dataset.confirmText
-  $('#'+this.dataset.whichDelMemorial).remove()
-})
-$('[data-id=btnDelMemorial]').on('click',function(){
-  $('#delMemorialModal').modal('show')
-  $('#btnConfirmDelMemorial')[0].setAttribute('data-which-del-memorial', this.dataset.parentMemorial)
-})
-
 $('.user-cabinet-content .card-header').on('click', function () {
   setTimeout(() => {
     $('html, body').animate({ scrollTop: $(this).offset().top - $('#header').outerHeight() - 20 }, 300)
   }, 500);
 })
 
-// get countries + cities
+/* ************************
+  Get Countries + Cities
+************************ */
 function getCountriesCities(countries, cities) {
   if (countries.length && cities.length) {
-    // $('.select-sort').on('click', function(){
 
     // example of countries and cities
     let requestUrl = 'https://raw.githubusercontent.com/David-Haim/CountriesToCitiesJSON/master/countriesToCities.json';
@@ -59,7 +51,6 @@ function getCountriesCities(countries, cities) {
           let countryName = document.createElement('li')
           countryName.classList.add('site-dropdown-options')
           countryName.innerHTML = item
-          // $('#country').append(countryName)
           countries.append(countryName)
         }
       })
@@ -79,19 +70,20 @@ function getCountriesCities(countries, cities) {
             let cityName = document.createElement('li')
             cityName.classList.add('site-dropdown-options')
             cityName.innerHTML = item;
-            // $('#city').append(cityName);
             cities.append(cityName);
           }, 100);
         });
       }
     }
-    // })
+    
   }
 }
 getCountriesCities($('#country'), $('#city'))
 getCountriesCities($('#burial_countries_list'), $('#burial_cities_list'))
 
-//  - - - - calendar datapicker settings - - - - //
+/* ******************************
+  Calendar Datapicker Settings
+****************************** */
 pickmeup.defaults.locales['uk'] = {
   days: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П`ятниця', 'Субота'],
   daysShort: ['Нед', 'Пон', 'Вів', 'Сер', 'Чет', 'Птн', 'Суб'],
@@ -99,7 +91,14 @@ pickmeup.defaults.locales['uk'] = {
   months: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
   monthsShort: ['Січ', 'Лют', 'Бер', 'Кві', 'Тра', 'Чер', 'Лип', 'Сер', 'Вер', 'Жов', 'Лис', 'Гру']
 };
-function pmuInit(input) {
+function pmuInit(input, c) {
+
+  // if press TAB ... show calendar
+  if ($(input)[0]) {
+    $(input)[0].onfocus = function () { this.click(); this.blur(); }
+    $(input)[0].onclick = function () { this.blur() }
+  }
+
   pickmeup($(input)[0], {
     locale: 'uk',
     format: 'm.d.Y',
@@ -109,7 +108,9 @@ function pmuInit(input) {
     prev: '&#x276E;',
     next: '&#x276F;',
     default_date: false,
-    // max: 'today'
+    max: 'today',
+    // min: '05.05.2023',
+    min: c
   })
   $('.pickmeup').each(function () {
     $(this).css('width', this.__pickmeup_target.offsetWidth)
@@ -118,9 +119,29 @@ function pmuInit(input) {
     $('.pickmeup').each(function () {
       $(this).css('width', this.__pickmeup_target.offsetWidth)
     })
+
+    if (this.id === 'birth_day') {
+      $('#death_day')[0].value = ''
+    }
+
     pickmeup($(input)[0]).update()
   })
 }
+
+// birthday calendar initialization
 pmuInit('#birth_day')
-pmuInit('#death_day')
-pmuInit('#memorable_event_birth_day')
+// calendar initialization for date of death (choice of date of death depending on the date of birth )
+$('#death_day').on('click', function () {
+  let d = $('#birth_day')[0].value
+  if (d === '') {
+    $(this)[0].blur()
+    $('#birth_day')[0].focus()
+    $('#birth_day')[0].click()
+    return false;
+  }
+  pickmeup($('#death_day')[0]).destroy()
+  pmuInit('#death_day', d)
+  pickmeup($('#death_day')[0]).update()
+})
+// initializing the calendar to create events
+pmuInit('#memorable_event_date_day')

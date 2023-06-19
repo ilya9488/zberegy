@@ -4,6 +4,7 @@ const
   userDataForm = $('#user_data_form'),
   userLastName = $('#user_last_name'),
   dataUserName = $('#user_name'),
+  dataUserSurname = $('#user_surname'),
   dataUserEmail = $('#user_email');
 
 function oldUserDataFilds() {
@@ -41,6 +42,8 @@ $('#load_user_img').on('change', function () {
   if (this.files && this.files[0]) {
     let readerImg = new FileReader();
     readerImg.onload = function (e) {
+      // console.log(e.total > 100_000_000);
+      // console.log(this.files.size);
       userImgPath = e.target.result;
       $('#user_data_form .select-img img')[0].src = userImgPath
     }
@@ -90,10 +93,27 @@ $('#btn_edit_user_data').on('click', function (e) {
     // validation inputs
     if (userLastName[0].value == '') {
       userLastName.addClass('error')
+      $('#' + userLastName[0].id + ' ~ .error-mess')[0].textContent = "Додайте інформацію"
     }
+    if (userLastName[0].value.length === 1) {
+      userLastName.addClass('error')
+      $('#' + userLastName[0].id+' ~ .error-mess')[0].textContent = 'Не меньше двох символiв'
+    }
+
     if (dataUserName[0].value == '') {
       dataUserName.addClass('error')
+      $('#' + dataUserName[0].id + ' ~ .error-mess')[0].textContent = "Додайте інформацію"
     }
+    if (dataUserName[0].value.length === 1) {
+      dataUserName.addClass('error')
+      $('#' + dataUserName[0].id+' ~ .error-mess')[0].textContent = 'Не меньше двох символiв'
+    }
+
+    if (dataUserSurname[0].value.length === 1) {
+      dataUserSurname.addClass('error')
+      $('#' + dataUserSurname[0].id+' ~ .error-mess')[0].textContent = 'Не меньше двох символiв'
+    }
+
     if (dataUserEmail[0].value == '') {
       dataUserEmail.addClass('error')
       $('#'+dataUserEmail[0].id+' ~ .error-mess')[0].textContent = 'Вкажiть ваш Email'
@@ -102,7 +122,7 @@ $('#btn_edit_user_data').on('click', function (e) {
     if (!emailReg.test(dataUserEmail[0].value)) {
       let clarificationText = dataUserEmail[0].value.includes(' ') ? ' (видаліть пробіли)' : '';
       dataUserEmail.addClass('error')
-      $('#' + dataUserEmail[0].id + ' ~ .error-mess')[0].textContent = 'Не коректний Email' + clarificationText
+      $('#' + dataUserEmail[0].id + ' ~ .error-mess')[0].textContent = 'Перевірте E-mail' + clarificationText
     }
 
     if ($('#user_data_form .error').length){ return false; }

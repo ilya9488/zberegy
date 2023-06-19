@@ -107,8 +107,8 @@
               </div>
               <div class="form-emal donate-block">
                 <label for="email"><h5>Email*</h5></label>
-                <input id="email" type="email" name="email" placeholder="Введіть Ваш e-mail">
-                <span class="error-mess">Некоректно заповнене поле</span>
+                <input id="email" type="email" name="email" placeholder="Введіть Ваш e-mail" required>
+                <span class="error-mess">Перевірте E-mail</span>
               </div>
               <div class="form-card donate-block" id="formCard" hidden>
                 <div class="donate-block">
@@ -118,7 +118,7 @@
                     "attr": "type=\"button\" ",
                   })
                 </div>
-                <div class="dash-block"><span class="dash-text">або E-mail</span></div>
+                <div class="dash-block"><span class="dash-text">або оплата карткою</span></div>
 
                 <div class="form-group">
                   <label for="card_num">Номер картки</label>
@@ -159,7 +159,7 @@
                   <span class="pay-mess">Оплата пройшла успішно</span>
                   <div class="pay-data">
                     <span>Дякуємо за оплату.</span>
-                    <span>Ви заплатили <span class="success-type-curency">UAH</span> <span id="you_paid_amount">xxx</span></span>
+                    <span>Ви заплатили: <span id="you_paid_amount">xxx</span> <span class="success-type-curency">UAH</span></span>
                     <span>Цей платіж буде вказано у Вашій банківській виписці як: ХХХХ</span>
                   </div>
                 </div>
@@ -168,7 +168,7 @@
                 @@include('../component/btns_links.html', {
                   "type": "btn",
                   "style": "blue",
-                  "text": "Підтримати Проект",
+                  "text": "Підтримати проект",
                   "attr": "type=\"submit\" id=\"donate_submit\"",
                 })
               </div>

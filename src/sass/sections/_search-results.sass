@@ -53,17 +53,15 @@
       margin: 0
 
   .search-drop-wrap
+    margin: auto auto 0 auto
     display: flex
     align-items: center
     justify-content: center
     flex-wrap: wrap
-
+    gap: 10px
     @include media-breakpoint-down(sm)
+      align-items: center
       justify-content: center
-    .label-search-sort
-      margin-right: 10px
-      @media (max-width: 400px)
-        margin-bottom: 10px
 
   .preview-item
     position: relative

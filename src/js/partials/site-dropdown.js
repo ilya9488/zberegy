@@ -21,7 +21,7 @@ $('.site-dropdown').on('click',function (e) {
     
     // curent item (.active)
     selectSortOptoon.each(function () { $(this).removeClass('curent') })
-    $(this).find('select').removeClass('error')
+    $(this).find('.error').removeClass('error')
     $(e.target).addClass('curent')
   }
 })

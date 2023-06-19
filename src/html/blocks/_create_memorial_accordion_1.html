@@ -1,21 +1,19 @@
 <form class="site-form form-create-memorial" id="form_create_memorial">
   <h6 >Головне фото</h6>
   <div class="select-img-wrap">
-    <div class="select-img">
-      <img src="static/img/no-foto.jpg" alt="Зображення акаунта">
+    <div id="main_img" class="select-img">
+      <img src="static/img/no-foto.svg" alt="Зображення акаунта">
     </div>
 
-    <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="load_memorial_img" id="load_memorial_img">
+    <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
     <label class="btn-load-select-img btn-edit" for="load_memorial_img">
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" fill="currentColor" />
-        <path
-          d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"
-          fill="white" />
+        <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
       </svg>
     </label>
 
-    <button class="btn-del-select-img btn-delete-red" id="del_memorial_img" data-reset-img="static/img/no-foto.jpg">
+    <button type="button" class="btn-del-select-img btn-delete" id="del_memorial_img" data-reset-img="static/img/no-foto.svg">
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z"
@@ -35,22 +33,22 @@
     <div class="col-xl-4">
       <div class="form-group">
         <label for="memorial_last_name">Прізвище*</label>
-        <input type="text" id="memorial_last_name" placeholder="Введіть Прізвище">
-        <span class="error-mess">Вкажіть Прізвище</span>
+        <input type="text" id="memorial_last_name" placeholder="Введіть Прізвище" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
       </div>
     </div>
     <div class="col-xl-4 pl-xl-0">
       <div class="form-group">
         <label for="memorial_name">Ім'я*</label>
-        <input type="text" id="memorial_name" placeholder="Введіть Ім'я">
-        <span class="error-mess">Вкажіть ім'я</span>
+        <input type="text" id="memorial_name"  placeholder="Введіть Ім'я" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
       </div>
     </div>
     <div class="col-xl-4 pl-xl-0">
       <div class="form-group">
         <label for="memorialsurname">По батькові*</label>
-        <input type="text" id="memorial_surname" placeholder="Введіть По батькові">
-        <span class="error-mess">Вкажіть По батькові</span>
+        <input type="text" id="memorial_surname"  placeholder="Введіть По батькові" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
       </div>
     </div>
     <div class="col-xl-4">
@@ -90,7 +88,7 @@
       <div class="form-group">
         <label>Країна народження*</label>
         <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
-          <input class="select-dropdown" hidden id="selected_country">
+          <input class="select-dropdown" hidden id="memorial_country">
           <div class="site-dropdown-header">
             <span class="select-sort">Виберіть зі списку</span>
             <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
@@ -110,7 +108,7 @@
         <label>Місто народження*</label>
         <div class="site-dropdown">
           <!-- hiden elem (select)(!) -->
-          <input class="select-dropdown" hidden id="selected_city">
+          <input class="select-dropdown" hidden id="memorial_city">
           <div class="site-dropdown-header">
             <span class="select-sort">Виберіть зі списку</span>
             <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
@@ -215,10 +213,10 @@
         </label>
       </div>
       <div class="templates-top-bg">
-        <!-- <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="load_memorial_img" id="load_memorial_img"> -->
+        <!-- <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
         <input hidden type="file" accept="image/*" id="donl_templ" name="templates">
         <label class="btn-downl-templ" for="donl_templ">
-          <span>Завантажте шаблон</span>
+          <span>Завантажити шаблон</span>
           <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1"
               stroke-linecap="round" stroke-linejoin="round" />
@@ -239,8 +237,9 @@
     </div>
     <div class="col-12">
       <div class="form-group">
-        <label for="epitaph">Тут Ви можете додати епітафію. Розмір тексту повинен бути не менш за 50 символів та не
-          більше ХХХХ символів.</label>
+        <label for="epitaph">
+          Тут Ви можете додати епітафію.
+        </label>
         <textarea name="epitaph" id="epitaph" placeholder="Введіть текст" maxlength="1000"></textarea>
         <span class="textarea-maxlength">0/1000</span>
       </div>
@@ -279,9 +278,11 @@
     <div class="col-12">
       <div class="form-group">
         <h5>Біографія</h5>
-        <p>Тут Ви можете написати інформацію про людину для якої створюєте Онлайн Меморіал. Якщо Вам складно написати
+        <p>
+          Тут Ви можете написати інформацію про людину для якої створюєте Онлайн Меморіал. Якщо Вам складно написати
           щось зараз (це можна буде зробити у будь-який зручний для Вас момент пізніше), то не заповнюйте це поле
-          (залишіть його порожнім). Розмір тексту повинен бути не менш за 100 символів та не більше 5000 символів.</p>
+          (залишіть його порожнім).
+        </p>
         <textarea name="biography" id="biography" maxlength="5000"></textarea>
         <span class="textarea-maxlength">0/5000</span>
       </div>
@@ -333,13 +334,13 @@
     <div class="col-xl-4 pl-xl-0">
       <div class="form-group">
         <label for="cemetery_name">Цвинтар</label>
-        <input type="text" id="cemetery_name" placeholder="Введіть назву цвинтаря">
+        <input type="text" id="cemetery_name" placeholder="Введіть назву цвинтаря" maxlength="100">
       </div>
     </div>
     <div class="col-xl-4">
       <div class="form-group">
         <label for="cemetery_area">Ділянка</label>
-        <input type="text" id="cemetery_area" placeholder="Введіть номер ділянки">
+        <input type="text" id="cemetery_area" placeholder="Введіть номер ділянки" maxlength="100">
       </div>
     </div>
     <div class="col-xl-4 pl-xl-0">
@@ -355,18 +356,18 @@
 
       <div class="select-img-wrap square-type">
         <div class="select-img">
-          <img id="monument_foto_img" src="static/img/no-foto.jpg" alt="Фото пам'ятника/ділянки">
+          <img id="monument_foto_img" src="static/img/no-foto.svg" alt="Фото пам'ятника/ділянки">
         </div>
       
-        <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.jpg" name="monument_foto" id="monument_foto">
+        <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
         <label class="btn-load-select-img btn-edit" for="monument_foto">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15" cy="15" r="15" fill="currentColor" />
-            <path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white" />
+            <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
           </svg>
         </label>
       
-        <button class="btn-del-select-img btn-delete-red" id="del_monument_foto" data-reset-img="static/img/no-foto.jpg">
+        <button type="button" class="btn-del-select-img btn-delete" id="del_monument_foto" data-reset-img="static/img/no-foto.svg">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z"
@@ -390,7 +391,7 @@
     </div>
     <div class="col-12 btn-wrap">
       <button class="btn-yellow btn-edit-memorial" id="btn_edit_memorial" type="submit">
-        Редагувати
+        Зберегти
       </button>
       <button class="btn-reset" id="btn_reset_memorial" type="button">
         Скасувати

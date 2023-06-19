@@ -35,24 +35,62 @@ $('#login_form').on('submit', function (e) {
 		}
 			// Email
 			if (inputId === 'email') {
-				if ($(this).val() !== '' && $(this).val() === adminEmail) {
-					$(this).removeClass('error')
-				} else {
+				if ($(this).val() == '') {
 					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Вкажіть email'
+				}else if (!$(this).val().includes('@')) {
+					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Пропущено "@"'
+				}else if (/[а-яА-ЯЪъЫыЭэЁё]/i.test($(this).val())) {
+					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Не можна писати кирилицею'
+				}else if ($(this).val().length > 320) {
+					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Не можна бiльше 320 символiв'
+				}else if (!emailReg.test($(this).val()) || $(this).val() == '') {
+					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Перевірте E-mail'
+				}else if($(this).val() !== adminEmail) {
+					$(this).addClass('error')
+					$('#' + inputId + ' ~ .error-mess')[0].textContent = 'Перевірте E-mail'
+				}else {
+					$(this).removeClass('error')
 				}
+
+				// if ($(this).val() !== '' && $(this).val() === adminEmail) {
+				// 	$(this).removeClass('error')
+				// } else {
+				// 	$(this).addClass('error')
+				// }
 			}
 		})
 
+	
 	// check error
-	if ($('input.error').length) {
-		valid = false
-	} else {
-		valid = true
-	}
-	setTimeout(() => {
-		if (valid) {
-			location.href = 'user-cabinet-data.html'
-			localStorage.login = true
+  if ($('#login_form .error').length) {
+    return false; 
+  }
+
+	let formData = new FormData(e.target);
+	let jsonData = {};
+	
+	formData.forEach(function (value, key) { jsonData[key] = value; });
+	jsonData = JSON.stringify(jsonData);
+
+	$.ajax({
+		url: "/",
+		type: "POST",
+		data: jsonData,
+		success: function (jsonData) {
+			// code
+			setTimeout(() => {
+				location.href = 'user-cabinet-data.html'
+				localStorage.login = true
+			}, 1000);
+		},
+		error: function (error) {
+			// code
 		}
-	}, 1000);
+	});
+	
 })

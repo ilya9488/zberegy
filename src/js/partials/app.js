@@ -97,6 +97,11 @@ $('.btn-copy').on('click', function () {
 })
 // btn-copy share link post
 if ($('[data-news-copy]')[0]){ $('[data-news-copy]')[0].dataset.newsCopy = window.location.href}
+if ($('.share-links-modal .more-item')){
+  $('.share-links-modal .more-item').on('click', function(){
+    this.classList.toggle('more-item')
+  })
+}
 
 $('[data-news-copy]').on('click', function () {
   // copy
@@ -118,3 +123,14 @@ $('.btn-copy').on('click', function () {
   }.bind(this), 3000);
 })
 
+// Protection Against Double Acting Tabs Memorial
+$('[href^=#pills]').on('click', function () {
+  $('[href^=#pills]').each(function () {
+    this.style.pointerEvents = 'none'
+  })
+  setTimeout(() => {
+    $('[href^=#pills]').each(function () {
+      this.style.pointerEvents = 'auto'
+    })
+  }, 500);
+})

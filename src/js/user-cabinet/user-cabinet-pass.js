@@ -13,6 +13,29 @@ $('#btn_back_to_us_data').on('click', function(){
 
 $('#pass_recovery').on('submit', function (e) {
   e.preventDefault()
+
+  if($('#current_pas').val() !== admin_data.pass ||  $('#current_pas').val() === ''){
+    $('#current_pas').addClass('error')
+  } else {
+    $('#current_pas').removeClass('error')
+  }
+
+  if($('#new_pas').val() === ''){
+    $('#new_pas').addClass('error')
+    $('#new_pas ~ .error-mess')[0].textContent = 'Вкажіть пароль'
+  }else if($('#current_pas').val() === $('#new_pas').val()){
+    $('#new_pas').addClass('error')
+    $('#new_pas ~ .error-mess')[0].textContent = 'Вказано поточний пароль'
+  } else {
+    $('#new_pas').removeClass('error')
+  }
+
+
+  // check error
+  if ($('#pass_recovery .error').length) {
+    return false; 
+  }
+
   $('#sucsesModalLabel').text('Пароль змінено')
   setTimeout(function () {
     $('#complainModal').modal('hide')
@@ -24,4 +47,3 @@ $('#pass_recovery').on('submit', function (e) {
     }, 5000);
   }, 1000);
 })
-

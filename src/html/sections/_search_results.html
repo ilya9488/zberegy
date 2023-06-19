@@ -2,28 +2,33 @@
   <div class="container-xl">
     <div class="row search-head">
       <div class="col-lg-8 col-md-8">
-        <h1>Знайдено Меморіалів:&nbsp;<span class="search-count">457</span></h1>
+        <h1>
+          <span id="search_query" class="d-inline-block pb-3 h3"></span><br>
+          Меморіалів:&nbsp;<span class="search-count">457</span>
+        </h1>
       </div>
-      <div class="col-lg-4 col-md-4 search-drop-wrap">
-        <span class="label-search-sort">Сортувати за:</span>
-        <div class="site-dropdown">
-          <!-- hiden elem (select)(!) -->
-          <select class="select-dropdown d-none">
-            <option value="Прізвище">Прізвищем</option>
-          </select>
-          
-          <div class="site-dropdown-header">
-            <span class="select-sort">Прізвищем</span>
-            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"/>
-            </svg>
+      <div class="col-lg-4 col-md-4 d-flex">
+        <div class="search-drop-wrap">
+          <span class="label-search-sort">Сортувати за:</span>
+          <div class="site-dropdown">
+            <!-- hiden elem (select)(!) -->
+            <select class="select-dropdown d-none">
+              <option value="Прізвище">Прізвищем</option>
+            </select>
+            
+            <div class="site-dropdown-header">
+              <span class="select-sort">Прізвищем</span>
+              <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"/>
+              </svg>
+            </div>
+            <ul class="site-dropdown-select">
+              <li class="site-dropdown-options curent" data-sort="surname">Прізвищем</li>
+              <li class="site-dropdown-options" data-sort="name">Ім'ям</li>
+              <li class="site-dropdown-options" data-sort="patronymic">По-батькові</li>
+              <li class="site-dropdown-options" data-sort="date">Датою</li>
+            </ul>
           </div>
-          <ul class="site-dropdown-select">
-            <li class="site-dropdown-options curent" data-sort="surname">Прізвищем</li>
-            <li class="site-dropdown-options" data-sort="name">Ім'ям</li>
-            <li class="site-dropdown-options" data-sort="patronymic">По-батькові</li>
-            <li class="site-dropdown-options" data-sort="date">Датою</li>
-          </ul>
         </div>
       </div>
     </div>

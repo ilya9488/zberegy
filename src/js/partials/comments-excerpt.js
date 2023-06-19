@@ -36,7 +36,7 @@ for (let i = 0; i < $('.comments-user-wrap .comment-body').length; i++) {
         })
       }
     }
-  commBody.call($('.comments-user-wrap .comment-body')[i])
+  // commBody.call($('.comments-user-wrap .comment-body')[i])
 
 	}
 	

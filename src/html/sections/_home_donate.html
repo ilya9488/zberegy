@@ -1,5 +1,7 @@
-<section class="home-donate" style="background-image: url(static/img/home/home-donate-bg.png), linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,250,255,1) 50%, rgba(255,255,255,1) 100%);">
-  <div class="container-xl">
+<!-- <section class="home-donate" style="background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,250,255,1) 50%, rgba(255,255,255,1) 100%);"> -->
+<section class="home-donate">
+  <img class="bg" src="static/img/home/home-donate-bg.png" alt="">
+  <div class="container-xl content-wrap">
     <div class="row">
       <div class="col-lg-6 col-md-7 text-wrap">
         <h2>Підтримай Збережи</h2>
@@ -7,7 +9,7 @@
         @@include('../component/btns_links.html', {
           "type": "link",
           "style": "blue",
-          "text": "Підтримати Проект",
+          "text": "Підтримати проект",
           "attr": "href=\"donate.html\" ",
           "class": "btn-donate"
         })

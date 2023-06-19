@@ -13,7 +13,7 @@
       margin-bottom: 20px
     .name
       @include media-breakpoint-down(md)
-        padding-top: 20px
+        // padding-top: 20px
   .cabinet-gifts-sender,
   .cabinet-gifts-what-memorial
     display: flex
@@ -24,6 +24,7 @@
     @include media-breakpoint-down(lg)
       // align-items: flex-end
     @include media-breakpoint-down(md)
+      order: 1
       max-width: none
       // margin-bottom: 5px
     .img-wrap
@@ -46,16 +47,20 @@
 
   .cabinet-gifts-what-memorial
     margin-right: 0
-  .cabinet-gifts-date
-    @include media-breakpoint-down(md)
-      order: -1
-      padding-left: 50px
-      margin-bottom: -18px
   .cabinet-gifts-date,
   .cabinet-which-gifts
     flex: auto
   .cabinet-gifts-date
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    line-height: 20px
     @include media-breakpoint-down(md)
+      display: block
+      order: -1
+      // padding-left: 50px
+      // margin-bottom: -18px
       font-size: 12px
       line-height: 16px
     .label
@@ -70,6 +75,7 @@
   .cabinet-which-gifts
     margin: 0 15px
     @include media-breakpoint-down(md)
+      margin-top: 20px
       margin-bottom: 20px
     .img-wrap
       width: 50px

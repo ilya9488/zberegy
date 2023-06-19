@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=7afea185c55534438d8a6b218ce461bd">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -58,19 +58,28 @@
             </svg>
           </a>
           <div class="search-wrap">
-            <button id="search_btn" type="button" aria-label="Кнопка активувати поле пошуку" data-btn-name="Знайти" class="btn-search">
-              <svg class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
-              </svg>
-            </button>
-            <input type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input"> <!-- <div id="search-result" class=""></div> -->
+            <input id="search_input" type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input" list="character">
+            <datalist id="character">
+              <option value="Соловейко Іван Юрійович"></option>
+              <option value="Іваннов Іван Юрійович"></option>
+              <option value="Серов Петро Iванович"></option>
+              <option value="Смирнов Петро Петрович"></option>
+              <option value="Смирнов Петро Iванович"></option>
+              <option value="Про проект"></option>
+              <option value="Умови використання сайта"></option>
+            </datalist>
             <button class="btn-search-reset hide">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.8828 0.117299C7.7264 -0.0390995 7.4736 -0.0390995 7.31721 0.117299L4.00005 3.43446L0.682892 0.117299C0.526494 -0.0390995 0.273696 -0.0390995 0.117298 0.117299C-0.0390995 0.273697 -0.0390995 0.526494 0.117298 0.682892L3.43446 4.00005L0.117298 7.31721C-0.0390995 7.47361 -0.0390995 7.7264 0.117298 7.8828C0.195297 7.9608 0.297696 8 0.400095 8C0.502494 8 0.604893 7.9608 0.682892 7.8828L4.00005 4.56564L7.31721 7.8828C7.39521 7.9608 7.4976 8 7.6 8C7.7024 8 7.8048 7.9608 7.8828 7.8828C8.0392 7.7264 8.0392 7.47361 7.8828 7.31721L4.56564 4.00005L7.8828 0.682892C8.0392 0.526494 8.0392 0.273697 7.8828 0.117299Z" fill="#323232" fill-opacity="0.8" />
               </svg>
             </button>
+            <button id="search_btn" type="button" aria-label="Кнопка активувати поле пошуку" data-btn-name="Знайти" class="btn-search">
+              <svg class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9146 13.5021L9.65478 9.24232C10.5396 8.25995 11.0834 6.9647 11.0834 5.54165C11.0833 2.48601 8.59734 0 5.54168 0C2.48601 0 0 2.48601 0 5.54168C0 8.59734 2.48601 11.0834 5.54168 11.0834C6.96473 11.0834 8.25995 10.5396 9.24235 9.65478L13.5021 13.9146C13.5591 13.9715 13.6337 14 13.7084 14C13.783 14 13.8576 13.9715 13.9146 13.9146C14.0285 13.8006 14.0285 13.616 13.9146 13.5021ZM5.54168 10.5C2.80788 10.5 0.583352 8.27575 0.583352 5.54168C0.583352 2.8076 2.80788 0.583324 5.54168 0.583324C8.27548 0.583324 10.5 2.80757 10.5 5.54168C10.5 8.27578 8.27548 10.5 5.54168 10.5Z" fill="#323232" fill-opacity="0.6" />
+              </svg>
+            </button>
             <button class="btn-search-toggler close d-xl-none">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="10" cy="10" r="10" fill="#F2F2F2" />
                 <path d="M13.625 9.99997C13.625 10.1119 13.5823 10.2239 13.4968 10.3093L9.12184 14.6843C8.95089 14.8552 8.67406 14.8552 8.50321 14.6843C8.33237 14.5133 8.33226 14.2365 8.50321 14.0657L12.5689 9.99997L8.50321 5.93428C8.33226 5.76332 8.33226 5.48649 8.50321 5.31565C8.67417 5.14481 8.951 5.1447 9.12184 5.31565L13.4968 9.69065C13.5823 9.77608 13.625 9.88808 13.625 9.99997Z" fill="#323232" fill-opacity="0.8" />
               </svg>
@@ -85,19 +94,19 @@
         </div>
         <nav class="header-nav navbar-expand-xl">
           <div class="navbar-collapse collapse btn-wrap" id="headerMenu">
-            <a href="login.html" class="btn-green d-none d-xl-block"> Створити Меморіал </a>
-            <a href="donate.html" class="btn-blue d-none d-xl-block"> Підтримати Проект <svg class="btn-icon" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.81265 12.5C0.632382 12.5 0.5 12.6348 0.5 12.8261V19.6739C0.5 19.8654 0.632382 20 0.81265 20H2.76671C2.94698 20 3.07936 19.8654 3.07936 19.6739V12.8261C3.07936 12.6348 2.94698 12.5 2.76671 12.5H0.81265ZM24.3656 12.801C24.261 12.7906 24.1603 12.809 24.053 12.8259C23.9125 12.8476 23.7724 12.8933 23.6361 12.9764L17.7479 16.3124C17.0366 17.2038 16.8072 17.3428 15.5593 17.4663C14.0051 17.4927 12.406 17.492 10.8435 17.4911V16.6885H15.4812C16.1087 16.6885 16.4052 16.5435 16.6275 16.3875C16.728 16.3128 16.8031 16.1961 16.8881 16.0865C16.9895 15.9087 17.0965 15.7321 17.0965 15.4343C17.0965 14.9292 16.943 14.6589 16.6797 14.456C16.4163 14.2531 15.9977 14.1299 15.4812 14.1299H13.2144C12.6175 14.1299 11.9863 13.9223 11.3646 13.7286C10.7429 13.5348 10.1139 13.3489 9.74924 13.3273H7.50858C6.83491 13.3273 6.23928 13.5221 5.68478 13.7286C5.12982 13.9353 4.61979 14.1801 4.06942 14.1801H3.9131V19.1718H17.9824C18.1812 19.1637 18.3331 19.1364 18.4253 19.0963H18.4513C18.5971 19.0441 18.6552 19.0209 18.6598 19.0209L24.9649 15.158C25.494 14.8366 25.6604 14.1315 25.3296 13.6028L25.1733 13.3269C24.9841 13.0255 24.6797 12.8411 24.3656 12.8001V12.801Z" fill="currentColor" />
-                <path d="M14.3061 0C11.2883 0 8.83333 2.45495 8.83333 5.47279C8.83333 8.49063 11.2883 10.9456 14.3061 10.9456C17.324 10.9456 19.7789 8.49063 19.7789 5.47279C19.7789 2.45495 17.324 0 14.3061 0ZM16.0254 7.14456C15.8602 7.38547 15.6436 7.56622 15.3597 7.70115C15.1503 7.79396 14.9323 7.85096 14.7072 7.87216V8.60779C14.7072 8.72008 14.6164 8.8106 14.5044 8.8106H13.8973C13.7851 8.8106 13.6945 8.71979 13.6945 8.60779V7.80857C13.5802 7.78049 13.4677 7.74125 13.3548 7.68969C13.0514 7.56594 12.8068 7.36427 12.6352 7.09299C12.463 6.8412 12.3705 6.547 12.3562 6.19953C12.3516 6.08953 12.4355 5.99615 12.5453 5.9887L13.0904 5.95146C13.2001 5.94516 13.2929 6.02279 13.3058 6.12992C13.3276 6.3124 13.3789 6.46336 13.4545 6.56648C13.5396 6.69425 13.6487 6.77818 13.8137 6.84578C14.1632 6.99961 14.6078 6.9999 14.9154 6.88159C15.0518 6.82315 15.1483 6.75612 15.2122 6.67362C15.2669 6.59513 15.2938 6.51263 15.2938 6.41409C15.2938 6.32156 15.2701 6.25339 15.2125 6.17948C15.1824 6.13937 15.1048 6.06432 14.9005 5.98268C14.8008 5.94974 14.5419 5.87612 14.1477 5.78073C13.6874 5.66586 13.421 5.57878 13.2557 5.48911C13.0096 5.35906 12.8248 5.19693 12.7088 5.00815C12.5899 4.81594 12.5298 4.59651 12.5298 4.35646C12.5298 4.09521 12.6028 3.84628 12.7466 3.61654C12.8956 3.39253 13.1153 3.21664 13.3852 3.1032C13.4754 3.06224 13.5779 3.02786 13.6948 3.00036V2.32404C13.6948 2.21174 13.7856 2.12122 13.8976 2.12122H14.5046C14.6169 2.12122 14.7074 2.21203 14.7074 2.32404V2.96456C14.8899 2.99492 15.0589 3.04104 15.2122 3.10206C15.5087 3.23526 15.7238 3.41372 15.8773 3.6512C16.0312 3.87521 16.118 4.14419 16.1332 4.44583C16.1386 4.55641 16.0544 4.65094 15.9438 4.65839L15.3858 4.69591C15.2781 4.70336 15.1855 4.62659 15.1709 4.52089C15.1397 4.29201 15.0632 4.13216 14.9369 4.03276C14.7934 3.91044 14.5851 3.85344 14.2941 3.85344C14.0091 3.85344 13.7802 3.90872 13.6493 4.00956C13.543 4.09148 13.4932 4.19003 13.4932 4.31951C13.4932 4.41919 13.5244 4.4974 13.586 4.5524C13.6186 4.57818 13.7968 4.69419 14.3729 4.81536C14.8487 4.92766 15.1984 5.02992 15.3901 5.11242C15.6954 5.24992 15.9137 5.42724 16.0418 5.64036C16.1847 5.85435 16.2566 6.09383 16.2566 6.36424C16.2566 6.64555 16.179 6.90794 16.0254 7.14456Z" fill="currentColor" />
-              </svg>
-            </a>
-            <a href="login.html" class="btn-user-login">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="25" fill="currentColor" />
-                <path d="M25 25.0258C19.7295 25.0258 15.4414 29.3139 15.4414 34.5844C15.4414 34.8138 15.6276 35 15.857 35C16.0864 35 16.2726 34.8138 16.2726 34.5844C16.2726 29.7718 20.1875 25.8569 25.0001 25.8569C29.8126 25.8569 33.7275 29.7718 33.7275 34.5844C33.7275 34.8138 33.9137 35 34.1431 35C34.3725 35 34.5587 34.8138 34.5587 34.5844C34.5587 29.313 30.2706 25.0258 25 25.0258Z" fill="#323232" />
-                <path d="M25 15C22.4798 15 20.4285 17.0505 20.4285 19.5715C20.4285 22.0925 22.4798 24.143 25 24.143C27.5201 24.143 29.5715 22.0925 29.5715 19.5715C29.5715 17.0505 27.5201 15 25 15ZM25 23.3118C22.9378 23.3118 21.2596 21.6337 21.2596 19.5715C21.2596 17.5093 22.9378 15.8312 25 15.8312C27.0621 15.8312 28.7403 17.5093 28.7403 19.5715C28.7403 21.6337 27.0621 23.3118 25 23.3118Z" fill="#323232" />
-              </svg>
-            </a>
+            <a href="login.html" class="btn-green d-none d-xl-block"> Створити меморіал </a>
+            <div class="btn-user-login active">
+              <a href="login.html">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="25" cy="25" r="25" fill="currentColor"></circle>
+                  <path d="M25 25.0258C19.7295 25.0258 15.4414 29.3139 15.4414 34.5844C15.4414 34.8138 15.6276 35 15.857 35C16.0864 35 16.2726 34.8138 16.2726 34.5844C16.2726 29.7718 20.1875 25.8569 25.0001 25.8569C29.8126 25.8569 33.7275 29.7718 33.7275 34.5844C33.7275 34.8138 33.9137 35 34.1431 35C34.3725 35 34.5587 34.8138 34.5587 34.5844C34.5587 29.313 30.2706 25.0258 25 25.0258Z" fill="#323232"></path>
+                  <path d="M25 15C22.4798 15 20.4285 17.0505 20.4285 19.5715C20.4285 22.0925 22.4798 24.143 25 24.143C27.5201 24.143 29.5715 22.0925 29.5715 19.5715C29.5715 17.0505 27.5201 15 25 15ZM25 23.3118C22.9378 23.3118 21.2596 21.6337 21.2596 19.5715C21.2596 17.5093 22.9378 15.8312 25 15.8312C27.0621 15.8312 28.7403 17.5093 28.7403 19.5715C28.7403 21.6337 27.0621 23.3118 25 23.3118Z" fill="#323232"></path>
+                </svg>
+              </a>
+              <a class="link" href="login.html"> Вхід </a>
+              <span class="delimer">/</span>
+              <a class="link" href="signup.html"> Реєстрація </a>
+            </div>
             <a href="user-cabinet-data.html" class="btn-user-cabinet">
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="25" cy="25" r="25" fill="currentColor" />
@@ -115,12 +124,12 @@
                 <path d="M35.0547 15H14.9453C13.3213 15 12 16.3503 12 18.01V31.99C12 33.6497 13.3213 35 14.9453 35H35.0547C36.6787 35 38 33.6497 38 31.99V18.01C38 16.3503 36.6787 15 35.0547 15ZM37.1875 18.01V31.99C37.1875 32.459 37.0414 32.8934 36.7938 33.2493L27.7904 22.5794L36.6446 16.5591C36.9819 16.9448 37.1875 17.4532 37.1875 18.01ZM35.0547 15.8303C35.3645 15.8301 35.6706 15.8993 35.9515 16.0331L25 23.4794L14.0485 16.0331C14.3293 15.8993 14.6355 15.8301 14.9453 15.8303H35.0547ZM12.8125 31.99V18.01C12.8125 17.4532 13.0181 16.9448 13.3554 16.5592L22.2096 22.5794L13.2062 33.2493C12.9586 32.8934 12.8125 32.459 12.8125 31.99ZM14.9453 34.1697C14.5372 34.17 14.1376 34.0499 13.7946 33.8238L22.9045 23.0519L24.775 24.3237C24.8417 24.369 24.9199 24.3932 25 24.3932C25.0801 24.3932 25.1583 24.369 25.225 24.3237L27.0955 23.0519L36.2054 33.8238C35.8624 34.0499 35.4628 34.17 35.0547 34.1697H14.9453Z" fill="#323232" />
               </svg>
             </a>
-            <div class="nav-collapse d-xl-none d-lg-block">
-              <button type="button" data-toggle="collapse" data-target="#aboutUs" aria-expanded="false" aria-controls="aboutUs" class="btn-drop collapsed"> Про Нас <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="nav-collapse d-xl-none d-lg-block"> <!-- "class": "collapsed", -->
+              <button type="button" data-toggle="collapse" data-target="#aboutUs" aria-expanded="true" aria-controls="aboutUs" class="btn-drop"> Про Нас <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
-              <div class="collapse" id="aboutUs">
+              <div class="collapse show" id="aboutUs">
                 <ul class="header-nav-menu list-yellow-mark has-links">
                   <li class="menu-item">
                     <a class="menu-item-link" href="about-us.html">Про проект</a>
@@ -134,12 +143,12 @@
                 </ul>
               </div>
             </div>
-            <div class="nav-collapse d-xl-none d-lg-block">
-              <button type="button" data-toggle="collapse" data-target="#services" aria-expanded="false" aria-controls="services" class="btn-drop collapsed"> Послуги <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="nav-collapse d-xl-none d-lg-block"> <!-- "class": "collapsed", -->
+              <button type="button" data-toggle="collapse" data-target="#services" aria-expanded="false" aria-controls="services" class="btn-drop"> Послуги <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
-              <div class="collapse" id="services">
+              <div class="collapse show" id="services">
                 <ul class="header-nav-menu list-yellow-mark has-links">
                   <li class="menu-item">
                     <a class="menu-item-link" href="capabilities.html">Можливості сервісу</a>
@@ -150,12 +159,12 @@
                 </ul>
               </div>
             </div>
-            <div class="nav-collapse d-xl-none d-lg-block">
-              <button type="button" data-toggle="collapse" data-target="#importantInfo" aria-expanded="false" aria-controls="importantInfo" class="btn-drop collapsed"> Важлива інформація <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="nav-collapse d-xl-none d-lg-block"> <!-- "class": "collapsed", -->
+              <button type="button" data-toggle="collapse" data-target="#importantInfo" aria-expanded="false" aria-controls="importantInfo" class="btn-drop"> Важлива інформація <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
-              <div class="collapse" id="importantInfo">
+              <div class="collapse show" id="importantInfo">
                 <ul class="header-nav-menu list-yellow-mark has-links">
                   <li class="menu-item">
                     <a class="menu-item-link" href="capabilities.html">Контакти</a>
@@ -305,7 +314,7 @@
           </div>
           <div class="col-xl-2 col-md-4 offset-xl-1">
             <div class="nav-collapse">
-              <button type="button" data-toggle="collapse" data-target="#footerAboutUs" aria-expanded="false" aria-controls="footerAboutUs" class="btn-drop disabled"> Про Нас: <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button type="button" data-toggle="collapse" data-target="#footerAboutUs" aria-expanded="false" aria-controls="footerAboutUs" class="btn-drop disabled"> Про Нас <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
@@ -326,7 +335,7 @@
           </div>
           <div class="col-xl-3 col-md-4">
             <div class="nav-collapse">
-              <button type="button" data-toggle="collapse" data-target="#footerServices" aria-expanded="false" aria-controls="footerServices" class="btn-drop disabled"> Послуги: <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button type="button" data-toggle="collapse" data-target="#footerServices" aria-expanded="false" aria-controls="footerServices" class="btn-drop disabled"> Послуги <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
@@ -338,23 +347,26 @@
                   <li class="menu-item">
                     <a class="menu-item-link" href="example-memorial.html">Приклад Онлайн Меморіалу</a>
                   </li>
+                  <li class="menu-item">
+                    <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-md-4">
             <div class="nav-collapse">
-              <button type="button" data-toggle="collapse" data-target="#footerImportantInfo" aria-expanded="false" aria-controls="footerImportantInfo" class="btn-drop disabled"> Важлива інформація: <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button type="button" data-toggle="collapse" data-target="#footerImportantInfo" aria-expanded="false" aria-controls="footerImportantInfo" class="btn-drop disabled"> Важлива інформація <svg class="drop-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.00005 7.74998C6.8402 7.74998 6.6802 7.68888 6.55817 7.56685L0.308164 1.31685C0.0639453 1.07263 0.0639453 0.677166 0.308164 0.433103C0.552383 0.189041 0.947852 0.188884 1.19191 0.433103L7.00005 6.24123L12.8082 0.433103C13.0524 0.188884 13.4479 0.188884 13.6919 0.433103C13.936 0.677322 13.9361 1.07279 13.6919 1.31685L7.44192 7.56685C7.31989 7.68888 7.15989 7.74998 7.00005 7.74998Z" fill="#3E9AF6" />
                 </svg>
               </button>
               <div class="collapse show" id="footerImportantInfo">
                 <ul class="footer-nav-menu list-yellow-mark has-links">
                   <li class="menu-item">
-                    <a class="menu-item-link" href="faq.html">Допомога</a>
+                    <a class="menu-item-link" href="donate.html">Підтримати проект</a>
                   </li>
                   <li class="menu-item">
-                    <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
+                    <a class="menu-item-link" href="faq.html">Допомога</a>
                   </li>
                   <li class="menu-item">
                     <a class="menu-item-link" href="privacy-policy.html">Політика безпеки</a>
@@ -427,8 +439,9 @@
       </div> <!-- /.container -->
     </footer>
   </main> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=7afea185c55534438d8a6b218ce461bd">
-  <script defer src="static/js/common.min.js?_v=7afea185c55534438d8a6b218ce461bd"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
+  <script async src="static/js/modules.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
+  <script defer src="static/js/common.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
 </body>
 
 </html>

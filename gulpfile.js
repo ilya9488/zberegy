@@ -76,6 +76,15 @@ function scripts() {
     //.pipe(browserSync.stream());
 }
 
+function scriptsModules() {
+  return src('src/js/modules.js')
+    .pipe(rigger())
+    .pipe(concat('modules.min.js'))
+    .pipe(uglify())
+    .pipe(dest('static/js/'))
+    .pipe(browserSync.stream());
+}
+
 // function cleanImg() {
 //   // , '!static/img/favicon'
 //   return del(['static/img/**/*'])
@@ -84,7 +93,7 @@ function scripts() {
 function images(){
   return src('src/img/**/*')
     .pipe(newer('static/img/'))
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(dest('static/img/'));
 }
 
@@ -141,6 +150,7 @@ function startwatch(){
   watch(['src/sass/**/*.(sass|scss)'], parallel(styles));
   watch(['src/sass/**/*.(sass|scss)'], parallel(stylesHeader));
   watch(['src/js/**/*.js'], parallel(scripts));
+  watch(['src/js/**/*.js'], parallel(scriptsModules));
   // watch(['src/**/*.html'], parallel(cleanHtml));
   watch(['src/**/*.html'], parallel(htmlConcat));
   // watch('src/img/**/*', parallel(cleanImg));
@@ -151,6 +161,7 @@ function startwatch(){
 
 exports.browsersync = browsersync;
 exports.scripts = scripts;
+exports.scriptsModules = scriptsModules;
 exports.styles = styles;
 exports.stylesHeader = stylesHeader;
 // exports.cleanHtml = cleanHtml;
@@ -162,5 +173,5 @@ exports.fonts = fonts;
 // exports.cleanStyles = cleanStyles;
 
 // exports.default = parallel(browsersync, scripts, cleanHtml, htmlConcat, // cleanImg, images, fonts, startwatch);
-exports.default = parallel(browsersync, scripts, htmlConcat, images, fonts, startwatch);
+exports.default = parallel(browsersync, scriptsModules, scripts, htmlConcat, images, fonts, startwatch);
 // exports.default = parallel(browsersync, startwatch);

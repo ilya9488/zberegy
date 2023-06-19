@@ -1,84 +1,34 @@
-// /* del */
-// $('#galleryDescrModal').modal('show')
-// $('#galleryVideoModal').modal('show')
-// /* del  */
-
-let memorialImgPath = $('#form_create_memorial .select-img img').length ? $('#form_create_memorial .select-img img')[0].src : '';
-
-// input file
-$('#load_memorial_img').on('change', function () {
-  if (this.files && this.files[0]) {
-    let readerImg = new FileReader();
-    readerImg.onload = function (e) {
-      memorialImgPath = e.target.result;
-      $('#form_create_memorial .select-img img')[0].src = memorialImgPath
-    }
-    // readerImg.readAsDataURL(e.target.files[0]); // ? how better
-    readerImg.readAsDataURL(this.files[0]);
-    // activate the save button
-    // isChangeForm()
-  }
-})
-
-$('#del_memorial_img').on('click', function (e) {
-  // letiable for recording the old value
-  memorialImgPath = this.dataset.resetImg;
-  // assign the default image
-  $('#form_create_memorial .select-img img')[0].src = memorialImgPath;
-  // reset the input
-  $('#load_memorial_img')[0].value = ''
-  $('#load_memorial_img')[0].setAttribute('value', '')
-  // activate the save button
-  // isChangeForm()
-})
-
-//  - - - - custom template - - - - //
-function customTemplate(){
-  $('[name="templates"]').each(function(){
-    this.checked = false
-  })
-  $('[name="templates"]:not(#donl_templ)').on('click', function(){
-    $('#donl_templ_img')[0].src = 'static/img/fake-img.png';
-  })
-  $('#donl_templ').on('click',function(){
-    customTemplate()
-  })
-}
-// input download template bg
-fileImgLoad($('#donl_templ'), $('#donl_templ_img'), customTemplate)
-//  - - - - /custom template - - - - //
-
-//  - - - - /datapicker settings - - - - //
-
-//  - - - - monument foto - - - - //
-fileImgLoad($('#monument_foto'), $('#monument_foto_img'))
-
-$('#del_monument_foto').on('click', function (e) {
-  // assign the default image
-  $('#monument_foto_img')[0].src = this.dataset.resetImg;
-  // letiable for recording the old value
-  memorialImgPath = this.dataset.resetImg;
-  // reset the input
-  $('#monument_foto')[0].value = ''
-  $('#monument_foto')[0].setAttribute('value', '')
-  // activate the save button
-  // isChangeForm()
-})
-//  - - - - /monument foto - - - - //
-
-$('#form_create_memorial').on('submit', function (e) {
-  e.preventDefault()
-})
-
-
-
-//  - - - - - 2 - - - - --
+/*****************************************
+  2 - Forming a gallery for the memorial.
+******************************************/
 
 $('#formGallery').on('submit', function (e) {
   e.preventDefault();
+
+  let formData = new FormData(e.target);
+  let jsonData = {};
+
+  formData.forEach(function (value, key) { jsonData[key] = value; });
+  jsonData = JSON.stringify(jsonData);
+
+  console.log(jsonData);
+
+  $.ajax({
+    url: "/",
+    type: "POST",
+    data: jsonData,
+    success: function (jsonData) {
+      // code
+      $('#headCrMem_3').removeAttr('style')
+    },
+    error: function (error) {
+      // code
+    }
+  });
+
 })
 
-let input = document.querySelector('#gallery_img');
+let inputGalleryImg = document.querySelector('#gallery_img');
 const preview = document.querySelector('#gallery_img_imgs_previews');
 
 const button = document.getElementById('btn_save_gallery');
@@ -86,23 +36,22 @@ const button = document.getElementById('btn_save_gallery');
 const fileList = [];
 
 
-// Обработчик кнопки Send
+// Send
 if(button){button.addEventListener('click', (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   if (!fileList.length) {
-    console.log('Empty!');
     return;
   }
   // console.log(JSON.stringify(fileList.map(({ name, modified, size, description }) => ({ name, modified, size, data: '<[!FILEDATA]>', description })), null, 2));
 });}
 
-if (input) {
-  input.addEventListener('change', onChange);
+if (inputGalleryImg) {
+  inputGalleryImg.addEventListener('change', onChange);
 }
 
 function onChange() {
   
-  [...input.files].forEach(file => {
+  [...inputGalleryImg.files].forEach(file => {
     // We create a reader
     const reader = new FileReader;
       // We hang an event on the reader
@@ -122,7 +71,7 @@ function onChange() {
             editImg.type = "button";
             editImg.classList.add('btn-load-select-img', 'btn-edit')
             editImg.id = 'btn_edit_gallery_img'
-            editImg.innerHTML = '<svg width = "30" height = "30" viewBox = "0 0 30 30" fill = "none" xmlns = "http://www.w3.org/2000/svg" ><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg>';
+        editImg.innerHTML = '<svg width = "30" height = "30" viewBox = "0 0 30 30" fill = "none" xmlns = "http://www.w3.org/2000/svg" ><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"></path></svg>';
       const сhangeImage = document.createElement('input');
             сhangeImage.type = 'file';
             сhangeImage.id = 'сhange_image'
@@ -210,26 +159,23 @@ function onChange() {
       itemWrap.appendChild(remove);
       itemWrap.appendChild(editImg);
       item.appendChild(image);
-        itemWrap.appendChild(item);
-        console.log(itemWrap);
-        console.log(preview);
-
+      itemWrap.appendChild(item);
+        
       preview.appendChild(itemWrap);
     });
     // Launch a file reading
     reader.readAsBinaryString(file);
   });
   // We drop the meaning <input>
-  input.value = '';
+  inputGalleryImg.value = '';
   // Create a clone <input>
-  const newInput = input.cloneNode(true);
+  const newInput = inputGalleryImg.cloneNode(true);
   // Replaceable <input> clone
-  input.replaceWith(newInput);
+  inputGalleryImg.replaceWith(newInput);
   // Now Input will indicate the clone
-  input = newInput;
+  inputGalleryImg = newInput;
   // we’ll hang the onchange function for the change event in the new <nput>
-  input.addEventListener('change', onChange);
-  console.log(fileList);
+  inputGalleryImg.addEventListener('change', onChange);
   return;
 }
 
@@ -257,7 +203,7 @@ $('#gallery_video_form').on('submit', function (e) {
     const editVideo = document.createElement('button');
           editVideo.type = "button";
           editVideo.classList.add('btn-load-select-video', 'btn-edit')
-          editVideo.innerHTML = '<svg width = "30" height = "30" viewBox = "0 0 30 30" fill = "none" xmlns = "http://www.w3.org/2000/svg" ><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" fill="white"></path></svg>';
+    editVideo.innerHTML = '<svg width = "30" height = "30" viewBox = "0 0 30 30" fill = "none" xmlns = "http://www.w3.org/2000/svg" ><circle cx="15" cy="15" r="15" fill="currentColor"></circle><path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"></path></svg>';
     const remove = document.createElement('button');
           remove.type = "button";
           remove.classList.add('btn-del-select-video', 'btn-delete')
@@ -311,14 +257,3 @@ $('#gallery_video_form').on('submit', function (e) {
     thisInput.classList.add('error')
   }
 })
-
-
-$('#memorable_events_form').on('submit', function (e) {
-  e.preventDefault();
-  
-});
-
-$('#btn_memorable_events').on('click', function () {
-  
-});
-

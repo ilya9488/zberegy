@@ -1,22 +1,46 @@
 .login_signup-block
-  padding: 100px 0
+  max-width: 1920px
+  margin-left: auto
+  margin-right: auto
+  padding: 80px 0
   @include media-breakpoint-down(sm)
-    padding: 60px 0
+    padding: 20px 0
   &.login-block
-    min-height: 100vh
+    max-width: none
+    min-height: calc( 100vh - 60px )
     background-color: #E3F0FF
-    background-image: url(../img/login/login-bg.svg)
-    background-size: auto 94%
-    @include media-breakpoint-down(md)
-      background-image: url(../img/login/login-bg-sm-t.svg), url(../img/login/login-bg-sm-b.svg)
-      background-size: 100% auto, 100% auto
-      background-position: top 18px center, bottom 0 left 0
+    background-image: url(../img/login/login-bg-1.png)
+    background-size: 100% auto
+    background-position: bottom center
+    @include media-breakpoint-down(sm)
+      background-size: 250% auto
+
+    .signup_login-form
+      background-color: $clear
+      @include media-breakpoint-down(sm)
+        background-color: transparent
+        padding: 0
   &.signup-block
-    background-image: url(../img/signup/signup-bg.png)
-    background-size: calc( 50% - 100px ) auto
-    background-position: calc( 100% - 30px ) center
-    @include media-breakpoint-down(md)
-      background: none
+    position: relative
+    .bg
+      position: absolute
+      right: 0
+      bottom: 0
+      transform: translate(30%, 0%)
+      max-width: 130%
+      max-height: 100%
+      z-index: 0
+      @include media-breakpoint-down(lg)
+        max-width: 110%
+      @include media-breakpoint-down(md)
+        position: relative
+        margin-top: 30px
+        max-width: none
+        width: 150%
+        transform: translate(-10%, 0%)
+    .content-wrap
+      position: relative
+      z-index: 1
     .form-wrap
       margin: 0
     .signup_login-form
@@ -25,15 +49,25 @@
       @include media-breakpoint-down(md)
         margin: 0 auto
         padding: 0
-
+  &.mail_confirmation-block
+    .bg
+      transform: translate(30%, 30%)
+      width: 110%
+      height: auto
+      max-height: none
+      @include media-breakpoint-down(md)
+        transform: translate(-20%, 0)
+        width: 225%
+  &.forgot-password-block
+    max-width: none
   .form-wrap
     margin: 0 auto
   .signup_login-form
-    background-color: $clear
+    // background-color: $clear
     border-radius: $border-radius
     padding: 60px
     @include media-breakpoint-down(sm)
-      padding: 0
+      padding: 30px 20px 20px 20px
       background-color: transparent
     .btn-login-google,
     .btn-login-fb
@@ -51,11 +85,12 @@
     .pass-wrap
       position: relative
       margin-bottom: 20px
-      input
-        margin: 0
+      // input
+      //   margin: 0
     .btn-login
       width: 100%
       margin-bottom: 16px
+      text-transform: none
     .memorable-me
       user-select: none
       display: flex
@@ -76,15 +111,15 @@
       padding: 0 15px
       max-width: 500px
       margin: 0 auto
+    .ask-mail-mess
+      font-size: 16px
+      font-weight: 700
+      margin-bottom: 16px
     a,
     .current-signup-email
       color: #3E9AF6
       &:hover
         color: #1c7fe1
-    .sign-img
-      display: none
-      @include media-breakpoint-down(md)
-        display: block
 
 .forgot-password
   &-block
@@ -100,4 +135,3 @@
     color: #797F85
     svg
       margin-bottom: 15px
-

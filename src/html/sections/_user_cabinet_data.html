@@ -12,11 +12,11 @@
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="15" cy="15" r="15" fill="currentColor" />
           <path
-            d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"
-            fill="white" />
+            class="pen"
+            d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
         </svg>
       </label>
-      <button class="btn-del-select-img btn-delete-red" id="del_user_img" data-reset-img="static/img/no-photo.jpg">
+      <button class="btn-del-select-img btn-delete" id="del_user_img" data-reset-img="static/img/no-photo.jpg">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z"
@@ -31,21 +31,22 @@
       <div class="col-md-4">
         <div class="input-group">
           <label for="user_last_name">Прізвище</label>
-          <input class="only-letter_uk" type="text" id="user_last_name" value="Іванова" placeholder="Прізвище">
+          <input class=" no-spaces" type="text" id="user_last_name" value="Іванова" placeholder="Прізвище">
           <span class="error-mess">Вкажіть ваше прізвище</span>
         </div>
       </div>
       <div class="col-md-4 pl-md-0">
         <div class="input-group">
           <label for="user_name">Ім'я</label>
-          <input class="only-letter_uk" type="text" id="user_name" value="Іванка" placeholder="Ім'я">
+          <input class=" no-spaces" type="text" id="user_name" value="Іванка" placeholder="Ім'я">
           <span class="error-mess">Вкажіть ваше ім'я</span>
         </div>
       </div>
       <div class="col-md-4 pl-md-0">
         <div class="input-group">
           <label for="user_surname">По батькові</label>
-          <input class="only-letter_uk" type="text" id="user_surname" value="" placeholder="Не вказано">
+          <input class=" no-spaces" type="text" id="user_surname" value="" placeholder="Не вказано">
+          <span class="error-mess"></span>
         </div>
       </div>
       <div class="col-md-4">
@@ -162,8 +163,8 @@
             d="M18.8777 4.12187C18.7152 3.95938 18.451 3.95938 18.2885 4.12187L4.12187 18.2885C3.95938 18.451 3.95938 18.7152 4.12187 18.8777C4.20355 18.9585 4.31019 18.9994 4.41687 18.9994C4.52355 18.9994 4.63019 18.9586 4.71105 18.8777L18.8777 4.71105C19.0402 4.54855 19.0402 4.28437 18.8777 4.12187Z"
             fill="#323232" fill-opacity="0.6"></path>
         </svg>
-        <input type="password" id="pass" value="bea6f1da7d9=)" placeholder="Введіть пароль">
-        <span class="error-mess">Неправильний пароль</span>
+        <input type="password" id="current_pas" value="bea6f1da7d9=)" placeholder="Введіть пароль">
+        <span class="error-mess">Перевірте пароль</span>
       </div>
 
       <label for="pass" class="label-pass">Новий пароль</label>
@@ -183,8 +184,8 @@
             d="M18.8777 4.12187C18.7152 3.95938 18.451 3.95938 18.2885 4.12187L4.12187 18.2885C3.95938 18.451 3.95938 18.7152 4.12187 18.8777C4.20355 18.9585 4.31019 18.9994 4.41687 18.9994C4.52355 18.9994 4.63019 18.9586 4.71105 18.8777L18.8777 4.71105C19.0402 4.54855 19.0402 4.28437 18.8777 4.12187Z"
             fill="#323232" fill-opacity="0.6"></path>
         </svg>
-        <input type="password" id="pass" value="bea6f1da7d9=)" placeholder="Введіть новий пароль">
-        <span class="error-mess">Некоректно заповнене пароль</span>
+        <input type="password" id="new_pas" value="bea6f1da7d9=)" placeholder="Введіть новий пароль">
+        <span class="error-mess">Вкажіть пароль</span>
       </div>
       <button class="btn-blue btn-pass-recovery" id="btn_pass_recovery" type="submit">
         <span>Далі</span>
