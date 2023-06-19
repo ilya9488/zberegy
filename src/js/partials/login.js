@@ -11,7 +11,7 @@ function getFile(fileName) {
 			}
 	request.send()
 }
-getFile('/admin-data.json')
+getFile('admin-data.json')
 
 
 $('#login_form').on('submit', function (e) {
