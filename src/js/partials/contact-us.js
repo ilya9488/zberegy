@@ -83,7 +83,6 @@ $('#contact_us_form').on('submit', function (e) {
     data: jsonData,
     success: function (jsonData) {
       // code
-
       $('#sucsesModalLabel').text("Ваше повідомлення успішно надіслано. Ми спробуємо зв'язатися з Вами якнайшвидше!")
       setTimeout(function () {
         $('#contact_us_form').find('input, option, textarea').not('[type=submit]').each(function () {
