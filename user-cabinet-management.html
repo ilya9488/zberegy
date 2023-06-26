@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=37dc312f2a167f341e5f57d32f70d9d5">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -620,24 +620,6 @@
                   </div>
                 </div>
               </div>
-            </div> <!-- Modal info memorial -->
-            <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                      <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
-                        <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
-                  </div>
-                  <div class="modal-body"></div>
-                </div>
-              </div>
             </div> <!-- Modal gallery descr -->
             <div class="modal fade site-modal gallery-descr-modal" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
@@ -662,7 +644,7 @@
                       </div>
                       <div class="imgs-previews">
                         <div class="select-img-wrap square-type">
-                          <input hidden type="file" id="сhange_image">
+                          <input hidden type="file" id="сhange_image" accept="image/jpeg, image/jpg, image/png, image/webp">
                           <label for="сhange_image" class="btn-load-select-img btn-edit">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="15" cy="15" r="15" fill="currentColor"></circle>
@@ -871,6 +853,24 @@
                   </div>
                 </div>
               </div>
+            </div> <!-- Modal info memorial (this window must be the last one) -->
+            <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                      <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+                        <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
+                  </div>
+                  <div class="modal-body"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-xl-9 col-lg-8 col-md-8">
@@ -1021,10 +1021,10 @@
                         <form class="site-form form-create-memorial" id="form_create_memorial">
                           <h6>Головне фото</h6>
                           <div class="select-img-wrap">
-                            <div id="main_img" class="select-img">
-                              <img src="static/img/no-foto.svg" alt="Зображення акаунта">
+                            <div class="select-img">
+                              <img id="main_img" src="static/img/no-foto.svg" alt="Зображення акаунта">
                             </div>
-                            <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
+                            <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
                             <label class="btn-load-select-img btn-edit" for="load_memorial_img">
                               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="15" cy="15" r="15" fill="currentColor" />
@@ -1203,8 +1203,8 @@
                                   </div>
                                 </label>
                               </div>
-                              <div class="templates-top-bg"> <!-- <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
-                                <input hidden type="file" accept="image/*" id="donl_templ" name="templates">
+                              <div class="templates-top-bg"> <!-- <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
+                                <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="donl_templ" name="templates">
                                 <label class="btn-downl-templ" for="donl_templ">
                                   <span>Завантажити шаблон</span>
                                   <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1329,7 +1329,7 @@
                                 <div class="select-img">
                                   <img id="monument_foto_img" src="static/img/no-foto.svg" alt="Фото пам'ятника/ділянки">
                                 </div>
-                                <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
+                                <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
                                 <label class="btn-load-select-img btn-edit" for="monument_foto">
                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="15" cy="15" r="15" fill="currentColor" />
@@ -1355,7 +1355,7 @@
                             </div>
                             <div class="col-12 btn-wrap">
                               <button class="btn-yellow btn-edit-memorial" id="btn_edit_memorial" type="submit"> Зберегти </button>
-                              <button class="btn-reset" id="btn_reset_memorial" type="button"> Скасувати </button>
+                              <button class="btn-reset" id="btn_reset_memorial" type="reset"> Скасувати </button>
                             </div>
                             <div class="col-12">
                               <small>* відзначені поля, які є <span class="red-t">обов'язковими</span> для заповнення.</small>
@@ -1380,12 +1380,12 @@
                           <h6>Завантажте фото</h6>
                           <p> Додайте фотографії на сторінку Онлайн Меморіалу. Розмір фото не повинен перевищувати ХХХ Кб (.jpg .jpeg, .png, .gif) а його вміст має відповідати <a href="#" class="link-blue">правилам</a> нашого сервісу. </p>
                           <div id="gallery_img_imgs_previews" class="imgs-previews"></div>
-                          <input hidden id="gallery_img" type="file" accept="image/*" name="uploadfile[]" multiple>
+                          <input hidden id="gallery_img" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" name="uploadfile[]" multiple>
                           <label for="gallery_img" class="btn-add-foto">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6" />
                               <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6" />
-                            </svg> Додати фото <!-- Додати ще фото -->
+                            </svg> Додати фото
                           </label>
                           <h6>Завантажте відео</h6>
                           <p>Ви можете додати відео на сторінку Онлайн Меморіалу. Нагадуємо, що контент, який Ви розміщуєте, повинен відповідати нашим правилам і бути завантажений з сервісу YouTube. Для того, щоб коректно додати відеоролик (посилання на нього), Ви можете скористатися розділом Допомога, в якому буде надано докладне пояснення цього процесу.</p>
@@ -1423,7 +1423,7 @@
                             <input readonly type="text" name="event_birth_day" id="event_birth_day" value="00.00.0000" placeholder="дд.мм.рррр">
                           </div>
                           <div id="events_wrap"></div>
-                          <div hidden id="event_template" class="memorable-event-preview-block with-separator form-group"> <!-- <div id="event_template" class="memorable-event-preview-block with-separator form-group"> -->
+                          <div hidden id="event_template" class="memorable-event-preview-block with-separator form-group">
                             <div class="event-title-group">
                               <label hidden data-lab-hide>Назва події*</label>
                               <textarea data-readonly readonly="true" class="event-title" value="" maxlength="1000"></textarea>
@@ -1439,7 +1439,7 @@
                             </div>
                             <div class="memorable-event-img form-group">
                               <label hidden data-event-block="event_template" class="select-new-img btn-downl-event-img">
-                                <input hidden data-event-block="event_template" type="file" accept="image/*" name="templates" autocomplete="off">
+                                <input hidden data-event-block="event_template" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" name="templates" autocomplete="off">
                                 <span>Змiнити фото</span>
                                 <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1503,8 +1503,8 @@
                               <input readonly type="text" id="memorable_event_date_day" value="" placeholder="дд.мм.рррр">
                               <span class="error-mess">Оберіть дату</span>
                             </div>
-                            <div class="memorable-event-img form-group"> <!-- <input hidden="" id="gallery_img" type="file" accept="image/*" autocomplete="off"> --> <!-- <input hidden="" type="file" accept="image/*" id="memorable_crreate_event_img" name="templates" autocomplete="off"> -->
-                              <input hidden="" type="file" accept="image/*" id="memorable_crreate_event_img" name="uploadfile[]" multiple="" autocomplete="off">
+                            <div class="memorable-event-img form-group"> <!-- <input hidden="" id="gallery_img" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" autocomplete="off"> --> <!-- <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="templates" autocomplete="off"> -->
+                              <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="uploadfile[]" multiple="" autocomplete="off">
                               <label class="btn-downl-event-img" for="memorable_crreate_event_img">
                                 <span>Завантажте фото</span>
                                 <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2017,24 +2017,6 @@
         </div>
       </div>
     </div>
-  </div> <!-- Modal info memorial -->
-  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
-              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
-            </svg>
-          </span>
-        </button>
-        <div class="modal-header">
-          <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
-        </div>
-        <div class="modal-body"></div>
-      </div>
-    </div>
   </div> <!-- Modal gallery descr -->
   <div class="modal fade site-modal gallery-descr-modal" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -2059,7 +2041,7 @@
             </div>
             <div class="imgs-previews">
               <div class="select-img-wrap square-type">
-                <input hidden type="file" id="сhange_image">
+                <input hidden type="file" id="сhange_image" accept="image/jpeg, image/jpg, image/png, image/webp">
                 <label for="сhange_image" class="btn-load-select-img btn-edit">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="15" cy="15" r="15" fill="currentColor"></circle>
@@ -2268,10 +2250,28 @@
         </div>
       </div>
     </div>
+  </div> <!-- Modal info memorial (this window must be the last one) -->
+  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
   </div> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
-  <script async src="static/js/modules.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
-  <script defer src="static/js/common.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=37dc312f2a167f341e5f57d32f70d9d5">
+  <script async src="static/js/modules.min.js?_v=37dc312f2a167f341e5f57d32f70d9d5"></script>
+  <script defer src="static/js/common.min.js?_v=37dc312f2a167f341e5f57d32f70d9d5"></script>
 </body>
 
 </html>

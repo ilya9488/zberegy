@@ -1,11 +1,11 @@
 <form class="site-form form-create-memorial" id="form_create_memorial">
   <h6 >Головне фото</h6>
   <div class="select-img-wrap">
-    <div id="main_img" class="select-img">
-      <img src="static/img/no-foto.svg" alt="Зображення акаунта">
+    <div class="select-img">
+      <img id="main_img" src="static/img/no-foto.svg" alt="Зображення акаунта">
     </div>
 
-    <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
+    <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
     <label class="btn-load-select-img btn-edit" for="load_memorial_img">
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" fill="currentColor" />
@@ -213,8 +213,8 @@
         </label>
       </div>
       <div class="templates-top-bg">
-        <!-- <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
-        <input hidden type="file" accept="image/*" id="donl_templ" name="templates">
+        <!-- <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
+        <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="donl_templ" name="templates">
         <label class="btn-downl-templ" for="donl_templ">
           <span>Завантажити шаблон</span>
           <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -359,7 +359,7 @@
           <img id="monument_foto_img" src="static/img/no-foto.svg" alt="Фото пам'ятника/ділянки">
         </div>
       
-        <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
+        <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
         <label class="btn-load-select-img btn-edit" for="monument_foto">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15" cy="15" r="15" fill="currentColor" />
@@ -393,7 +393,7 @@
       <button class="btn-yellow btn-edit-memorial" id="btn_edit_memorial" type="submit">
         Зберегти
       </button>
-      <button class="btn-reset" id="btn_reset_memorial" type="button">
+      <button class="btn-reset" id="btn_reset_memorial" type="reset">
         Скасувати
       </button>
     </div>

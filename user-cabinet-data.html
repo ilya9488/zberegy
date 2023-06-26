@@ -11,7 +11,7 @@
   <meta property="og:description" content="Наш проект був задуманий та створений для людей, які втратили своїх близьких. Звичайно, ми не можемо зменшити біль від втрати, але можемо допомогти зберегти найцінніше, що залишається після смерті людини - пам'ять про неї. Історія життя кожної людини унікальна, неповторна і заслуговує на те, щоб про неї знали та пам'ятали. Збережи надає цю можливість кожному…">
   <meta property="og:image" content="static/img/open-graph-img.jpg">
   <title>Збережи</title> <!-- critical css -->
-  <link rel="stylesheet" href="static/css/header.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
+  <link rel="stylesheet" href="static/css/header.min.css?_v=37dc312f2a167f341e5f57d32f70d9d5">
   <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
@@ -620,24 +620,6 @@
                   </div>
                 </div>
               </div>
-            </div> <!-- Modal info memorial -->
-            <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                      <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
-                        <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
-                  </div>
-                  <div class="modal-body"></div>
-                </div>
-              </div>
             </div> <!-- Modal gallery descr -->
             <div class="modal fade site-modal gallery-descr-modal" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
@@ -662,7 +644,7 @@
                       </div>
                       <div class="imgs-previews">
                         <div class="select-img-wrap square-type">
-                          <input hidden type="file" id="сhange_image">
+                          <input hidden type="file" id="сhange_image" accept="image/jpeg, image/jpg, image/png, image/webp">
                           <label for="сhange_image" class="btn-load-select-img btn-edit">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="15" cy="15" r="15" fill="currentColor"></circle>
@@ -871,6 +853,24 @@
                   </div>
                 </div>
               </div>
+            </div> <!-- Modal info memorial (this window must be the last one) -->
+            <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                      <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+                        <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
+                  </div>
+                  <div class="modal-body"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-xl-9 col-lg-8 col-md-8">
@@ -887,7 +887,7 @@
                     <div class="select-img"> <!-- <img src="static/img/cabinet/select-img.jpg" alt=""> -->
                       <img src="static/img/no-photo.jpg" alt="Зображення акаунта">
                     </div>
-                    <input hidden type="file" accept="image/*" value="" data-old-value="static/img/no-photo.jpg" name="load_user_img" id="load_user_img">
+                    <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-photo.jpg" name="load_user_img" id="load_user_img">
                     <label class="btn-load-select-img btn-edit" for="load_user_img">
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="15" r="15" fill="currentColor" />
@@ -1497,24 +1497,6 @@
         </div>
       </div>
     </div>
-  </div> <!-- Modal info memorial -->
-  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
-              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
-            </svg>
-          </span>
-        </button>
-        <div class="modal-header">
-          <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
-        </div>
-        <div class="modal-body"></div>
-      </div>
-    </div>
   </div> <!-- Modal gallery descr -->
   <div class="modal fade site-modal gallery-descr-modal" id="galleryDescrModal" tabindex="-1" aria-labelledby="galleryDescrLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -1539,7 +1521,7 @@
             </div>
             <div class="imgs-previews">
               <div class="select-img-wrap square-type">
-                <input hidden type="file" id="сhange_image">
+                <input hidden type="file" id="сhange_image" accept="image/jpeg, image/jpg, image/png, image/webp">
                 <label for="сhange_image" class="btn-load-select-img btn-edit">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="15" cy="15" r="15" fill="currentColor"></circle>
@@ -1748,10 +1730,28 @@
         </div>
       </div>
     </div>
+  </div> <!-- Modal info memorial (this window must be the last one) -->
+  <div class="modal fade site-modal info-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
+              <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
   </div> <!-- scripst & styles -->
-  <link rel="stylesheet" href="static/css/style.min.css?_v=bcab6b9b986cf38ea2c6e988406e66c4">
-  <script async src="static/js/modules.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
-  <script defer src="static/js/common.min.js?_v=bcab6b9b986cf38ea2c6e988406e66c4"></script>
+  <link rel="stylesheet" href="static/css/style.min.css?_v=37dc312f2a167f341e5f57d32f70d9d5">
+  <script async src="static/js/modules.min.js?_v=37dc312f2a167f341e5f57d32f70d9d5"></script>
+  <script defer src="static/js/common.min.js?_v=37dc312f2a167f341e5f57d32f70d9d5"></script>
 </body>
 
 </html>

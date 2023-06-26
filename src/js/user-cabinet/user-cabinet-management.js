@@ -9,4 +9,3 @@ $('[data-parent-id-memorial]').on('click', function () {
   $('#delMemorialModal').modal('show')
   $('#btnConfirmDelMemorial')[0].setAttribute('data-which-del-memorial', this.dataset.parentIdMemorial)
 })
-

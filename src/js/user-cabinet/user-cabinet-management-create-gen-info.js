@@ -5,24 +5,13 @@
 let memorialImgPath = $('#form_create_memorial .select-img img').length ? $('#form_create_memorial .select-img img')[0].src : '';
 
 // input file
-$('#load_memorial_img').on('change', function () {
-  if (this.files && this.files[0]) {
-    let readerImg = new FileReader();
-    readerImg.onload = function (e) {
-      memorialImgPath = e.target.result;
-      $('#main_img img')[0].src = memorialImgPath
-    }
-    readerImg.readAsDataURL(this.files[0]);
-    // activate the save button
-    // isChangeForm()
-  }
-})
+fileImgLoad($('#load_memorial_img'), $('#main_img'))
 
 $('#del_memorial_img').on('click', function (e) {
   // letiable for recording the old value
   memorialImgPath = this.dataset.resetImg;
   // assign the default image
-  $('#main_img img')[0].src = memorialImgPath;
+  $('#main_img')[0].src = memorialImgPath;
   // reset the input
   $('#load_memorial_img')[0].value = ''
   $('#load_memorial_img')[0].setAttribute('value', '')
@@ -43,8 +32,6 @@ function customTemplate() {
 // input download template bg
 fileImgLoad($('#donl_templ'), $('#donl_templ_img'), customTemplate)
 //  - - - - /custom template - - - - //
-
-//  - - - - /datapicker settings - - - - //
 
 //  - - - - monument foto - - - - //
 fileImgLoad($('#monument_foto'), $('#monument_foto_img'))
@@ -144,4 +131,18 @@ $('#form_create_memorial').on('submit', function (e) {
   });
 
 
+})
+
+
+$('#form_create_memorial [type="reset"]').on('click', function (e) {
+  e.preventDefault();
+  e.target.form.reset()
+  e.target.form.main_img.src = 'static/img/no-foto.svg';
+  e.target.form.monument_foto_img.src = 'static/img/no-foto.svg';
+  e.target.form.donl_templ_img.src = 'static/img/fake-img.png';
+  
+  let selSort = e.target.form.querySelectorAll('.select-sort');
+  for (let i = 0; i < selSort.length; i++) {
+    selSort[i].textContent = 'Виберіть зі списку'
+  }
 })

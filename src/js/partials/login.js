@@ -19,7 +19,7 @@ $('#login_form').on('submit', function (e) {
 	const adminEmail = admin_data.email,
 				adminPass = admin_data.pass;
 
-	let valid, inputId;
+	let inputId;
 	
 	$(this).find('input').not('[type=submit]').each(function () {
 

@@ -2,6 +2,8 @@
 
 window.onload = function () {
 	
+	//= partials/global-var.js
+  
 	//= partials/functions.js
 
 	/*_all_js_*/
@@ -42,7 +44,6 @@ window.onload = function () {
 	//= partials/complain-form.js
 	//= partials/send-message-form.js
 	//= partials/comments-form.js
-	//= partials/comments-to-foto-form.js
 	//= partials/comments-to-comment-form.js
 	//= partials/contact-us.js
 	//= partials/donate-form.js

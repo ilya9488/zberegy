@@ -1,3 +1,4 @@
+// slider accordion + images
 $('.accordion-images-wrap').each(function () {
   let thisParent = $(this),
       type = thisParent.hasClass('revers-type') ? 'right': 'left';

@@ -78,6 +78,15 @@ Fancybox.bind('[data-fancybox="gallery"]', {
       // Update comments
       fancybox.$comments.innerHTML = data
       $('.fancybox__container').addClass('active memorial-gallery')
+
+      // SUBMIT 
+      $('.form-comments-to-foto').each(function(){
+        $(this).on('submit', function (e) {
+          e.preventDefault();
+          
+        })
+      })
+      
     },
   },
 })

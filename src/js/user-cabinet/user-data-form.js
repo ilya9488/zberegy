@@ -40,17 +40,68 @@ thisValInp.call(dataUserEmail[0])
 // input file
 $('#load_user_img').on('change', function () {
   if (this.files && this.files[0]) {
+
+    // maxW & imgFormats (src/js/partials/global-var.js)
+    let thisFiles_0 = this.files[0];
+    let thisFiles_Sz = (this.files[0].size / (1024*1024)).toFixed(2);
+    let fl_format = this.files[0].name.split('.').pop();
+    let validImg = false;
+    let urlImg = window.URL || window.webkitURL;
+    let img = new Image();
     let readerImg = new FileReader();
-    readerImg.onload = function (e) {
-      // console.log(e.total > 100_000_000);
-      // console.log(this.files.size);
-      userImgPath = e.target.result;
-      $('#user_data_form .select-img img')[0].src = userImgPath
+
+    if(!imgFormats.includes(fl_format)){
+      $('#infoModal').modal('show')
+      $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+      $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+      validImg = false;
+      $('#comment_add_foto').val("");
+      return false;
     }
-    // readerImg.readAsDataURL(e.target.files[0]); // ? how better
-    readerImg.readAsDataURL(this.files[0]);
-    // activate the save button
-    isChangeForm()
+
+    img.onload = function () {
+      thisImgW = this.width;
+      thisImgH = this.height;
+
+      if(thisImgW < minW || thisImgH < minH){
+        $('#infoModal').modal('show')
+        $('#infoModal .modal-title')[0].innerHTML = 'Занадто маленьке зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+        $('#infoModal .modal-body')[0].innerHTML = 'Miнiмальний розмiр ('+minW +'px x '+minH+'px)'
+        validImg = false;
+        $('#comment_add_foto').val("");
+      }else if(thisImgW > maxW || thisImgH > maxH){
+        $('#infoModal').modal('show')
+        $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+        $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр ('+maxW +'px x '+maxH+'px)'
+        validImg = false;
+        $('#comment_add_foto').val("");
+      }else if(thisFiles_Sz > max_mb){
+        $('#infoModal').modal('show')
+        $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення - '+thisFiles_Sz+'мб'
+        $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр - <b>'+max_mb+'мб</b>'
+        validImg = false;
+        $('#comment_add_foto').val("");
+      }else if(!imgFormats.includes(fl_format)){
+        $('#infoModal').modal('show')
+        $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+        $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+        validImg = false;
+        $('#comment_add_foto').val("");
+      }else{
+        validImg = true;
+      }
+      
+      if(validImg){
+        readerImg.onload = function (e) {
+          userImgPath = e.target.result;
+          $('#user_data_form .select-img img')[0].src = userImgPath
+        }
+        readerImg.readAsDataURL(thisFiles_0);
+        // activate the save button
+        isChangeForm()
+      }
+    }
+    img.src = urlImg.createObjectURL(this.files[0]);
   }
 })
 
@@ -66,7 +117,6 @@ $('#del_user_img').on('click', function (e) {
   // activate the save button
   isChangeForm()
 })
-
 
 // all inputs
 $('#user_data_form input').on('keyup', function (e) {
@@ -141,7 +191,6 @@ $('#btn_edit_user_data').on('click', function (e) {
         // }
       })
     }, 10);
-    
     
   }
 

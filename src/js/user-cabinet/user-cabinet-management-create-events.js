@@ -27,6 +27,9 @@ if ($('#memorable_events_form').length) {
       success: function (jsonData) {
         // code
         $('#donateModal').modal('show')
+        setTimeout(() => {
+          $('#donateModal').modal('hide')
+        }, 5000);
       },
       error: function (error) {
         // code
@@ -71,13 +74,6 @@ if ($('#memorable_events_form').length) {
     elControlsListener('.btn-save-edits', 'click', saveEdit)
     elControlsListener('.btn-remove-event', 'click', removeEvent)
     elControlsListener('.btn-remove-event-img', 'click', removeEventImg)
-
-    // function imgElControlsListener(e, img, func) {
-    //   func(el.querySelector(e), el.querySelector(img));
-    // }
-    // imgElControlsListener('[type=file]', 'img.memorable-event-img', changeImg)
-
-
     
   function qEl(e, m, l) {
     el.querySelector(e)[m] = l;
@@ -120,14 +116,68 @@ if ($('#memorable_events_form').length) {
     function changeImg(inp, img, btnDel, btnNewImgLabel) {
       inp.addEventListener('change', function () {
         if (this.files && this.files[0]) {
+
+          // maxW & imgFormats (src/js/partials/global-var.js)
+          let thisFiles_0 = this.files[0];
+          let thisFiles_Sz = (this.files[0].size / (1024*1024)).toFixed(2);
+          let fl_format = this.files[0].name.split('.').pop();
+          let validImg = false;
+          let urlImg = window.URL || window.webkitURL;
+          let img_ = new Image();
           let readerImg = new FileReader();
-          readerImg.onload = function (e) {
-            memorialImgPath = e.target.result;
-            img.src = memorialImgPath
-            btnDel.hidden = false;
-            btnNewImgLabel.textContent = 'Змiнити фото'
+
+          if(!imgFormats.includes(fl_format)){
+            $('#infoModal').modal('show')
+            $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+            $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+            validImg = false;
+            inp.value = '';
+            return false;
           }
-          readerImg.readAsDataURL(this.files[0]);
+
+          img_.onload = function () {
+            thisImgW = this.width;
+            thisImgH = this.height;
+
+            if(thisImgW < minW || thisImgH < minH){
+              $('#infoModal').modal('show')
+              $('#infoModal .modal-title')[0].innerHTML = 'Занадто маленьке зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+              $('#infoModal .modal-body')[0].innerHTML = 'Miнiмальний розмiр ('+minW +'px x '+minH+'px)'
+              validImg = false;
+              inp.value = '';
+            }else if(thisImgW > maxW || thisImgH > maxH){
+              $('#infoModal').modal('show')
+              $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+              $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр ('+maxW +'px x '+maxH+'px)'
+              validImg = false;
+              inp.value = '';
+            }else if(thisFiles_Sz > max_mb){
+              $('#infoModal').modal('show')
+              $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення - '+thisFiles_Sz+'мб'
+              $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр - <b>'+max_mb+'мб</b>'
+              validImg = false;
+              inp.value = '';
+            }else if(!imgFormats.includes(fl_format)){
+              $('#infoModal').modal('show')
+              $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+              $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+              validImg = false;
+              inp.value = '';
+            }else{
+              validImg = true;
+            }
+            
+            if(validImg){
+              readerImg.onload = function (e) {
+                memorialImgPath = e.target.result;
+                img.src = memorialImgPath
+                btnDel.hidden = false;
+                btnNewImgLabel.textContent = 'Змiнити фото'
+              }
+              readerImg.readAsDataURL(thisFiles_0);
+            }
+          }
+          img_.src = urlImg.createObjectURL(this.files[0]);
         }
       })
     }

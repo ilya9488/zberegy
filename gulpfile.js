@@ -36,8 +36,8 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('style.min.css'))
-    // .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
-    // .pipe(cleancss(({level: {1: {specialComments: 0}}})))
+    .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
+    .pipe(cleancss(({level: {1: {specialComments: 0}}})))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('static/css/'))
     .pipe(browserSync.stream());
@@ -48,8 +48,8 @@ function stylesHeader() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('header.min.css'))
-    // .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
-    // .pipe(cleancss(({level: {1: {specialComments: 0}}})))
+    .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
+    .pipe(cleancss(({level: {1: {specialComments: 0}}})))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('static/css/'))
     .pipe(browserSync.stream());
@@ -66,7 +66,7 @@ function scripts() {
   return src('src/js/common.js')
     .pipe(rigger())
     .pipe(concat('common.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(dest('static/js/'))
     .pipe(browserSync.stream());
 
@@ -147,10 +147,10 @@ const htmlFiles = [
 ]
 
 function startwatch(){
-  watch(['src/sass/**/*.(sass|scss)'], parallel(styles));
-  watch(['src/sass/**/*.(sass|scss)'], parallel(stylesHeader));
+  watch(['src/sass/**/*.(sass|scss)'], parallel(styles, stylesHeader));
+  // watch(['src/sass/**/*.(sass|scss)'], parallel(stylesHeader));
   watch(['src/js/**/*.js'], parallel(scripts));
-  watch(['src/js/**/*.js'], parallel(scriptsModules));
+  watch(['src/js/modules.js'], parallel(scriptsModules));
   // watch(['src/**/*.html'], parallel(cleanHtml));
   watch(['src/**/*.html'], parallel(htmlConcat));
   // watch('src/img/**/*', parallel(cleanImg));
@@ -174,4 +174,5 @@ exports.fonts = fonts;
 
 // exports.default = parallel(browsersync, scripts, cleanHtml, htmlConcat, // cleanImg, images, fonts, startwatch);
 exports.default = parallel(browsersync, scriptsModules, scripts, htmlConcat, images, fonts, startwatch);
+exports.b = parallel(scriptsModules, scripts, htmlConcat, images, fonts);
 // exports.default = parallel(browsersync, startwatch);

@@ -10,7 +10,6 @@
   <div id="events_wrap"></div>
   
   <div hidden id="event_template" class="memorable-event-preview-block with-separator form-group">
-  <!-- <div  id="event_template" class="memorable-event-preview-block with-separator form-group"> -->
     <div class="event-title-group">
       <label hidden data-lab-hide>Назва події*</label>
       <textarea data-readonly readonly="true" class="event-title" value="" maxlength="1000"></textarea>
@@ -29,7 +28,7 @@
     <div class="memorable-event-img form-group">
       
       <label hidden data-event-block="event_template" class="select-new-img btn-downl-event-img">
-        <input hidden data-event-block="event_template" type="file" accept="image/*" name="templates" autocomplete="off">
+        <input hidden data-event-block="event_template" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" name="templates" autocomplete="off">
         <span>Змiнити фото</span>
         <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -104,9 +103,9 @@
     </div>
 
     <div class="memorable-event-img form-group">
-      <!-- <input hidden="" id="gallery_img" type="file" accept="image/*"  autocomplete="off"> -->
-      <!-- <input hidden="" type="file" accept="image/*" id="memorable_crreate_event_img" name="templates" autocomplete="off"> -->
-      <input hidden="" type="file" accept="image/*" id="memorable_crreate_event_img" name="uploadfile[]" multiple="" autocomplete="off">
+      <!-- <input hidden="" id="gallery_img" type="file" accept="image/jpeg, image/jpg, image/png, image/webp"  autocomplete="off"> -->
+      <!-- <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="templates" autocomplete="off"> -->
+      <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="uploadfile[]" multiple="" autocomplete="off">
 
       <label class="btn-downl-event-img" for="memorable_crreate_event_img">
         <span>Завантажте фото</span>

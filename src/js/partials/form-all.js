@@ -32,41 +32,82 @@ function fileImgLoad(input, viewImg, callFunc) {
   if (input[0] !== undefined) {
 
     input[0].addEventListener('change', function () {
-      if (this.files && this.files[0]) {
 
-        let maxW = 1000, maxH = 1000, minW = 150, minH = 150, thisImgW = 0, thisImgH = 0;
+      if (this.files && this.files[0]) {
+        // maxW & imgFormats (src/js/partials/global-var.js)
+        let thisFiles_0 = this.files[0]
+        let thisFiles_Sz = (this.files[0].size / (1024*1024)).toFixed(2);
+        let fl_format = this.files[0].name.split('.').pop();
+        let validImg = false;
+        let urlImg = window.URL || window.webkitURL;
+        let img = new Image();
         let readerImg = new FileReader();
 
-        let url = window.URL || window.webkitURL;
-        let img = new Image();
+        if(!imgFormats.includes(fl_format)){
+          $('#infoModal').modal('show')
+          $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+          $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+          validImg = false;
+          input.val("");
+          return false;
+        }
+
         img.onload = function () {
           thisImgW = this.width;
           thisImgH = this.height;
-        }
-        img.src = url.createObjectURL(this.files[0]);
 
-        if(thisImgW < minW || thisImgH < minH){
-          console.log(1231321);
-          input.addClass('error')
-          // $('#' + input.id + ' ~ .error-mess')[0].textContent = 'Вкажіть email'
-          return false;
-        }else if(thisImgW > maxW || thisImgH > maxH){
-          console.log(1231321);
-          return false;
+          if(thisImgW < minW || thisImgH < minH){
+            $('#infoModal').modal('show')
+            $('#infoModal .modal-title')[0].innerHTML = 'Занадто маленьке зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+            $('#infoModal .modal-body')[0].innerHTML = 'Miнiмальний розмiр ('+minW +'px x '+minH+'px)'
+            validImg = false;
+            input.val("");
+          }else if(thisImgW > maxW || thisImgH > maxH){
+            $('#infoModal').modal('show')
+            $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення <br> ('+thisImgW +'px x '+thisImgH+'px)'
+            $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр ('+maxW +'px x '+maxH+'px)'
+            validImg = false;
+            input.val("");
+          }else if(thisFiles_Sz > max_mb){
+            $('#infoModal').modal('show')
+            $('#infoModal .modal-title')[0].innerHTML = 'Надто велике зображення - '+thisFiles_Sz+'мб'
+            $('#infoModal .modal-body')[0].innerHTML = 'Mаксимальний розмiр - <b>'+max_mb+'мб</b>'
+            validImg = false;
+            input.val("");
+          }else if(!imgFormats.includes(fl_format)){
+            $('#infoModal').modal('show')
+            $('#infoModal .modal-title')[0].innerHTML = '.'+fl_format+' - неприпустимий формат файлу'
+            $('#infoModal .modal-body')[0].innerHTML = 'Формат має бути - '+imgFormats.join(', ')
+            validImg = false;
+            input.val("");
+          }else{
+            validImg = true;
+          }
+    
+          if(validImg){
+            readerImg.onload = function (e) {
+              memorialImgPath = e.target.result;
+              viewImg[0].src = memorialImgPath
+              // activate the save button
+              if (callFunc) { callFunc()}
+            }
+            readerImg.readAsDataURL(thisFiles_0);
+          }
         }
+        img.src = urlImg.createObjectURL(this.files[0]);
 
-        readerImg.onload = function (e) {
-          memorialImgPath = e.target.result;
-          viewImg[0].src = memorialImgPath
-        }
-        readerImg.readAsDataURL(this.files[0]);
+        // readerImg.onload = function (e) {
+        //   memorialImgPath = e.target.result;
+        //   viewImg[0].src = memorialImgPath
+        // }
+        // readerImg.readAsDataURL(this.files[0]);
+        
         // activate the save button
-        if (callFunc) { callFunc()}
+        // if (callFunc) { callFunc()}
       }
     })
   }
 }
-
 
 // all input autocomplete off
 $('input:not([type="checkbox"], [type="radio"], [type="submit"])').each(function () { this.setAttribute('autocomplete', 'off') })
