@@ -1,6 +1,3 @@
-// delete this code (start code)
-// $('#sucsesModal').modal('show')
-// $('#shareLinksModal').modal('show')
 
 // delete this code (start code)
 // setInterval(function () {
@@ -45,12 +42,7 @@ $('[data-favorite]').on('click', function (e) {
     this.setAttribute('data-title', 'Видалити з Обраного')
   }
 })
-  // find img: not atrr width
-  // $('img').each(function (){
-  //   if(!this.hasAttribute('width')){
-  //
-  //   }
-  // })
+
 
 $('a.btn-circle').blur() // del m.b.
 $('a.btn-circle').on('click', function (e) {

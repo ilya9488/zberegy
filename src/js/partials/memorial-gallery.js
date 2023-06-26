@@ -1,10 +1,4 @@
-
-// ( ? )
-// $('img').on("load", function() {
-// console.log('load img');
-// })
-
-
+// avoid page reload errors
 if (document.location.href.indexOf('#gallery') >= 1) {
   $('.fancybox__button--close').trigger('click')
 }
