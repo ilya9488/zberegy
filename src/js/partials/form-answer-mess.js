@@ -10,6 +10,7 @@ let curMess = '';
 function sendMessageForm_2() {
   tbnAnswer = this;
   curMess = $(tbnAnswer.dataset.messBlock)[0];
+  console.log(curMess);
 }
 
 $('#send_message_form_2').on('submit', function (e) {
